@@ -3896,8 +3896,6 @@ function togglePassword() {
         
 
 
-
-
 <!-- ফেসবুক একাউন্ট সেল -->
     <div class="service-card" onclick="handleFacebookSellClick()">
         <div class="icon-circle" style="background: linear-gradient(135deg, #1877f2, #0d5db8);">
@@ -3997,6 +3995,103 @@ function togglePassword() {
             <p>আপনার জব পোস্ট করুন</p>
         </div>
         <button class="card-btn" style="background: linear-gradient(135deg, #56ab2f, #a8e063);">পোস্ট করুন &rarr;</button>
+    </div>
+ <!-- ইউটিউব মনিটাইজেশন -->
+    <div class="service-card" onclick="handleYoutubeMonetizationClick()">
+        <div class="icon-circle" style="background: linear-gradient(135deg, #f12711, #f5af19);">
+            <!-- প্লে বাটন / মনিটাইজেশন লোগো (svg) -->
+            <svg viewBox="0 0 24 24"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+        </div>
+        <div class="card-content">
+            <h3>মনিটাইজেশন সার্ভিস</h3>
+            <p>চ্যানেল ও পেজ মনিটাইজ করুন</p>
+        </div>
+        <button class="card-btn" style="background: linear-gradient(135deg, #f12711, #f5af19);">আবেদন করুন &rarr;</button>
+    </div>
+    <!-- ফেসবুক পেজ সার্ভিস -->
+    <div class="service-card" onclick="handleFacebookPageClick()">
+        <div class="icon-circle" style="background: linear-gradient(135deg, #00c6ff, #0072ff);">
+            <!-- থাম্বস আপ / পেজ লাইক লোগো (svg) -->
+            <svg viewBox="0 0 24 24"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>
+        </div>
+        <div class="card-content">
+            <h3>পেজ ফলোয়ার সার্ভিস</h3>
+            <p>লাইক ও ফলোয়ার বাড়িয়ে নিন</p>
+        </div>
+        <button class="card-btn" style="background: linear-gradient(135deg, #00c6ff, #0072ff);">কাজ করুন &rarr;</button>
+    </div>
+    <!-- গ্রাফিক্স ডিজাইন -->
+    <div class="service-card" onclick="handleGraphicsDesignClick()">
+        <div class="icon-circle" style="background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);">
+            <!-- পেন্ট ব্রাশ / ডিজাইন লোগো (svg) -->
+            <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 20.1c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l2.49-2.49C9.93 19.26 10.92 19.5 12 19.5c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+        </div>
+        <div class="card-content">
+            <h3>গ্রাফিক্স ডিজাইন</h3>
+            <p>লোগো ও ব্যানার ডিজাইন কাজ</p>
+        </div>
+        <button class="card-btn" style="background: linear-gradient(135deg, #833ab4, #fd1d1d);">শুরু করুন &rarr;</button>
+    </div>
+    <!-- ডাটা এন্ট্রি -->
+    <div class="service-card" onclick="handleDataEntryClick()">
+        <div class="icon-circle" style="background: linear-gradient(135deg, #3a7bd5, #3a6073);">
+            <!-- ডকুমেন্ট / ডাটা এন্ট্রি লোগো (svg) -->
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+        </div>
+        <div class="card-content">
+            <h3>ডাটা এন্ট্রি জব</h3>
+            <p>টাইপিং ও কপি-পেস্ট কাজ</p>
+        </div>
+        <button class="card-btn" style="background: linear-gradient(135deg, #3a7bd5, #3a6073);">কাজ নিন &rarr;</button>
+    </div>
+    <!-- গেম টপ-আপ -->
+    <div class="service-card" onclick="handleGameTopUpClick()">
+        <div class="icon-circle" style="background: linear-gradient(135deg, #ff416c, #ff4b2b);">
+            <!-- গেম প্যাড লোগো (svg) -->
+            <svg viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 9 18.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+        </div>
+        <div class="card-content">
+            <h3>গেম টপ-আপ</h3>
+            <p>ডায়মন্ড ও ইউসি সেল করুন</p>
+        </div>
+        <button class="card-btn" style="background: linear-gradient(135deg, #ff416c, #ff4b2b);">টপ-আপ &rarr;</button>
+    </div>
+    <!-- কনটেন্ট রাইটিং সার্ভিস -->
+    <div class="service-card" onclick="handleContentWritingClick()">
+        <div class="icon-circle" style="background: linear-gradient(135deg, #f857a6, #ff5858);">
+            <!-- পেন / রাইটিং লোগো (svg) -->
+            <svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+        </div>
+        <div class="card-content">
+            <h3>আর্টিকেল রাইটিং</h3>
+            <p>কন্টেন্ট লিখে আয় করুন</p>
+        </div>
+        <button class="card-btn" style="background: linear-gradient(135deg, #f857a6, #ff5858);">কাজ করুন &rarr;</button>
+    </div>
+    
+    <!-- ভিডিও এডিটিং সার্ভিস -->
+    <div class="service-card" onclick="handleVideoEditingClick()">
+        <div class="icon-circle" style="background: linear-gradient(135deg, #ee0979, #ff6a00);">
+            <!-- ভিডিও প্লে / এডিটিং লোগো (svg) -->
+            <svg viewBox="0 0 24 24"><path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4zM4 18V8h16v10H4z"/></svg>
+        </div>
+        <div class="card-content">
+            <h3>ভিডিও এডিটিং</h3>
+            <p>রিলস ও শর্টস ভিডিও এডিট</p>
+        </div>
+        <button class="card-btn" style="background: linear-gradient(135deg, #ee0979, #ff6a00);">শুরু করুন &rarr;</button>
+    </div>
+<!-- অ্যাডস ক্যাম্পেইন সার্ভিস -->
+    <div class="service-card" onclick="handleAdsCampaignClick()">
+        <div class="icon-circle" style="background: linear-gradient(135deg, #ff416c, #ff4b2b);">
+            <!-- মেগাফোন / প্রমোশন লোগো (svg) -->
+            <svg viewBox="0 0 24 24"><path d="M18 11v2h4v-2h-4zm-2 6.11c.96.59 1.86 1.3 2.67 2.11l1.41-1.41c-.91-.9-1.93-1.67-3.04-2.28l-1.04 1.58zM18 5.89c.96-.59 1.86-1.3 2.67-2.11l1.41 1.41c-.91.9-1.93 1.67-3.04 2.28l-1.04-1.58zM4 9c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h1l4 3V6L5 9H4zm11-.5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-5z"/></svg>
+        </div>
+        <div class="card-content">
+            <h3>অ্যাডস্ ক্যাম্পেইন</h3>
+            <p>ফেসবুক ও গুগল বিজ্ঞাপন কাজ</p>
+        </div>
+        <button class="card-btn" style="background: linear-gradient(135deg, #ff416c, #ff4b2b);">শুরু করুন &rarr;</button>
     </div>
 </div>
 
@@ -13112,6 +13207,188 @@ function handleAdsIncomeClick() {
         openPage('p-ads');
     }
 }
+
+// কমন ফাংশন: অ্যাকাউন্ট চেক করে পেজ ওপেন করার জন্য
+function checkAndOpenPage(pageName, serviceName) {
+    // ধরে নিচ্ছি curUser অবজেক্টে ইউজারের স্ট্যাটাস সেভ করা আছে
+    if (typeof curUser !== 'undefined' && curUser.status !== 'active') {
+        Swal.fire({
+            title: 'অ্যাকাউন্ট ভেরিফিকেশন প্রয়োজন!',
+            text: `${serviceName} কাজ করতে হলে আপনার অ্যাকাউন্টটি একটিভ থাকা বাধ্যতামূলক।`,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'এখনই একটিভ করুন',
+            cancelButtonText: 'পরে করব',
+            confirmButtonColor: '#2ecc71',
+            cancelButtonColor: '#d33',
+            background: '#fff',
+            borderRadius: '20px'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                openPage('p-fund'); // ভেরিফিকেশন বা ফান্ড পেজ
+            }
+        });
+    } else {
+        // একাউন্ট একটিভ থাকলে সরাসরি নির্দিষ্ট পেজে নিয়ে যাবে
+        openPage(pageName);
+    }
+}
+
+// ১. ফেসবুক সেল
+function handleFacebookSellClick() {
+    checkAndOpenPage('p-facebook-sell', 'ফেসবুক একাউন্ট সেল');
+}
+
+// ২. জিমেইল সেল
+function handleGmailSellClick() {
+    checkAndOpenPage('p-gmail-sell', 'জিমেইল সেল');
+}
+
+// ৩. ইনস্টাগ্রাম সেল
+function handleInstagramSellClick() {
+    checkAndOpenPage('p-instagram-sell', 'ইনস্টাগ্রাম সেল');
+}
+
+// ৪. হোয়াটসঅ্যাপ সেল
+function handleWhatsAppSellClick() {
+    checkAndOpenPage('p-whatsapp-sell', 'হোয়াটসঅ্যাপ সেল');
+}
+
+// ৫. রিসেলিং করুন
+function handleResellingClick() {
+    checkAndOpenPage('p-reselling', 'রিসেলিং');
+}
+
+// ৬. ভেন্ডরশীপ নিন
+function handleVendorshipClick() {
+    checkAndOpenPage('p-vendorship', 'ভেন্ডরশীপ');
+}
+
+// ৭. মনিটাইজেশন সার্ভিস
+function handleYoutubeMonetizationClick() {
+    checkAndOpenPage('p-monetization', 'মনিটাইজেশন সার্ভিস');
+}
+
+// ৮. পেজ ফলোয়ার সার্ভিস
+function handleFacebookPageClick() {
+    checkAndOpenPage('p-page-service', 'পেজ ফলোয়ার সার্ভিস');
+}
+
+// ৯. গ্রাফিক্স ডিজাইন
+function handleGraphicsDesignClick() {
+    checkAndOpenPage('p-graphics', 'গ্রাফিক্স ডিজাইন');
+}
+
+// ১০. ডাটা এন্ট্রি জব
+function handleDataEntryClick() {
+    checkAndOpenPage('p-data-entry', 'ডাটা এন্ট্রি জব');
+}
+
+// ১১. গেম টপ-আপ
+function handleGameTopUpClick() {
+    checkAndOpenPage('p-topup', 'গেম টপ-আপ');
+}
+
+// ১২. আর্টিকেল রাইটিং
+function handleContentWritingClick() {
+    checkAndOpenPage('p-writing', 'আর্টিকেল রাইটিং');
+}
+
+// ১৩. ভিডিও এডিটিং
+function handleVideoEditingClick() {
+    checkAndOpenPage('p-video-edit', 'ভিডিও এডিটিং');
+}
+
+// ১৪. অ্যাডস্ ক্যাম্পেইন
+function handleAdsCampaignClick() {
+    checkAndOpenPage('p-ads-campaign', 'অ্যাডস্ ক্যাম্পেইন');
+}
+// কমন ফাংশন: অ্যাকাউন্ট স্ট্যাটাস চেক করে কাজ করবে
+function checkAccountAndShowUpdate(serviceName) {
+    // ইউজারের অ্যাকাউন্ট স্ট্যাটাস একটিভ না থাকলে
+    if (typeof curUser !== 'undefined' && curUser.status !== 'active') {
+        Swal.fire({
+            title: 'অ্যাকাউন্ট ভেরিফিকেশন প্রয়োজন!',
+            text: `${serviceName} কাজ করতে হলে আপনার অ্যাকাউন্টটি একটিভ থাকা বাধ্যতামূলক।`,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'এখনই একটিভ করুন',
+            cancelButtonText: 'পরে করব',
+            confirmButtonColor: '#2ecc71',
+            cancelButtonColor: '#d33',
+            background: '#fff',
+            borderRadius: '20px'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                openPage('p-fund'); // ভেরিফিকেশন বা ফান্ড পেজ
+            }
+        });
+    } else {
+        // অ্যাকাউন্ট একটিভ থাকলে শুধু আপডেট নোটিফিকেশন দেখাবে
+        Swal.fire({
+            title: 'আপডেট চলছে!',
+            text: 'অতি শীঘ্রই লঞ্চ করা হবে, ধন্যবাদ।',
+            icon: 'info',
+            confirmButtonText: 'ঠিক আছে',
+            confirmButtonColor: '#1877f2',
+            background: '#fff',
+            borderRadius: '20px'
+        });
+    }
+}
+
+// যেসব সার্ভিসে এই নিয়মটি প্রযোজ্য সেগুলোর ফাংশন:
+
+// ১. রিসেলিং করুন
+function handleResellingClick() {
+    checkAccountAndShowUpdate('রিসেলিং');
+}
+
+// ২. ভেন্ডরশীপ নিন
+function handleVendorshipClick() {
+    checkAccountAndShowUpdate('ভেন্ডরশীপ');
+}
+
+// ৩. মনিটাইজেশন সার্ভিস
+function handleYoutubeMonetizationClick() {
+    checkAccountAndShowUpdate('মনিটাইজেশন সার্ভিস');
+}
+
+// ৪. পেজ ফলোয়ার সার্ভিস
+function handleFacebookPageClick() {
+    checkAccountAndShowUpdate('পেজ ফলোয়ার সার্ভিস');
+}
+
+// ৫. গ্রাফিক্স ডিজাইন
+function handleGraphicsDesignClick() {
+    checkAccountAndShowUpdate('গ্রাফিক্স ডিজাইন');
+}
+
+// ৬. ডাটা এন্ট্রি জব
+function handleDataEntryClick() {
+    checkAccountAndShowUpdate('ডাটা এন্ট্রি জব');
+}
+
+// ৭. গেম টপ-আপ
+function handleGameTopUpClick() {
+    checkAccountAndShowUpdate('গেম টপ-আপ');
+}
+
+// ৮. আর্টিকেল রাইটিং
+function handleContentWritingClick() {
+    checkAccountAndShowUpdate('আর্টিকেল রাইটিং');
+}
+
+// ৯. ভিডিও এডিটিং
+function handleVideoEditingClick() {
+    checkAccountAndShowUpdate('ভিডিও এডিটিং');
+}
+
+// ১০. অ্যাডস্ ক্যাম্পেইন
+function handleAdsCampaignClick() {
+    checkAccountAndShowUpdate('অ্যাডস্ ক্যাম্পেইন');
+}
+
 function handleLeaderClick() {
     // ইউজার যদি একটিভ না থাকে
     if (curUser.status !== 'active') {
