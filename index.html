@@ -4423,6 +4423,299 @@ function togglePassword() {
 
     </div>
 </div>
+
+<!-- সাপোর্ট সেন্টার পেজ -->
+<div id="p-support-center" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f4f6f9; z-index: 1500; overflow-y: auto; padding-bottom: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; opacity: 0; transition: opacity 0.3s ease;">
+    
+    <!-- হেডার -->
+    <div style="background: linear-gradient(135deg, #0f172a 100%, #1e293b 0%); padding: 16px 20px; display: flex; align-items: center; position: sticky; top: 0; z-index: 1502; box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);">
+        <div onclick="closeSupportPage()" style="cursor: pointer; display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); transition: all 0.2s ease;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+            <i class="fas fa-arrow-left" style="font-size: 18px; color: #ffffff;"></i>
+        </div>
+        <div style="margin-left: 14px;">
+            <h5 style="margin: 0; font-weight: 800; color: #ffffff; font-size: 17px; letter-spacing: 0.5px;">সাপোর্ট সেন্টার</h5>
+            <span style="font-size: 10px; color: #94a3b8; font-weight: 600;">২৪/৭ অনলাইন সহায়তা</span>
+        </div>
+    </div>
+
+    <div class="container mt-3 px-3" style="max-width: 650px; margin: 0 auto; animation: slideUp 0.4s ease forwards;">
+        
+        <!-- নোটিশ বক্স -->
+        <div style="background: #ffffff; border-left: 5px solid #3b82f6; padding: 16px; border-radius: 14px; margin-bottom: 22px; box-shadow: 0 6px 20px rgba(0,0,0,0.04);">
+            <h6 style="margin: 0 0 8px 0; font-weight: 800; color: #1e293b; font-size: 14px; display: flex; align-items: center; gap: 8px;">
+                <i class="fas fa-bullhorn" style="color: #ef4444;"></i> জরুরি নোটিশ
+            </h6>
+            <p style="margin: 0; font-size: 12px; color: #64748b; line-height: 1.7; text-align: justify;">
+                যেকোনো প্রয়োজনে নিচের ভেরিফাইড অ্যাডমিনদের সাথে সরাসরি যোগাযোগ করুন অথবা আমাদের অফিসিয়াল গ্রুপগুলোতে জয়েন করুন। প্রতারণা এড়াতে শুধুমাত্র ভেরিফাইড লিস্টের সাথে লেনদেন করুন।
+            </p>
+        </div>
+
+        <!-- সরাসরি অ্যাডমিনের সাথে কথা বলুন (মেইন বাটন) -->
+        <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border-radius: 18px; padding: 22px; text-align: center; margin-bottom: 22px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.2);">
+            <div style="width: 60px; height: 60px; background: rgba(59, 130, 246, 0.15); color: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px auto;">
+                <i class="fas fa-headset" style="font-size: 26px;"></i>
+            </div>
+            <h6 style="margin: 0 0 6px 0; font-weight: 800; color: #ffffff; font-size: 16px;">সরাসরি অ্যাডমিনের সাথে কথা বলুন</h6>
+            <p style="margin: 0 0 16px 0; font-size: 11px; color: #94a3b8; line-height: 1.5;">আপনার যেকোনো সমস্যা বা লেনদেন সংক্রান্ত সহায়তার জন্য নির্দিষ্ট অ্যাডমিনকে বেছে নিন।</p>
+            <button onclick="openAdminModal()" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; border: none; padding: 12px 24px; border-radius: 12px; font-weight: 800; font-size: 13px; cursor: pointer; box-shadow: 0 4px 15px rgba(59,130,246,0.4); transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 8px;">
+                <i class="fas fa-comments"></i> অ্যাডমিন লিস্ট দেখুন
+            </button>
+        </div>
+
+        <!-- সোশ্যাল গ্রুপ সেকশন -->
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+            
+            <!-- টেলিগ্রাম গ্রুপ দুটি -->
+            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                    <div style="width: 32px; height: 32px; background: #0088cc; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fab fa-telegram-plane" style="font-size: 16px;"></i>
+                    </div>
+                    <span style="font-size: 13px; font-weight: 800; color: #1e293b;">টেলিগ্রাম চ্যানেল ও গ্রুপ</span>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #0088cc, #00aaff); color: white; border: none; padding: 10px; border-radius: 10px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,136,204,0.25);">
+                        গ্রুপ ১ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
+                    </button>
+                    <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #00aaff, #0088cc); color: white; border: none; padding: 10px; border-radius: 10px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,136,204,0.25);">
+                        গ্রুপ ২ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- হোয়াটসঅ্যাপ গ্রুপ দুটি -->
+            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                    <div style="width: 32px; height: 32px; background: #25d366; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fab fa-whatsapp" style="font-size: 16px;"></i>
+                    </div>
+                    <span style="font-size: 13px; font-weight: 800; color: #1e293b;">হোয়াটসঅ্যাপ কমিউনিটি</span>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button onclick="window.open('https://whatsapp.com/', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #25d366, #128c7e); color: white; border: none; padding: 10px; border-radius: 10px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 12px rgba(37,211,102,0.25);">
+                        গ্রুপ ১ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
+                    </button>
+                    <button onclick="window.open('https://whatsapp.com/', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #128c7e, #25d366); color: white; border: none; padding: 10px; border-radius: 10px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 12px rgba(37,211,102,0.25);">
+                        গ্রুপ ২ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ফেসবুক গ্রুপ দুটি -->
+            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                    <div style="width: 32px; height: 32px; background: #1877f2; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fab fa-facebook-f" style="font-size: 16px;"></i>
+                    </div>
+                    <span style="font-size: 13px; font-weight: 800; color: #1e293b;">ফেসবুক অফিশিয়াল গ্রুপ</span>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button onclick="window.open('https://facebook.com/', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #1877f2, #0d56b3); color: white; border: none; padding: 10px; border-radius: 10px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 12px rgba(24,119,242,0.25);">
+                        গ্রুপ ১ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
+                    </button>
+                    <button onclick="window.open('https://facebook.com/', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #0d56b3, #1877f2); color: white; border: none; padding: 10px; border-radius: 10px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 12px rgba(24,119,242,0.25);">
+                        গ্রুপ ২ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- প্রফেশনাল অ্যাডমিন পপআপ (Modal) -->
+<div id="admin-modal" class="d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(5px); z-index: 2000; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; padding: 15px;">
+    
+    <div style="background: #ffffff; width: 100%; max-width: 500px; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.2); max-height: 90vh; display: flex; flex-direction: column; animation: scaleUp 0.3s ease forwards;">
+        
+        <!-- পপআপ হেডার -->
+        <div style="background: linear-gradient(135deg, #0f172a, #1e293b); padding: 16px 20px; display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="width: 35px; height: 35px; background: rgba(59, 130, 246, 0.2); color: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-user-shield" style="font-size: 16px;"></i>
+                </div>
+                <div>
+                    <h5 style="margin: 0; color: #ffffff; font-size: 15px; font-weight: 800;">ভেরিফাইড অ্যাডমিন লিস্ট</h5>
+                    <span style="font-size: 10px; color: #94a3b8;">আপনার সমস্যার জন্য সঠিক অ্যাডমিন বেছে নিন</span>
+                </div>
+            </div>
+            <div onclick="closeAdminModal()" style="cursor: pointer; width: 32px; height: 32px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+                <i class="fas fa-times" style="font-size: 14px;"></i>
+            </div>
+        </div>
+
+        <!-- পপআপ বডি (৫টি অ্যাডমিন কার্ড with Problem Description) -->
+        <div style="padding: 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px;">
+            
+            <!-- Admin 1 -->
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: all 0.2s;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(59,130,246,0.3);">
+                        <i class="fas fa-wallet" style="font-size: 18px;"></i>
+                    </div>
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                            <span style="font-size: 13px; font-weight: 800; color: #1e293b;">Admin 1</span>
+                            <span style="font-size: 8px; color: #3b82f6; font-weight: 700; background: #eff6ff; padding: 1px 5px; border-radius: 4px;">Verified</span>
+                        </div>
+                        <p style="margin: 3px 0 0 0; font-size: 11px; color: #64748b; font-weight: 600;">পেমেন্ট জমা, ডিপোজিট ও উইথড্র সংক্রান্ত সমস্যা</p>
+                    </div>
+                </div>
+                <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" style="background: #3b82f6; color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0; transition: background 0.2s;" onmouseover="this.style.background='#1d4ed8'" onmouseout="this.style.background='#3b82f6'">
+                    মেসেজ করুন
+                </button>
+            </div>
+
+            <!-- Admin 2 -->
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: all 0.2s;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #10b981, #047857); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(16,185,129,0.3);">
+                        <i class="fas fa-user-cog" style="font-size: 18px;"></i>
+                    </div>
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                            <span style="font-size: 13px; font-weight: 800; color: #1e293b;">Admin 2</span>
+                            <span style="font-size: 8px; color: #10b981; font-weight: 700; background: #ecfdf5; padding: 1px 5px; border-radius: 4px;">Verified</span>
+                        </div>
+                        <p style="margin: 3px 0 0 0; font-size: 11px; color: #64748b; font-weight: 600;">অ্যাকাউন্ট ভেরিফিকেশন ও পাসওয়ার্ড সমস্যা</p>
+                    </div>
+                </div>
+                <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" style="background: #10b981; color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0; transition: background 0.2s;" onmouseover="this.style.background='#047857'" onmouseout="this.style.background='#10b981'">
+                    মেসেজ করুন
+                </button>
+            </div>
+
+            <!-- Admin 3 -->
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: all 0.2s;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(245,158,11,0.3);">
+                        <i class="fas fa-gift" style="font-size: 18px;"></i>
+                    </div>
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                            <span style="font-size: 13px; font-weight: 800; color: #1e293b;">Admin 3</span>
+                            <span style="font-size: 8px; color: #f59e0b; font-weight: 700; background: #fffbeb; padding: 1px 5px; border-radius: 4px;">Verified</span>
+                        </div>
+                        <p style="margin: 3px 0 0 0; font-size: 11px; color: #64748b; font-weight: 600;">বোনাস, অফার ও প্রমোশন সংক্রান্ত সমস্যা</p>
+                    </div>
+                </div>
+                <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" style="background: #f59e0b; color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0; transition: background 0.2s;" onmouseover="this.style.background='#d97706'" onmouseout="this.style.background='#f59e0b'">
+                    মেসেজ করুন
+                </button>
+            </div>
+
+            <!-- Admin 4 -->
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: all 0.2s;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #8b5cf6, #6d28d9); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(139,92,246,0.3);">
+                        <i class="fas fa-gamepad" style="font-size: 18px;"></i>
+                    </div>
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <span style="font-size: 13px; font-weight: 800; color: #1e293b;">Admin 4</span>
+                            <span style="font-size: 8px; color: #8b5cf6; font-weight: 700; background: #f3e8ff; padding: 1px 5px; border-radius: 4px;">Verified</span>
+                        </div>
+                        <p style="margin: 3px 0 0 0; font-size: 11px; color: #64748b; font-weight: 600;">গেম বা বেটিং ব্যালেন্স আপডেট সমস্যা</p>
+                    </div>
+                </div>
+                <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" style="background: #8b5cf6; color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0; transition: background 0.2s;" onmouseover="this.style.background='#6d28d9'" onmouseout="this.style.background='#8b5cf6'">
+                    মেসেজ করুন
+                </button>
+            </div>
+
+            <!-- Admin 5 -->
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: all 0.2s;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #ec4899, #be185d); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(236,72,153,0.3);">
+                        <i class="fas fa-headset" style="font-size: 18px;"></i>
+                    </div>
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                            <span style="font-size: 13px; font-weight: 800; color: #1e293b;">Admin 5</span>
+                            <span style="font-size: 8px; color: #ec4899; font-weight: 700; background: #fce7f3; padding: 1px 5px; border-radius: 4px;">Verified</span>
+                        </div>
+                        <p style="margin: 3px 0 0 0; font-size: 11px; color: #64748b; font-weight: 600;">সাধারণ সহায়তা ও অন্যান্য অভিযোগ</p>
+                    </div>
+                </div>
+                <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" style="background: #ec4899; color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0; transition: background 0.2s;" onmouseover="this.style.background='#be185d'" onmouseout="this.style.background='#ec4899'">
+                    মেসেজ করুন
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<style>
+.social-btn {
+    transition: all 0.2s ease;
+}
+.social-btn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+.social-btn:active {
+    transform: scale(0.96);
+}
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleUp {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+</style>
+
+<script>
+function handleSupportCenterClick() {
+    let page = document.getElementById('p-support-center');
+    if (page) {
+        page.style.display = 'block';
+        page.classList.remove('d-none');
+        setTimeout(() => {
+            page.style.opacity = '1';
+        }, 10);
+    }
+}
+
+function closeSupportPage() {
+    let page = document.getElementById('p-support-center');
+    if (page) {
+        page.style.opacity = '0';
+        setTimeout(() => {
+            page.style.display = 'none';
+            page.classList.add('d-none');
+        }, 300);
+    }
+}
+
+// অ্যাডমিন পপআপ খোলার ফাংশন
+function openAdminModal() {
+    let modal = document.getElementById('admin-modal');
+    if (modal) {
+        modal.style.display = 'flex';
+        modal.classList.remove('d-none');
+        setTimeout(() => {
+            modal.style.opacity = '1';
+        }, 10);
+    }
+}
+
+// অ্যাডমিন পপআপ বন্ধ করার ফাংশন
+function closeAdminModal() {
+    let modal = document.getElementById('admin-modal');
+    if (modal) {
+        modal.style.opacity = '0';
+        setTimeout(() => {
+            modal.style.display = 'none';
+            modal.classList.add('d-none');
+        }, 300);
+    }
+}
+</script>
+
+
 <div id="p-admin-profile" class="p-page d-none shadow" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fafc; z-index: 1500; overflow-y: auto; padding-bottom: 50px; font-family: 'Poppins', sans-serif;">
 
     <!-- হেডার: প্রিমিয়াম রেড-ইয়েলো গ্রেডিয়েন্ট -->
@@ -8995,7 +9288,7 @@ initMicroJobs();
         <span style="display: block; font-size: 9px; font-weight: 800; color: white; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.3px;">ওয়ালেট</span>
     </div>
 
-<div onclick="window.open('https://t.me/Mohammed1199440', '_blank')" 
+<div onclick="handleSupportCenterClick()" 
      style="text-align: center; cursor: pointer; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; transition: transform 0.2s ease;"
      onmousedown="this.style.transform='scale(0.92)'" onmouseup="this.style.transform='scale(1)'">
     <div style="width: 36px; height: 36px; background: rgba(255, 255, 255, 0.15); border-radius: 4px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255, 255, 255, 0.2);">
