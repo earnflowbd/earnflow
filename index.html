@@ -3015,53 +3015,49 @@ function toggleSignupPassword() {
 </nav>
 
 <div id="custom-noti-popup-overlay" onclick="closeCustomNotification(event)" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 99998; align-items: center; justify-content: center; padding: 15px; box-sizing: border-box;">
+<div id="custom-noti-popup" class="aypoth-popup-box" onclick="event.stopPropagation()" style="position: relative; width: 100%; max-width: 380px; background: white; color: #333; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); padding: 14px; z-index: 99999; border: 1px solid rgba(0,0,0,0.1); box-sizing: border-box; animation: popupScale 0.3s ease; font-family: 'Poppins', sans-serif;">
+        
+    <div onclick="closeCustomNotification(event)" style="position: absolute; top: -10px; right: -10px; width: 28px; height: 28px; background: #ff1744; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: bold; cursor: pointer; box-shadow: 0 2px 6px rgba(255, 23, 68, 0.4); z-index: 100000; line-height: 1;">
+        &times;
+    </div>
     
-    <div id="custom-noti-popup" class="aypoth-popup-box" onclick="event.stopPropagation()" style="position: relative; width: 100%; max-width: 450px; background: white; color: #333; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.3); padding: 25px; z-index: 99999; border: 1px solid rgba(0,0,0,0.05); box-sizing: border-box; animation: popupScale 0.3s ease; font-family: 'Poppins', sans-serif;">
+    <div style="text-align: center; margin-bottom: 10px; border-bottom: 1px solid #f1f5f9; padding-bottom: 8px;">
+        <span style="font-weight: 700; font-size: 14px; color: #333;">🎉 EarnFlow তে স্বাগতম! 🎉</span>
+    </div>
+    
+    <!-- কভার ছবির সাইজ বড় করা হয়েছে -->
+    <div style="width: 100%; border-radius: 6px; overflow: hidden; margin-bottom: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">
+        <img src="https://raw.githubusercontent.com/earnflowbd/earnflow/refs/heads/main/1785133092305.jpg" alt="Live Meeting Banner" style="width: 100%; display: block; object-fit: cover; max-height: 170px;">
+    </div>
+
+    <div style="font-family: 'Poppins', sans-serif;">
         
-        <div onclick="closeCustomNotification(event)" style="position: absolute; top: -12px; right: -12px; width: 32px; height: 32px; background: #ff1744; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 10px rgba(255, 23, 68, 0.4); z-index: 100000; line-height: 1;">
-            &times;
-        </div>
-        
-        <div style="text-align: center; margin-bottom: 15px; border-bottom: 1px solid #f1f5f9; padding-bottom: 10px;">
-            <span style="font-weight: 700; font-size: 16px; color: #333;">🎉 Aypoth তে স্বাগতম! 🎉</span>
-        </div>
-        
-        <div style="width: 100%; border-radius: 12px; overflow: hidden; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-            <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/IMG_20260624_232331_416.jpeg
-
-
-            
-            " alt="Live Meeting Banner" style="width: 100%; display: block; object-fit: cover;">
+        <!-- অপশন–১ (প্রিমিয়াম) -->
+        <div style="margin: 0 0 8px 0; font-size: 11.5px; color: #1e293b; line-height: 1.4; text-align: left; background: #f8fafc; padding: 7px 10px; border-radius: 6px; border-left: 3px solid #3b82f6;">
+            <b style="font-size: 12.5px; color: #1d4ed8;">বাংলাদেশের স্মার্ট ডিজিটাল আয়ের প্ল্যাটফর্ম</b><br>
+            আজই আপনার সফলতার যাত্রা শুরু করুন! 
+            💼 ঘরে বসে কাজ করুন | 💰 প্রতিদিন আয়ের সুযোগ | 🎯 ফ্রি ট্রেনিং | 🚀 আজই যোগ দিন
         </div>
 
-        <div style="font-family: 'Poppins', sans-serif;">
-            <p style="margin: 0 0 12px 0; font-size: 13px; color: #334155; line-height: 1.6; text-align: left; white-space: normal; font-weight: 500;">
-                🚀 <b>শিখুন | আয় করুন | বৃদ্ধি করুন</b><br>
-                আমাদের প্ল্যাটফর্মে আপনাকে স্বাগতম! আপনার সফল ক্যারিয়ার গাইডলাইনের জন্য আজই জয়েন করুন আমাদের স্পেশাল লাইভ সেশনে।<br><br>
-
-                📅 <b>মেগা লাইভ মিটিং আপডেট:</b><br>
-                ⏰ <b>সময়:</b> আজ রাত <b>০৯:০০ ঘটিকায়</b><br>
-                📍 <b>মাধ্যম:</b> জুম (Zoom App) / গুগল মিট<br>
-                💡 <b>আজকের আলোচনার বিষয়:</b> ঘরে বসে মোবাইল দিয়ে ফ্রিল্যান্সিং ও সহজে ইনকাম শুরু করার ১০০% কার্যকরী উপায়।<br><br>
-
-
-
-                📌 <b>বিশেষ সুবিধা ও বোনাস:</b><br>
-                🎁 মিটিংয়ে লাইভ অংশ নিলেই পাচ্ছেন ১টি <b>ফ্রি প্রিমিয়াম কোর্স!</b><br>
-                🤝 ২৪/৭ ঘন্টা লাইভ সাপোর্ট টিম সুবিধা।<br>
-                🎯 সরাসরি টপ ফ্রিল্যান্সারদের সাথে কথা বলার সুযোগ।<br><br>
-
-                🔔 <i>নোট: মিটিং শুরুর ১৫ মিনিট আগে টেলিগ্রাম চ্যানেলে লিংক দেওয়া হবে। সিট সংখ্যা সীমিত, তাই সঠিক সময়ে যুক্ত হোন!</i>
-            </p>
-
-            <a href="https://t.me/Aypoth_Official 
-            " target="_blank" style="display: block; text-align: center; background: linear-gradient(135deg, #0088cc 0%, #00a8ff 100%); color: white; text-decoration: none; padding: 12px; border-radius: 10px; font-size: 14px; font-weight: 700; margin-top: 15px; box-shadow: 0 4px 12px rgba(0, 136, 204, 0.3); transition: 0.2s;">
-                <i class="fab fa-telegram-plane" style="margin-right: 5px;"></i> টেলিগ্রামে লিংক পান
-            </a>
+        <!-- অপশন–২ (মার্কেটিং স্টাইল) -->
+        <div style="margin: 0 0 8px 0; font-size: 11.5px; color: #1e293b; line-height: 1.4; text-align: left; background: #fdf2f8; padding: 7px 10px; border-radius: 6px; border-left: 3px solid #db2777;">
+            <b style="font-size: 12.5px; color: #be185d;">স্বপ্ন নয়, এবার বাস্তব আয়!</b><br>
+            আজই EarnFlow পরিবারের সদস্য হোন<br>
+            ✅ ফ্রি গাইডলাইন | ✅ লাইভ সাপোর্ট | ✅ টিমওয়ার্ক | ✅ দ্রুত আয়ের সুযোগ
         </div>
+
+        <!-- অপশন–৩ (সবচেয়ে আকর্ষণীয়) -->
+        <div style="margin: 0 0 10px 0; font-size: 11.5px; color: #1e293b; line-height: 1.4; text-align: left; background: #fefce8; padding: 7px 10px; border-radius: 6px; border-left: 3px solid #ca8a04;">
+            <b style="font-size: 12.5px; color: #a16207;">আপনার সফলতার নতুন ঠিকানা - EarnFlow</b><br>
+            📈 শিখুন • কাজ করুন • আয় করুন | 🔥 সীমিত সময়ের সুযোগ | 🎁 নতুনদের এক্সক্লুসিভ সুবিধা
+        </div>
+
+        <a href="https://t.me/+YMYWFTsebDI4Y2Q1" target="_blank" style="display: block; text-align: center; background: linear-gradient(135deg, #0088cc 0%, #00a8ff 100%); color: white; text-decoration: none; padding: 9px; border-radius: 6px; font-size: 12.5px; font-weight: 700; margin-top: 8px; box-shadow: 0 3px 8px rgba(0, 136, 204, 0.3);">
+            <i class="fab fa-telegram-plane" style="margin-right: 5px;"></i> টেলিগ্রামে লিংক পান
+        </a>
     </div>
 </div>
-
+</div>
 
 <style>
     @keyframes popupScale {
