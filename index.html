@@ -3931,6 +3931,20 @@ function togglePassword() {
         </div>
         <button class="card-btn" style="background: linear-gradient(135deg, #f09433, #dc2743, #bc1888);">বিক্রি করুন &rarr;</button>
     </div>
+    <!-- টেলিগ্রাম সেল -->
+    <div class="service-card" onclick="handleTelegramSellClick()">
+        <div class="icon-circle" style="background: linear-gradient(135deg, #2aabee, #229ed9);">
+            <!-- টেলিগ্রামের লোগো (svg) -->
+            <svg viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.26.26-.534.26l.213-3.053 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.654-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/></svg>
+        </div>
+        <div class="card-content">
+            <h3>টেলিগ্রাম সেল</h3>
+            <p>টেলিগ্রাম একাউন্ট বা চ্যানেল সেল করুন</p>
+        </div>
+        <button class="card-btn" style="background: linear-gradient(135deg, #2aabee, #229ed9);">বিক্রি করুন &rarr;</button>
+    </div>
+    
+    
 <!-- হোয়াটসঅ্যাপ সেল -->
     <div class="service-card" onclick="handleWhatsAppSellClick()">
         <div class="icon-circle" style="background: linear-gradient(135deg, #25d366, #128c7e);">
@@ -4076,18 +4090,6 @@ function togglePassword() {
             <p>রিলস ও শর্টস ভিডিও এডিট</p>
         </div>
         <button class="card-btn" style="background: linear-gradient(135deg, #ee0979, #ff6a00);">শুরু করুন &rarr;</button>
-    </div>
-<!-- অ্যাডস ক্যাম্পেইন সার্ভিস -->
-    <div class="service-card" onclick="handleAdsCampaignClick()">
-        <div class="icon-circle" style="background: linear-gradient(135deg, #ff416c, #ff4b2b);">
-            <!-- মেগাফোন / প্রমোশন লোগো (svg) -->
-            <svg viewBox="0 0 24 24"><path d="M18 11v2h4v-2h-4zm-2 6.11c.96.59 1.86 1.3 2.67 2.11l1.41-1.41c-.91-.9-1.93-1.67-3.04-2.28l-1.04 1.58zM18 5.89c.96-.59 1.86-1.3 2.67-2.11l1.41 1.41c-.91.9-1.93 1.67-3.04 2.28l-1.04-1.58zM4 9c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h1l4 3V6L5 9H4zm11-.5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-5z"/></svg>
-        </div>
-        <div class="card-content">
-            <h3>অ্যাডস্ ক্যাম্পেইন</h3>
-            <p>ফেসবুক ও গুগল বিজ্ঞাপন কাজ</p>
-        </div>
-        <button class="card-btn" style="background: linear-gradient(135deg, #ff416c, #ff4b2b);">শুরু করুন &rarr;</button>
     </div>
 </div>
 
@@ -13244,6 +13246,12 @@ function handleGmailSellClick() {
 function handleInstagramSellClick() {
     checkAndOpenPage('p-instagram-sell', 'ইনস্টাগ্রাম সেল');
 }
+
+// ৩. টেলিগ্রাম সেল
+function handleTelegramSellClick() {
+    checkAndOpenPage('p-telegram-sell', 'টেলিগ্রাম সেল');
+}
+
 
 // ৪. হোয়াটসঅ্যাপ সেল
 function handleWhatsAppSellClick() {
