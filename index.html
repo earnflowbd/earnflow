@@ -3891,6 +3891,9 @@ function togglePassword() {
     <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px 0; text-align: center; width: 100%;">
         
 
+    <div class="section-header" style="grid-column: span 4; margin-bottom: 10px; text-align: left;">
+        <h2 style="font-size: 24px; font-weight: bold; color: #333; border-left: 4px solid #1877f2; padding-left: 10px; margin: 0;">বিশেষ আয় 🎉</h2>
+    </div>
 
 <div class="service-card" onclick="handleFbCreateClick()">
     <div class="icon-circle" style="background: linear-gradient(135deg, #1877f2, #0d5db8);">
@@ -3956,7 +3959,7 @@ function togglePassword() {
     </div>
     <button class="card-btn" style="background: linear-gradient(135deg, #25d366, #128c7e);">বিক্রি করুন &rarr;</button>
 </div>
-    <!-- ১. মাইক্রো জব -->
+        <!-- ১. মাইক্রো জব -->
     <div class="service-card" onclick="handleMicroJobClick()">
         <div class="icon-circle" style="background: linear-gradient(135deg, #00b4db, #0083b0);">
             <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
@@ -3968,7 +3971,197 @@ function togglePassword() {
         <button class="card-btn" style="background: linear-gradient(135deg, #00b4db, #0083b0);">শুরু করুন &rarr;</button>
     </div>
 
-    <!-- ৪. জব পোস্ট -->
+
+<!-- রিসেলিং করুন -->
+    <div class="service-card" onclick="handleResellingClick()">
+        <div class="icon-circle" style="background: linear-gradient(135deg, #f7971e, #ffd200);">
+            <!-- শপিং ব্যাগ / রিসেলিং লোগো (svg) -->
+            <svg viewBox="0 0 24 24"><path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"/></svg>
+        </div>
+        <div class="card-content">
+            <h3>রিসেলিং করুন</h3>
+            <p>পণ্যের রিসেলিং করে আয়</p>
+        </div>
+        <button class="card-btn" style="background: linear-gradient(135deg, #f7971e, #ffd200); color: #333333;">শুরু করুন &rarr;</button>
+    </div>
+
+<!-- ভেন্ডরশীপ নিন -->
+    <div class="service-card" onclick="handleVendorshipClick()">
+        <div class="icon-circle" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
+            <!-- শপ / ভেন্ডর লোগো (svg) -->
+            <svg viewBox="0 0 24 24"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"/></svg>
+        </div>
+        <div class="card-content">
+            <h3>ভেন্ডরশীপ নিন</h3>
+            <p>ভেন্ডর হয়ে ব্যবসা করুন</p>
+        </div>
+        <button class="card-btn" style="background: linear-gradient(135deg, #11998e, #38ef7d);">আবেদন করুন &rarr;</button>
+    </div>
+
+    <div class="section-header" style="grid-column: span 4; margin-bottom: 10px; text-align: left;">
+        <h2 style="font-size: 24px; font-weight: bold; color: #333; border-left: 4px solid #1877f2; padding-left: 10px; margin: 0;">সার্ভিস সমুহ 🎊</h2>
+    </div>
+
+
+
+<!-- ফেসবুক পেজ সার্ভিস -->
+<div class="service-card" onclick="handleSocialServiceClick()">
+    <div class="icon-circle" style="background: linear-gradient(135deg, #00c6ff, #0072ff);">
+        <!-- থাম্বস আপ / পেজ লাইক লোগো (svg) -->
+        <svg viewBox="0 0 24 24"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>
+    </div>
+    <div class="card-content">
+        <h3>পেজ ফলোয়ার সার্ভিস</h3>
+        <p>লাইক ও ফলোয়ার বাড়িয়ে নিন</p>
+    </div>
+    <button class="card-btn" style="background: linear-gradient(135deg, #00c6ff, #0072ff);">কাজ করুন &rarr;</button>
+</div>
+
+<!-- গ্রাফিক্স ডিজাইন -->
+<div class="service-card" onclick="handleGraphicsDesignClick()">
+    <div class="icon-circle" style="background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);">
+        <!-- পেন্ট ব্রাশ / ডিজাইন লোগো (svg) -->
+        <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 20.1c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l2.49-2.49C9.93 19.26 10.92 19.5 12 19.5c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+    </div>
+    <div class="card-content">
+        <h3>গ্রাফিক্স ডিজাইন</h3>
+        <p>লোগো ও ব্যানার ডিজাইন কাজ</p>
+    </div>
+    <button class="card-btn" style="background: linear-gradient(135deg, #833ab4, #fd1d1d);">শুরু করুন &rarr;</button>
+</div>
+
+<!-- ডাটা এন্ট্রি -->
+<div class="service-card" onclick="handleDataEntryClick()">
+    <div class="icon-circle" style="background: linear-gradient(135deg, #3a7bd5, #3a6073);">
+        <!-- ডকুমেন্ট / ডাটা এন্ট্রি লোগো (svg) -->
+        <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+    </div>
+    <div class="card-content">
+        <h3>ডাটা এন্ট্রি জব</h3>
+        <p>টাইপিং ও কপি-পেস্ট কাজ</p>
+    </div>
+    <button class="card-btn" style="background: linear-gradient(135deg, #3a7bd5, #3a6073);">কাজ নিন &rarr;</button>
+</div>
+
+<!-- গেম টপ-আপ -->
+<div class="service-card" onclick="handleGameTopUpClick()">
+    <div class="icon-circle" style="background: linear-gradient(135deg, #ff416c, #ff4b2b);">
+        <!-- গেম প্যাড লোগো (svg) -->
+        <svg viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 9 18.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+    </div>
+    <div class="card-content">
+        <h3>গেম টপ-আপ</h3>
+        <p>ডায়মন্ড ও ইউসি সেল করুন</p>
+    </div>
+    <button class="card-btn" style="background: linear-gradient(135deg, #ff416c, #ff4b2b);">টপ-আপ &rarr;</button>
+</div>
+
+<div class="section-header" style="grid-column: span 4; margin-bottom: 10px; text-align: left;">
+    <h2 style="font-size: 24px; font-weight: bold; color: #333; border-left: 4px solid #1877f2; padding-left: 10px; margin: 0;">টার্গেট বোনাস 🎁</h2>
+</div>
+
+<!-- ১. টার্গেট বোনাস -->
+<div class="service-card" onclick="handleBonusClick('target')">
+    <div class="icon-circle" style="background: linear-gradient(135deg, #8a2be2, #4b0082);">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z"/></svg>
+    </div>
+    <div class="card-content">
+        <h3>টার্গেট বোনাস</h3>
+        <p>আপনার টার্গেট পূরণ করে বোনাস অর্জন করুন</p>
+    </div>
+    <button class="card-btn" style="background: linear-gradient(135deg, #8a2be2, #4b0082);">বিস্তারিত দেখুন &rarr;</button>
+</div>
+
+<!-- ২. দৈনিক -->
+<div class="service-card" onclick="handleBonusClick('daily')">
+    <div class="icon-circle" style="background: linear-gradient(135deg, #00b09b, #96c93d);">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+    </div>
+    <div class="card-content">
+        <h3>দৈনিক</h3>
+        <p>প্রতিদিনের টার্গেট পূরণ করে দৈনিক বোনাস পান</p>
+    </div>
+    <button class="card-btn" style="background: linear-gradient(135deg, #00b09b, #96c93d);">বিস্তারিত দেখুন &rarr;</button>
+</div>
+
+<!-- ৩. সাপ্তাহিক -->
+<div class="service-card" onclick="handleBonusClick('weekly')">
+    <div class="icon-circle" style="background: linear-gradient(135deg, #2193b0, #6dd5ed);">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+    </div>
+    <div class="card-content">
+        <h3>সাপ্তাহিক</h3>
+        <p>সাপ্তাহিক টার্গেট পূরণ করে সাপ্তাহিক বোনাস নিন</p>
+    </div>
+    <button class="card-btn" style="background: linear-gradient(135deg, #2193b0, #6dd5ed);">বিস্তারিত দেখুন &rarr;</button>
+</div>
+
+<!-- ৪. মাসিক -->
+<div class="service-card" onclick="handleBonusClick('monthly')">
+    <div class="icon-circle" style="background: linear-gradient(135deg, #f7971e, #ffd200);">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+    </div>
+    <div class="card-content">
+        <h3>মাসিক</h3>
+        <p>মাসিক টার্গেট পূরণ করে মাসিক বোনাস পান</p>
+    </div>
+    <button class="card-btn" style="background: linear-gradient(135deg, #f7971e, #ffd200);">বিস্তারিত দেখুন &rarr;</button>
+</div>
+
+<!-- ৫. বার্ষিক -->
+<div class="service-card" onclick="handleBonusClick('yearly')">
+    <div class="icon-circle" style="background: linear-gradient(135deg, #ff416c, #ff4b2b);">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+    </div>
+    <div class="card-content">
+        <h3>বার্ষিক</h3>
+        <p>বার্ষিক টার্গেট পূরণ করে বার্ষিক বোনাস নিন</p>
+    </div>
+    <button class="card-btn" style="background: linear-gradient(135deg, #ff416c, #ff4b2b);">বিস্তারিত দেখুন &rarr;</button>
+</div>
+
+<!-- ৬. আজীবন -->
+<div class="service-card" onclick="handleBonusClick('lifetime')">
+    <div class="icon-circle" style="background: linear-gradient(135deg, #7f00ff, #e100ff);">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+    </div>
+    <div class="card-content">
+        <h3>আজীবন</h3>
+        <p>আজীবন টার্গেট পূরণ করে বড় বোনাস অর্জন করুন</p>
+    </div>
+    <button class="card-btn" style="background: linear-gradient(135deg, #7f00ff, #e100ff);">বিস্তারিত দেখুন &rarr;</button>
+</div>
+
+<!-- ১. র‍্যাংক -->
+<div class="service-card" onclick="handleIncomeClick('rank')">
+    <div class="icon-circle" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-3.001v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg>
+    </div>
+    <div class="card-content">
+        <h3>র‍্যাংক</h3>
+        <p>সেরা পারফর্মারে নিজের লিডারবোর্ড অবস্থান দেখুন</p>
+    </div>
+    <button class="card-btn" style="background: linear-gradient(135deg, #11998e, #38ef7d);">বিস্তারিত দেখুন &rarr;</button>
+</div>
+
+<!-- ২. ওয়েলকাম অফার -->
+<div class="service-card" onclick="handleIncomeClick('welcome')">
+    <div class="icon-circle" style="background: linear-gradient(135deg, #f2994a, #f2c94c);">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/></svg>
+    </div>
+    <div class="card-content">
+        <h3>ওয়েলকাম অফার</h3>
+        <p>নতুন সদস্যদের জন্য বিশেষ ওয়েলকাম বোনাস</p>
+    </div>
+    <button class="card-btn" style="background: linear-gradient(135deg, #f2994a, #f2c94c);">বিস্তারিত দেখুন &rarr;</button>
+</div>
+
+
+    <div class="section-header" style="grid-column: span 4; margin-bottom: 10px; text-align: left;">
+        <h2 style="font-size: 24px; font-weight: bold; color: #333; border-left: 4px solid #1877f2; padding-left: 10px; margin: 0;"> অন্যান্য প্রজেক্ট 🎉</h2>
+    </div>
+        
+        <!-- ৪. জব পোস্ট -->
     <div class="service-card" onclick="handleJobPostClick()">
         <div class="icon-circle" style="background: linear-gradient(135deg, #56ab2f, #a8e063);">
             <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
@@ -3979,20 +4172,9 @@ function togglePassword() {
         </div>
         <button class="card-btn" style="background: linear-gradient(135deg, #56ab2f, #a8e063);">পোস্ট করুন &rarr;</button>
     </div>
-        <!-- ফেসবুক পেজ সার্ভিস -->
-    <div class="service-card" onclick="handleSocialServiceClick()">
-        <div class="icon-circle" style="background: linear-gradient(135deg, #00c6ff, #0072ff);">
-            <!-- থাম্বস আপ / পেজ লাইক লোগো (svg) -->
-            <svg viewBox="0 0 24 24"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>
-        </div>
-        <div class="card-content">
-            <h3>পেজ ফলোয়ার সার্ভিস</h3>
-            <p>লাইক ও ফলোয়ার বাড়িয়ে নিন</p>
-        </div>
-        <button class="card-btn" style="background: linear-gradient(135deg, #00c6ff, #0072ff);">কাজ করুন &rarr;</button>
-    </div>
+
     
-        <!-- কনটেন্ট রাইটিং সার্ভিস -->
+            <!-- কনটেন্ট রাইটিং সার্ভিস -->
     <div class="service-card" onclick="handleInvestClick()">
         <div class="icon-circle" style="background: linear-gradient(135deg, #f857a6, #ff5858);">
             <!-- পেন / রাইটিং লোগো (svg) -->
@@ -4023,70 +4205,10 @@ function togglePassword() {
     </div>
     
     
-    
-<!-- রিসেলিং করুন -->
-    <div class="service-card" onclick="handleResellingClick()">
-        <div class="icon-circle" style="background: linear-gradient(135deg, #f7971e, #ffd200);">
-            <!-- শপিং ব্যাগ / রিসেলিং লোগো (svg) -->
-            <svg viewBox="0 0 24 24"><path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"/></svg>
-        </div>
-        <div class="card-content">
-            <h3>রিসেলিং করুন</h3>
-            <p>পণ্যের রিসেলিং করে আয়</p>
-        </div>
-        <button class="card-btn" style="background: linear-gradient(135deg, #f7971e, #ffd200); color: #333333;">শুরু করুন &rarr;</button>
-    </div>
 
-<!-- ভেন্ডরশীপ নিন -->
-    <div class="service-card" onclick="handleVendorshipClick()">
-        <div class="icon-circle" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
-            <!-- শপ / ভেন্ডর লোগো (svg) -->
-            <svg viewBox="0 0 24 24"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"/></svg>
-        </div>
-        <div class="card-content">
-            <h3>ভেন্ডরশীপ নিন</h3>
-            <p>ভেন্ডর হয়ে ব্যবসা করুন</p>
-        </div>
-        <button class="card-btn" style="background: linear-gradient(135deg, #11998e, #38ef7d);">আবেদন করুন &rarr;</button>
-    </div>
     
 
-    <!-- গ্রাফিক্স ডিজাইন -->
-    <div class="service-card" onclick="handleGraphicsDesignClick()">
-        <div class="icon-circle" style="background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);">
-            <!-- পেন্ট ব্রাশ / ডিজাইন লোগো (svg) -->
-            <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 20.1c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l2.49-2.49C9.93 19.26 10.92 19.5 12 19.5c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
-        </div>
-        <div class="card-content">
-            <h3>গ্রাফিক্স ডিজাইন</h3>
-            <p>লোগো ও ব্যানার ডিজাইন কাজ</p>
-        </div>
-        <button class="card-btn" style="background: linear-gradient(135deg, #833ab4, #fd1d1d);">শুরু করুন &rarr;</button>
-    </div>
-    <!-- ডাটা এন্ট্রি -->
-    <div class="service-card" onclick="handleDataEntryClick()">
-        <div class="icon-circle" style="background: linear-gradient(135deg, #3a7bd5, #3a6073);">
-            <!-- ডকুমেন্ট / ডাটা এন্ট্রি লোগো (svg) -->
-            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-        </div>
-        <div class="card-content">
-            <h3>ডাটা এন্ট্রি জব</h3>
-            <p>টাইপিং ও কপি-পেস্ট কাজ</p>
-        </div>
-        <button class="card-btn" style="background: linear-gradient(135deg, #3a7bd5, #3a6073);">কাজ নিন &rarr;</button>
-    </div>
-    <!-- গেম টপ-আপ -->
-    <div class="service-card" onclick="handleGameTopUpClick()">
-        <div class="icon-circle" style="background: linear-gradient(135deg, #ff416c, #ff4b2b);">
-            <!-- গেম প্যাড লোগো (svg) -->
-            <svg viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 9 18.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
-        </div>
-        <div class="card-content">
-            <h3>গেম টপ-আপ</h3>
-            <p>ডায়মন্ড ও ইউসি সেল করুন</p>
-        </div>
-        <button class="card-btn" style="background: linear-gradient(135deg, #ff416c, #ff4b2b);">টপ-আপ &rarr;</button>
-    </div>
+
     <!-- ভিডিও এডিটিং সার্ভিস -->
     <div class="service-card" onclick="handleMoreOptionsClick()">
         <div class="icon-circle" style="background: linear-gradient(135deg, #ee0979, #ff6a00);">
