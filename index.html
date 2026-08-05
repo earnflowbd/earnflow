@@ -17071,7 +17071,63 @@ function contactForWeb(serviceName) {
     window.open(telegramUrl, '_blank');
 }
 
+// বোনাস কার্ডগুলোর জন্য ফাংশন
+function handleBonusClick(type) {
+    checkAccountStatus(() => {
+        // অ্যাকাউন্ট একটিভ থাকলে এই মেসেজ দেখাবে
+        Swal.fire({
+            title: 'আপডেট চলছে!',
+            text: 'অতি শীঘ্রই চালু করা হবে। ধন্যবাদ!',
+            icon: 'info',
+            confirmButtonText: 'ঠিক আছে',
+            confirmButtonColor: '#1e3a8a',
+            background: '#fff',
+            borderRadius: '20px'
+        });
+    });
+}
 
+// ইনকাম বা অন্যান্য কার্ডগুলোর জন্য ফাংশন
+function handleIncomeClick(type) {
+    checkAccountStatus(() => {
+        // অ্যাকাউন্ট একটিভ থাকলে এই মেসেজ দেখাবে
+        Swal.fire({
+            title: 'আপডেট চলছে!',
+            text: 'অতি শীঘ্রই চালু করা হবে। ধন্যবাদ!',
+            icon: 'info',
+            confirmButtonText: 'ঠিক আছে',
+            confirmButtonColor: '#1e3a8a',
+            background: '#fff',
+            borderRadius: '20px'
+        });
+    });
+}
+
+// কমন স্ট্যাটাস চেকার ফাংশন
+function checkAccountStatus(callback) {
+    if (typeof curUser === 'undefined' || curUser.status !== 'active') {
+        // একাউন্ট একটিভ না থাকলে ভেরিফাই পপআপ আসবে
+        Swal.fire({
+            title: 'অ্যাকাউন্ট অ্যাক্টিভ করুন!',
+            text: 'এই ফিচারটি ব্যবহার করতে হলে আপনার অ্যাকাউন্টটি আগে অ্যাক্টিভ করা প্রয়োজন।',
+            icon: 'info',
+            showCancelButton: true,
+            confirmButtonText: 'এখনই করুন',
+            cancelButtonText: 'পরে করবো',
+            confirmButtonColor: '#1e3a8a',
+            cancelButtonColor: '#6c757d',
+            background: '#fff',
+            borderRadius: '20px'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                openPage('p-fund'); 
+            }
+        });
+    } else {
+        // একাউন্ট একটিভ থাকলে নির্দিষ্ট কাজটি করবে
+        callback();
+    }
+}
 </script>
 
 </body>
