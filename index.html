@@ -13809,10 +13809,8 @@ function loadTeamData() {
     }
 }
 
-// পেজ ওপেন হওয়ার সময় ডাটা লোড হবে
-document.addEventListener('DOMContentLoaded', loadTeamData);
 
-function renderTeam() {
+  function renderTeam() {
     if (!curUser || !curUser.referCode) {
         const savedEmail = localStorage.getItem('v7_logged_email');
         curUser = db.users.find(u => u.email === savedEmail);
@@ -13825,22 +13823,13 @@ function renderTeam() {
         document.getElementById('referCode').innerText = myReferCode;
     }
 
-    let generations = [[], [], [], [], []]; 
+    // --- ১মে শুধু ১ম জেনারেশন (Direct Members) ফিল্টার ---
+    const level1Members = db.users.filter(u => u.referredBy === myReferCode);
 
-    function getFullDownline(codes, level) {
-        if (level >= 5 || codes.length === 0) return;
-        let levelMembers = db.users.filter(u => codes.includes(u.referredBy));
-        generations[level] = levelMembers;
-        let nextLevelCodes = levelMembers.map(m => m.referCode);
-        getFullDownline(nextLevelCodes, level + 1);
-    }
-
-    getFullDownline([myReferCode], 0);
-
-    // --- টোটাল নেটওয়ার্ক ক্যালকুলেশন ---
-    const allMembers = generations.flat(); // ৫ লেভেলের সব মেম্বারকে একসাথে করা
-    const totalNetwork = allMembers.length;
-    const totalActive = allMembers.filter(u => u.status === 'active').length;
+    // ১মে জেনারেশনের টোটাল, এক্টিভ ও ইনঅ্যাক্টিভ হিসাব
+    const totalNetwork = level1Members.length;
+    const totalActive = level1Members.filter(u => u.status === 'active').length;
+    const totalInactive = totalNetwork - totalActive;
 
     container.innerHTML = "";
 
@@ -13850,8 +13839,8 @@ function renderTeam() {
             <div style="position: absolute; top: -10px; right: -10px; width: 80px; height: 80px; background: #ffb800; opacity: 0.1; border-radius: 50%;"></div>
             
             <div style="position: relative; z-index: 1;">
-                <p style="margin: 0; font-size: 11px; font-weight: 800; color: #ffb800; text-transform: uppercase; letter-spacing: 1.5px;">My Network Statistics</p>
-                <h2 style="margin: 8px 0; font-size: 30px; font-weight: 900;">${totalNetwork} <small style="font-size: 14px; color: #aaa; font-weight: 600;">Total Users</small></h2>
+                <p style="margin: 0; font-size: 11px; font-weight: 800; color: #ffb800; text-transform: uppercase; letter-spacing: 1.5px;">My Direct Network</p>
+                <h2 style="margin: 8px 0; font-size: 30px; font-weight: 900;">${totalNetwork} <small style="font-size: 14px; color: #aaa; font-weight: 600;">Direct Users</small></h2>
                 
                 <div style="display: flex; gap: 12px; margin-top: 15px;">
                     <div style="background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 12px; border-left: 3px solid #00b894;">
@@ -13860,78 +13849,73 @@ function renderTeam() {
                     </div>
                     <div style="background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 12px; border-left: 3px solid #ff4757;">
                         <span style="font-size: 10px; color: #ff4757; display: block; font-weight: 800;">INACTIVE</span>
-                        <span style="font-size: 16px; font-weight: 900;">${totalNetwork - totalActive}</span>
+                        <span style="font-size: 16px; font-weight: 900;">${totalInactive}</span>
                     </div>
                 </div>
             </div>
         </div>
         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px; margin-left: 5px;">
             <div style="width: 4px; height: 18px; background: #ff0000; border-radius: 10px;"></div>
-            <h4 style="margin: 0; color: #2d3436; font-weight: 900; font-size: 14px; text-transform: uppercase;">Team Breakdown</h4>
+            <h4 style="margin: 0; color: #2d3436; font-weight: 900; font-size: 14px; text-transform: uppercase;">Direct Team Breakdown</h4>
         </div>
     `;
 
-    // ২. আপনার দেওয়া অরিজিনাল জেনারেশন কার্ড ডিজাইন
-    generations.forEach((gen, index) => {
-        const activeCount = gen.filter(u => u.status === 'active').length;
-        const inactiveCount = gen.length - activeCount;
+    // ২. শুধুমাত্র ১ম জেনারেশন (Level 1) কার্ড
+    const mainGradient = 'linear-gradient(135deg, #ff0000 0%, #d63031 100%)'; 
+    const lightBg = '#fff5f5';
+    const accentColor = '#ff0000';
 
-        const isEven = index % 2 === 0;
-        const mainGradient = isEven 
-            ? 'linear-gradient(135deg, #ff0000 0%, #d63031 100%)' 
-            : 'linear-gradient(135deg, #f1c40f 0%, #f39c12 100%)'; 
-        const lightBg = isEven ? '#fff5f5' : '#fffdf0';
-        const accentColor = isEven ? '#ff0000' : '#f39c12';
-
-        container.innerHTML += `
-            <div style="background: #ffffff; border-radius: 24px; padding: 20px; margin-bottom: 18px; border: 1px solid ${isEven ? '#ffe5e5' : '#fff4cc'}; box-shadow: 0 10px 25px rgba(0,0,0,0.05); position: relative; overflow: hidden; transition: transform 0.3s ease;">
-                
-                <!-- গ্লোসি ইফেক্ট -->
-                <div style="position: absolute; top: -20px; right: -20px; width: 80px; height: 80px; background: ${mainGradient}; opacity: 0.08; border-radius: 50%;"></div>
-                
-                <!-- Top Section -->
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <div style="width: 50px; height: 50px; background: ${mainGradient}; border-radius: 16px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 15px rgba(255, 0, 0, 0.15); border: 2px solid #ffffff;">
-                            <i class="fas fa-layer-group" style="color: white; font-size: 20px;"></i>
-                        </div>
-                        <div>
-                            <h3 style="margin: 0; font-size: 16px; font-weight: 900; color: #2d3436; letter-spacing: 0.5px;">Level ${index + 1}</h3>
-                            <div style="display: flex; align-items: center; gap: 5px; margin-top: 2px;">
-                                <div style="width: 6px; height: 6px; background: ${accentColor}; border-radius: 50%;"></div>
-                                <p style="margin: 0; font-size: 11px; color: #636e72; font-weight: 600; text-transform: uppercase;">Generation</p>
-                            </div>
-                        </div>
+    container.innerHTML += `
+        <div style="background: #ffffff; border-radius: 24px; padding: 20px; margin-bottom: 18px; border: 1px solid #ffe5e5; box-shadow: 0 10px 25px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
+            
+            <!-- গ্লোসি ইফেক্ট -->
+            <div style="position: absolute; top: -20px; right: -20px; width: 80px; height: 80px; background: ${mainGradient}; opacity: 0.08; border-radius: 50%;"></div>
+            
+            <!-- Top Section -->
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div style="width: 50px; height: 50px; background: ${mainGradient}; border-radius: 16px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 15px rgba(255, 0, 0, 0.15); border: 2px solid #ffffff;">
+                        <i class="fas fa-layer-group" style="color: white; font-size: 20px;"></i>
                     </div>
-
-                    <!-- Status Badges -->
-                    <div style="display: flex; flex-direction: column; gap: 5px;">
-                        <span style="font-size: 10px; font-weight: 800; color: #00b894; background: #e6fffb; padding: 4px 12px; border-radius: 8px; border: 1px solid #b7eb8f; display: flex; align-items: center; gap: 4px;">
-                            <i class="fas fa-check-circle" style="font-size: 8px;"></i> ${activeCount} Active
-                        </span>
-                        <span style="font-size: 10px; font-weight: 800; color: #ff4757; background: #fff5f5; padding: 4px 12px; border-radius: 8px; border: 1px solid #fab1a0; display: flex; align-items: center; gap: 4px;">
-                            <i class="fas fa-times-circle" style="font-size: 8px;"></i> ${inactiveCount} Inactive
-                        </span>
+                    <div>
+                        <h3 style="margin: 0; font-size: 16px; font-weight: 900; color: #2d3436; letter-spacing: 0.5px;">Level 1</h3>
+                        <div style="display: flex; align-items: center; gap: 5px; margin-top: 2px;">
+                            <div style="width: 6px; height: 6px; background: ${accentColor}; border-radius: 50%;"></div>
+                            <p style="margin: 0; font-size: 11px; color: #636e72; font-weight: 600; text-transform: uppercase;">Direct Generation</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Middle Stats Box -->
-                <div style="background: ${lightBg}; border-radius: 15px; padding: 15px; margin-top: 18px; display: flex; justify-content: space-between; align-items: center; border: 1px dashed ${isEven ? '#ff000033' : '#f39c1233'};">
-                    <div style="display: flex; align-items: center; gap: 8px;">
-                        <i class="fas fa-users" style="color: ${accentColor}; font-size: 14px;"></i>
-                        <span style="font-size: 14px; color: #2d3436; font-weight: 800;">Total Member: ${gen.length}</span>
-                    </div>
-                    
-                    <button onclick="showGenList(${index})" style="background: ${mainGradient}; color: white; border: none; padding: 8px 18px; border-radius: 12px; font-weight: 800; font-size: 11px; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px ${isEven ? 'rgba(255,0,0,0.2)' : 'rgba(243,156,18,0.2)'}; transition: 0.3s; text-transform: uppercase;">
-                        Details <i class="fas fa-arrow-right" style="font-size: 10px;"></i>
-                    </button>
+                <!-- Status Badges -->
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <span style="font-size: 10px; font-weight: 800; color: #00b894; background: #e6fffb; padding: 4px 12px; border-radius: 8px; border: 1px solid #b7eb8f; display: flex; align-items: center; gap: 4px;">
+                        <i class="fas fa-check-circle" style="font-size: 8px;"></i> ${totalActive} Active
+                    </span>
+                    <span style="font-size: 10px; font-weight: 800; color: #ff4757; background: #fff5f5; padding: 4px 12px; border-radius: 8px; border: 1px solid #fab1a0; display: flex; align-items: center; gap: 4px;">
+                        <i class="fas fa-times-circle" style="font-size: 8px;"></i> ${totalInactive} Inactive
+                    </span>
                 </div>
             </div>
-        `;
-    });
 
-    window.currentGenData = generations;
+            <!-- Middle Stats Box -->
+            <div style="background: ${lightBg}; border-radius: 15px; padding: 15px; margin-top: 18px; display: flex; justify-content: space-between; align-items: center; border: 1px dashed #ff000033;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-users" style="color: ${accentColor}; font-size: 14px;"></i>
+                    <span style="font-size: 14px; color: #2d3436; font-weight: 800;">Total Member: ${level1Members.length}</span>
+                </div>
+                
+                <button onclick="showGenList(0)" style="background: ${mainGradient}; color: white; border: none; padding: 8px 18px; border-radius: 12px; font-weight: 800; font-size: 11px; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(255,0,0,0.2); transition: 0.3s; text-transform: uppercase;">
+                    Details <i class="fas fa-arrow-right" style="font-size: 10px;"></i>
+                </button>
+            </div>
+        </div>
+    `;
+
+    // popup Modal বা SweetAlert এ দেখানোর জন্য Array-তে ডাটা স্টোর রাখা
+    window.currentGenData = [level1Members];
 }
+// পেজ ওপেন হওয়ার সময় ডাটা লোড হবে
+document.addEventListener('DOMContentLoaded', loadTeamData);
 // এই ফাংশনটি বাদ পড়েছিল, এখন এটি যোগ করে নিন
 function showGenList(genIndex) {
     const members = window.currentGenData[genIndex];
