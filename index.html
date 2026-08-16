@@ -4004,19 +4004,19 @@ function togglePassword() {
 
 
 
-<!-- ফেসবুক পেজ সার্ভিস -->
-<div class="service-card" onclick="handleSocialServiceClick()">
-    <div class="icon-circle" style="background: linear-gradient(135deg, #00c6ff, #0072ff);">
-        <!-- থাম্বস আপ / পেজ লাইক লোগো (svg) -->
-        <svg viewBox="0 0 24 24"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>
-    </div>
-    <div class="card-content">
-        <h3>পেজ ফলোয়ার সার্ভিস</h3>
-        <p>লাইক ও ফলোয়ার বাড়িয়ে নিন</p>
-    </div>
-    <button class="card-btn" style="background: linear-gradient(135deg, #00c6ff, #0072ff);">কাজ করুন &rarr;</button>
-</div>
 
+
+      <!-- ৪. জব পোস্ট -->
+    <div class="service-card" onclick="handleJobPostClick()">
+        <div class="icon-circle" style="background: linear-gradient(135deg, #56ab2f, #a8e063);">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+        </div>
+        <div class="card-content">
+            <h3>জব পোস্ট</h3>
+            <p>আপনার জব পোস্ট করুন</p>
+        </div>
+        <button class="card-btn" style="background: linear-gradient(135deg, #56ab2f, #a8e063);">পোস্ট করুন &rarr;</button>
+    </div>
 <!-- গ্রাফিক্স ডিজাইন -->
 <div class="service-card" onclick="handleGraphicsDesignClick()">
     <div class="icon-circle" style="background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);">
@@ -4157,36 +4157,12 @@ function togglePassword() {
 </div>
 
 
-    <div class="section-header" style="grid-column: span 4; margin-bottom: 10px; text-align: left;">
-        <h2 style="font-size: 24px; font-weight: bold; color: #333; border-left: 4px solid #1877f2; padding-left: 10px; margin: 0;"> অন্যান্য প্রজেক্ট 🎉</h2>
-    </div>
+    
         
-        <!-- ৪. জব পোস্ট -->
-    <div class="service-card" onclick="handleJobPostClick()">
-        <div class="icon-circle" style="background: linear-gradient(135deg, #56ab2f, #a8e063);">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-        </div>
-        <div class="card-content">
-            <h3>জব পোস্ট</h3>
-            <p>আপনার জব পোস্ট করুন</p>
-        </div>
-        <button class="card-btn" style="background: linear-gradient(135deg, #56ab2f, #a8e063);">পোস্ট করুন &rarr;</button>
-    </div>
 
     
            
-    <!-- ভিডিও এডিটিং সার্ভিস -->
-    <div class="service-card" onclick="handleMoreOptionsClick()">
-        <div class="icon-circle" style="background: linear-gradient(135deg, #ee0979, #ff6a00);">
-            <!-- ভিডিও প্লে / এডিটিং লোগো (svg) -->
-            <svg viewBox="0 0 24 24"><path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4zM4 18V8h16v10H4z"/></svg>
-        </div>
-        <div class="card-content">
-            <h3>আরো দেখুন</h3>
-            <p>আরো প্রজেক্ট আনতে মতামত দিন</p>
-        </div>
-        <button class="card-btn" style="background: linear-gradient(135deg, #ee0979, #ff6a00);">মতামত দিন &rarr;</button>
-    </div>
+  
 </div>
 
 <style>
@@ -4443,14 +4419,14 @@ function togglePassword() {
                     <i class="fas fa-angle-right" style="font-size: 11px; color: #aaa;"></i>
                 </button>
 
-                <!-- ২. Deposit (Emerald Green Gradient) -->
-                <button class="custom-menu-btn" onclick="openPage('p-fund'); toggleSidebar()" style="display: flex; align-items: center; width: 100%; padding: 10px 10px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444;">
-                    <span class="icon-box" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(17,153,142,0.18); margin-right: 12px; flex-shrink: 0;">
-                        <i class="fas fa-plus-circle" style="font-size: 11px;"></i>
-                    </span> 
-                    <span style="flex: 1; text-align: left; font-size: 13px; letter-spacing: 0.2px;">ডিপোজিট করুন</span>
-                    <i class="fas fa-angle-right" style="font-size: 11px; color: #aaa;"></i>
-                </button>
+              <!-- ২. Deposit (Emerald Green Gradient) -->
+<button class="custom-menu-btn" onclick="openDepositPage(); toggleSidebar()" style="display: flex; align-items: center; width: 100%; padding: 10px 10px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444;">
+    <span class="icon-box" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(17,153,142,0.18); margin-right: 12px; flex-shrink: 0;">
+        <i class="fas fa-plus-circle" style="font-size: 11px;"></i>
+    </span> 
+    <span style="flex: 1; text-align: left; font-size: 13px; letter-spacing: 0.2px;">ডিপোজিট করুন</span>
+    <i class="fas fa-angle-right" style="font-size: 11px; color: #aaa;"></i>
+</button>
 
                 <!-- ৩. Withdraw (Sunset Orange Gradient) -->
                 <button class="custom-menu-btn" onclick="openPage('p-withdraw'); toggleSidebar()" style="display: flex; align-items: center; width: 100%; padding: 10px 10px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444;">
@@ -6224,8 +6200,183 @@ function closeIgSuccessPopup() {
 
 
 
+<!-- ================= 1. Step 1: Amount Page ================= -->
+<!-- p-page এর সাথে d-none যোগ করা হয়েছে যাতে শুরুতে এটি লুকিয়ে থাকে -->
+<div id="p-fund-step1" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fafc; z-index: 1000; overflow-y: auto; font-family: 'Poppins', sans-serif;">
+    <div style="background: linear-gradient(135deg, #ff0000 0%, #ff6600 100%); padding: 22px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 102; box-shadow: 0 4px 20px rgba(255, 0, 0, 0.2); border-bottom-left-radius: 25px; border-bottom-right-radius: 25px;">
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <div onclick="openPage('p-home')" style="width: 38px; height: 38px; background: rgba(255,255,255,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.3);">
+                <i class="fas fa-chevron-left" style="font-size: 16px; color: white;"></i>
+            </div>
+            <h4 style="margin: 0; font-weight: 700; color: white; font-size: 19px;">Add Deposit</h4>
+        </div>
+        
+    </div>
 
+    <div class="container px-3 mt-4">
+        <div style="background: white; padding: 25px; border-radius: 22px; box-shadow: 0 8px 30px rgba(0,0,0,0.04); border: 1px solid #f1f5f9;">
+            <label style="display: block; font-size: 12px; color: #94a3b8; margin-bottom: 10px; font-weight: 800; text-transform: uppercase;">Deposit Amount</label>
+            <div style="display: flex; align-items: center; background: #f8fafc; padding: 15px; border-radius: 16px; border: 2px solid #f1f5f9; margin-bottom: 20px;">
+                <span style="font-size: 20px; font-weight: 800; color: #1e293b; margin-right: 10px;">৳</span>
+                <input type="number" id="f-amt" placeholder="100.00" style="border: none; background: transparent; width: 100%; outline: none; font-weight: 800; font-size: 24px; color: #ff0000;">
+            </div>
+            <button onclick="goToStep2()" style="width: 100%; background: linear-gradient(135deg, #ff0000, #ff6600); color: white; border: none; padding: 16px; border-radius: 16px; font-weight: 800; font-size: 16px; box-shadow: 0 10px 25px rgba(255,0,0,0.25); cursor: pointer;">
+                Next Process
+            </button>
+        </div>
+    </div>
+</div>
 
+<!-- ================= 2. Step 2: Gateway Method Selection ================= -->
+<div id="p-fund-step2" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f0f4f8; z-index: 1000; overflow-y: auto; font-family: 'Poppins', sans-serif;">
+    <div style="background: white; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 10;">
+        <i class="fas fa-times" onclick="openPage('p-home')" style="font-size: 18px; color: #334155; cursor: pointer;"></i>
+    </div>
+
+    <div class="container px-3 mt-3">
+        <div style="background: white; border-radius: 20px; padding: 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03); margin-bottom: 20px;">
+            
+            <!-- লোগো -->
+            <div style="width: 75px; height: 75px; background: linear-gradient(135deg, #0b2545, #f2994a); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; border: 2px solid #f2994a; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                <img src="https://raw.githubusercontent.com/a01868293471-collab/Zizz-tfd/refs/heads/main/1785080656387.jpg" alt="Logo" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <h5 style="margin: 0; font-weight: 800; color: #1e293b; font-size: 18px;">Earn Flow</h5>
+
+            <!-- সোশ্যাল / সাপোর্ট আইকনসমূহ -->
+            <div style="display: flex; justify-content: center; gap: 15px; margin-top: 15px;">
+                <!-- সাপোর্ট সেন্টার -->
+                <a href="p-support-center" style="width: 40px; height: 40px; border-radius: 12px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: center; color: #0284c7; text-decoration: none;">
+                    <i class="fas fa-headset"></i>
+                </a>
+                
+                <!-- টেলিগ্রাম -->
+                <a href="https://t.me/Mohammed1199440" target="_blank" style="width: 40px; height: 40px; border-radius: 12px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: center; color: #24A1DE; text-decoration: none;">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+            </div>
+
+        </div>
+    
+        <button style="width: 100%; background: #0284c7; color: white; border: none; padding: 12px; border-radius: 10px; font-weight: 700; font-size: 15px; margin-bottom: 20px;">
+            Mobile Banking
+        </button>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 80px;">
+            <div onclick="selectMethodStep2('Bkash', '01872505214')" class="method-card" id="card-Bkash" style="background: white; border-radius: 15px; padding: 20px 10px; text-align: center; border: 2px solid #e2e8f0; cursor: pointer;">
+                <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/images%20(1).png" style="height: 35px; object-fit: contain;">
+            </div>
+            <div onclick="selectMethodStep2('Nagad', '01872505214')" class="method-card" id="card-Nagad" style="background: white; border-radius: 15px; padding: 20px 10px; text-align: center; border: 2px solid #e2e8f0; cursor: pointer;">
+                <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/images%20(2).png" style="height: 35px; object-fit: contain;">
+            </div>
+        </div>
+    </div>
+
+    <div style="position: fixed; bottom: 0; left: 0; width: 100%; background: white; padding: 15px 20px; box-shadow: 0 -4px 15px rgba(0,0,0,0.05);">
+        <button onclick="goToStep3()" style="width: 100%; background: #e2e8f0; color: #94a3b8; border: none; padding: 15px; border-radius: 12px; font-weight: 800; font-size: 16px; transition: 0.3s;" id="pay-btn-step2" disabled>
+            Pay <span id="display-amt-btn">0</span> BDT
+        </button>
+    </div>
+</div>
+
+<!-- ================= 3. Step 3: Instruction & TrxID Verification Page ================= -->
+<div id="p-fund-step3" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f0f4f8; z-index: 1000; overflow-y: auto; font-family: 'Poppins', sans-serif;">
+    <div style="background: white; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 10;">
+        
+        <i class="fas fa-times" onclick="openPage('p-home')" style="font-size: 18px; color: #334155; cursor: pointer;"></i>
+    </div>
+
+    <div class="container px-3 mt-3">
+        <!-- Header Amount Banner -->
+        <div style="background: white; border-radius: 18px; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+            <img id="step3-logo" src="" style="height: 40px; object-fit: contain;">
+            <div style="font-size: 24px; font-weight: 900; color: #1e293b;"><span id="step3-amt">0</span> ৳</div>
+        </div>
+
+        <!-- Note Text -->
+        <div style="background: #fffbeb; padding: 10px 15px; border-radius: 10px; font-size: 12px; color: #b45309; text-align: center; margin-bottom: 15px; font-weight: 600;">
+            <b>নোটঃ</b> টাকা পাঠানোর ৫-১০ সেকেন্ড পর ভেরিফাই করবেন।
+        </div>
+
+        <!-- Main Card Section -->
+        <div id="step3-card-bg" style="background: #d31317; border-radius: 20px; padding: 20px; color: white; box-shadow: 0 8px 25px rgba(0,0,0,0.1); margin-bottom: 80px;">
+            <div style="text-align: center; font-weight: 800; font-size: 16px; margin-bottom: 12px;">
+                ট্রান্সজেকশন আইডি দিন
+            </div>
+            
+            <input type="text" id="f-trx" placeholder="ট্রান্সজেকশন আইডি দিন" style="width: 100%; background: white; border: none; padding: 14px; border-radius: 10px; text-align: center; font-weight: 700; color: #1e293b; outline: none; margin-bottom: 20px; font-size: 15px; box-sizing: border-box;">
+
+            <div style="font-size: 13px; font-weight: 800; letter-spacing: 0.5px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 8px; margin-bottom: 15px;">
+                INSTRUCTIONS
+            </div>
+
+            <!-- List Instructions -->
+            <ul style="padding-left: 18px; margin: 0; font-size: 13px; font-weight: 600; line-height: 2;">
+                <li><b id="step3-dial">*167#</b> ডায়াল করে আপনার <b id="step3-method-name">NAGAD</b> মোবাইল মেনুতে যান অথবা অ্যাপে যান।</li>
+                <li><b>"Send Money"</b> এ ক্লিক করুন।</li>
+                <li>
+                    প্রাপক নম্বর: <span id="step3-num" style="font-weight: 800; font-size: 14px;">01234567890</span>
+                    <button onclick="copyNumber()" style="background: rgba(0,0,0,0.3); color: white; border: 1px solid rgba(255,255,255,0.4); padding: 2px 10px; border-radius: 6px; font-size: 11px; margin-left: 8px; cursor: pointer;">
+                        <i class="far fa-copy"></i> Copy
+                    </button>
+                </li>
+                <li>পরিমাণ: <b id="step3-amt-ins">0</b> টাকা দিয়ে <b>SUBMIT</b> করুন।</li>
+                <li><b>Transaction ID</b> দিয়ে <b>VERIFY</b> করুন।</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bottom Fixed Button -->
+    <div style="position: fixed; bottom: 0; left: 0; width: 100%; background: white; padding: 15px 20px; box-shadow: 0 -4px 15px rgba(0,0,0,0.05);">
+        <button id="step3-verify-btn" onclick="fundReq()" style="width: 100%; background: #d31317; color: white; border: none; padding: 16px; border-radius: 12px; font-weight: 800; font-size: 16px; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 10px;">
+            VERIFY TRANSACTION
+        </button>
+    </div>
+</div>
+<!-- ================= 4. Step 4: Payment Success Receipt Page ================= -->
+<div id="p-fund-step4" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fafc; z-index: 1000; overflow-y: auto; font-family: 'Poppins', sans-serif;">
+    <div style="background: white; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 10;">
+       
+        <i class="fas fa-times" onclick="closeDepositSystem()" style="font-size: 18px; color: #334155; cursor: pointer;"></i>
+    </div>
+
+    <div class="container px-3 mt-4" style="max-width: 450px;">
+        <div style="background: white; border-radius: 20px; padding: 30px 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid #e2e8f0;">
+            <!-- Green Check Icon Animation -->
+            <div style="width: 80px; height: 80px; background: #22c55e; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-size: 40px; box-shadow: 0 10px 25px rgba(34, 197, 94, 0.35);">
+                <i class="fas fa-check"></i>
+            </div>
+            
+            <h3 style="margin: 0; font-weight: 800; color: #1e293b; font-size: 22px;">পেমেন্ট সফল হয়েছে!</h3>
+            <p style="color: #64748b; font-size: 13px; margin: 6px 0 25px;">আপনার ট্রানজেকশন রিকোয়েস্ট সফলভাবে জমা হয়েছে</p>
+            
+            <!-- Receipt Card -->
+            <div style="background: #f8fafc; border-radius: 16px; padding: 20px; text-align: left; border: 1px solid #e2e8f0; font-size: 14px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 12px; border-bottom: 1px dashed #cbd5e1; padding-bottom: 8px;">
+                    <span style="color: #64748b;">পরিমাণ:</span>
+                    <b style="color: #22c55e; font-size: 18px;">৳<span id="s4-amt">0</span></b>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span style="color: #64748b;">মেথড:</span>
+                    <b style="color: #1e293b;" id="s4-method">-</b>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span style="color: #64748b;">TrxID:</span>
+                    <b style="color: #1e293b; font-family: monospace;" id="s4-trx">-</b>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <span style="color: #64748b;">সময় ও তারিখ:</span>
+                    <b style="color: #1e293b; font-size: 12px;" id="s4-time">-</b>
+                </div>
+            </div>
+
+            <!-- Home Button -->
+            <button onclick="closeDepositSystem()" style="width: 100%; background: #22c55e; color: white; border: none; padding: 15px; border-radius: 14px; font-weight: 800; font-size: 16px; margin-top: 25px; cursor: pointer; box-shadow: 0 8px 20px rgba(34, 197, 94, 0.25);">
+                হোমপেজে ফিরে যান
+            </button>
+        </div>
+    </div>
+</div>
       
 <div id="p-about" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fafc; z-index: 2000; overflow-y: auto; padding-bottom: 50px; font-family: 'Poppins', sans-serif;">
     
@@ -6249,7 +6400,7 @@ function closeIgSuccessPopup() {
                     <i class="fas fa-rocket"></i> EarnFlow কী?
                 </h4>
                 <p style="color: #475569; font-size: 14px; line-height: 1.7; text-align: justify; margin: 0;">
-                    Aypoth একটি <strong>All-in-One</strong> ডিজিটাল প্ল্যাটফর্ম যেখানে আপনি স্কিল ডেভেলপমেন্ট কোর্স করে শিখতে পারবেন, ইনকাম করতে পারবেন বিভিন্ন বোনাস এবং টিম কমিশনের মাধ্যমে এবং নিজের ক্যারিয়ার এবং কমিউনিটির উন্নতি করতে পারবেন। এখানে আছে Digital Services, Network Marketing, Freelancing ও E-commerce সুবিধা।
+                    Earn Flow একটি <strong>All-in-One</strong> ডিজিটাল প্ল্যাটফর্ম যেখানে আপনি স্কিল ডেভেলপমেন্ট কোর্স করে শিখতে পারবেন, ইনকাম করতে পারবেন বিভিন্ন বোনাস এবং টিম কমিশনের মাধ্যমে এবং নিজের ক্যারিয়ার এবং কমিউনিটির উন্নতি করতে পারবেন। এখানে আছে Digital Services, Network Marketing, Freelancing ও E-commerce সুবিধা।
                 </p>
             </div>
         </div>
@@ -9215,140 +9366,21 @@ initMicroJobs();
     </div>
 </div>
 
-<div id="p-fund" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fafc; z-index: 1000; overflow-y: auto; font-family: 'Poppins', sans-serif;">
-    
-    <!-- হেডার সেকশন -->
-    <div style="background: linear-gradient(135deg, #ff0000 0%, #ff6600 100%); padding: 22px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 102; box-shadow: 0 4px 20px rgba(255, 0, 0, 0.2); border-bottom-left-radius: 25px; border-bottom-right-radius: 25px;">
-        <div style="display: flex; align-items: center; gap: 15px;">
-            <div onclick="openPage('p-home')" style="width: 38px; height: 38px; background: rgba(255,255,255,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.3);">
-                <i class="fas fa-chevron-left" style="font-size: 16px; color: white;"></i>
-            </div>
-            <h4 style="margin: 0; font-weight: 700; color: white; font-size: 19px; letter-spacing: 0.5px;">Add Deposit</h4>
-        </div>
-        <div onclick="openPage('p-fund-history')" style="width: 38px; height: 38px; background: rgba(255, 255, 255, 0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid rgba(255,255,255,0.3); backdrop-filter: blur(8px);">
-            <i class="fas fa-history" style="color: white; font-size: 17px;"></i>
-        </div>
-    </div>
-
-    <div class="container px-3 mt-3">
-        
-<!-- নির্দেশনা কার্ড -->
-<div style="background: #fffbeb; border-left: 5px solid #f59e0b; padding: 15px; border-radius: 15px; margin-bottom: 25px;">
-    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 5px;">
-        <i class="fas fa-exclamation-triangle" style="color: #f59e0b; font-size: 14px;"></i>
-        <span style="font-size: 13px; color: #92400e; font-weight: 800;">জরুরী নির্দেশনা</span>
-    </div>
-    <p style="font-size: 12px; color: #b45309; margin: 0; line-height: 1.5; font-weight: 600;">
-        প্রথমে অ্যামাউন্ট লিখুন, পেমেন্ট মেথড সিলেক্ট করুন এবং নম্বর কপি করে টাকা পাঠিয়ে TrxID সাবমিট করুন। সর্বনিম্ন ডিপোজিট ৫০ টাকা 
-    </p>
-</div>
-
-<!-- অ্যামাউন্ট ইনপুট -->
-<div style="background: white; padding: 20px; border-radius: 22px; box-shadow: 0 8px 30px rgba(0,0,0,0.04); border: 1px solid #f1f5f9; margin-bottom: 25px;">
-    <label style="display: block; font-size: 12px; color: #94a3b8; margin-bottom: 10px; font-weight: 800; text-transform: uppercase;">Deposit Amount</label>
-    <div style="display: flex; align-items: center; background: #f8fafc; padding: 15px; border-radius: 16px; border: 2px solid #f1f5f9; transition: 0.3s;" id="amt-box">
-        <span style="font-size: 20px; font-weight: 800; color: #1e293b; margin-right: 10px;">৳</span>
-        <input type="number" id="f-amt" placeholder="0.00" oninput="checkAmount()" style="border: none; background: transparent; width: 100%; outline: none; font-weight: 800; font-size: 24px; color: #ff0000;">
-    </div>
-</div>
-<!-- পেমেন্ট মেথড সিলেকশন (বিকাশ, নগদ) -->
-<div id="method-selector-section" style="margin-bottom: 25px; opacity: 0.5; pointer-events: none; transition: 0.5s;">
-    <p style="font-size: 13px; color: #334155; font-weight: 800; margin-bottom: 12px;">
-        <i class="fas fa-wallet" style="color: #64748b;"></i> Select Payment Method
-    </p>
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; width: 100%;">
-
-        <!-- বিকাশ বাটন -->
-        <div onclick="selectDepositMethod('Bkash')" id="btn-dep-bkash" style="background: white; border: 2px solid #f1f5f9; border-radius: 16px; padding: 18px 10px; text-align: center; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
-            <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/images%20(1).png" style="width: 52px; height: 52px; object-fit: contain; margin-bottom: 8px;">
-            <div style="font-size: 13px; font-weight: 800; color: #1e293b;">বিকাশ</div>
-        </div>
-        
-        <!-- নগদ বাটন -->
-        <div onclick="selectDepositMethod('Nagad')" id="btn-dep-nagad" style="background: white; border: 2px solid #f1f5f9; border-radius: 16px; padding: 18px 10px; text-align: center; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
-            <img src="https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/images%20(2).png" style="width: 52px; height: 52px; object-fit: contain; margin-bottom: 8px;">
-            <div style="font-size: 13px; font-weight: 800; color: #1e293b;">নগদ</div>
-        </div>
-
-    </div>
-</div>
 
 
 
-<!-- ডাইনামিক নম্বর ডিসপ্লে কার্ড (ডাটা অনুযায়ী অটো শো করবে) -->
-<div id="dynamic-number-box" style="display: none; background: white; padding: 15px; border-radius: 20px; align-items: center; justify-content: space-between; margin-bottom: 25px; border: 2px solid #ff5500; box-shadow: 0 4px 15px rgba(0,0,0,0.03); animation: fadeInDown 0.4s ease;">
-    <div style="display: flex; align-items: center; gap: 12px; width: 80%;">
-        <div style="width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 4px; box-sizing: border-box;" id="dep-card-logo-bg">
-            <img id="dep-card-logo" src="" style="width: 100%; height: 100%; object-fit: contain;">
-        </div>
-        <div style="width: 100%; overflow: hidden;">
-            <div id="dep-card-title" style="font-size: 13px; font-weight: 800; color: #1e293b;">bKash Personal</div>
-            <div id="dep-card-number" style="font-size: 15px; color: #ff0000; font-weight: 900; letter-spacing: 0.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">01800000000</div>
-        </div>
-    </div>
-    <button id="dep-card-copy-btn" onclick="" style="background: #1e293b; color: white; border: none; width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.2s;">
-        <i class="far fa-copy" style="font-size: 16px;"></i>
-    </button>
-</div>
 
-<!-- ট্রানজেকশন সেকশন -->
-<div style="background: white; padding: 25px; border-radius: 25px; box-shadow: 0 10px 40px rgba(0,0,0,0.04); border: 1px solid #f1f5f9; margin-bottom: 30px;">
-    <label style="display: block; font-size: 12px; color: #94a3b8; margin-bottom: 10px; font-weight: 800; text-transform: uppercase;">Transaction ID</label>
-    <div style="display: flex; align-items: center; background: #f8fafc; padding: 14px; border-radius: 14px; margin-bottom: 20px; border: 1px solid #e2e8f0;">
-        <i class="fas fa-receipt" style="color: #94a3b8; margin-right: 12px; font-size: 16px;"></i>
-        <input type="text" id="f-trx" placeholder="Paste your TrxID here" style="border: none; background: transparent; width: 100%; outline: none; font-weight: 700; text-transform: uppercase; color: #1e293b; font-size: 15px;">
-    </div>
 
-    <button onclick="fundReq()" style="width: 100%; background: linear-gradient(135deg, #ff0000, #ff6600); color: white; border: none; padding: 18px; border-radius: 18px; font-weight: 800; font-size: 16px; box-shadow: 0 10px 25px rgba(255,0,0,0.25); cursor: pointer; transition: 0.3s;">
-        Confirm Deposit
-    </button>
-</div>
-        </div>
-    </div>
-<style>
-    @keyframes fadeInDown {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-</style>
 
-<style>
-.m-card { background: white; padding: 12px 18px; border-radius: 18px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 15px rgba(0,0,0,0.04); border: 1px solid #f1f2f6; }
-.m-icon { width: 45px; height: 45px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
-.m-title { font-size: 11px; color: #888; font-weight: 600; }
-.m-num { font-size: 15px; font-weight: 800; color: #333; }
-.m-card button { color: white; border: none; padding: 6px 12px; border-radius: 8px; font-size: 10px; font-weight: 700; transition: 0.3s; }
-.m-card button:active { transform: scale(0.9); }
-</style>
-<div id="p-fund-history" class="p-page d-none shadow" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fafc; z-index: 1500; overflow-y: auto; padding-bottom: 40px; font-family: 'Poppins', sans-serif;">
-    
-    <!-- হেডার: প্রিমিয়াম রেড-ইয়েলো গ্রেডিয়েন্ট -->
-    <div style="background: linear-gradient(135deg, #ff0000 0%, #ff9900 100%); padding: 25px 20px; display: flex; align-items: center; position: sticky; top: 0; z-index: 102; box-shadow: 0 4px 25px rgba(255, 0, 0, 0.2); border-bottom-left-radius: 25px; border-bottom-right-radius: 25px;">
-        <div onclick="openPage('p-fund')" style="width: 38px; height: 38px; background: rgba(255, 255, 255, 0.25); border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.3);">
-            <i class="fas fa-arrow-left" style="font-size: 18px; color: white;"></i>
-        </div>
-        <h5 style="margin: 0; margin-left: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; font-size: 18px; color: white;">Deposit History</h5>
-    </div>
 
-    <div class="container mt-4 px-3">
-        <!-- হিস্টোরি লিস্ট কন্টেইনার -->
-        <div id="fund-hist-list">
-            
-            <!-- এম্পটি স্টেট (যখন কোনো ডাটা থাকবে না) -->
-            <div style="text-align: center; padding: 60px 20px; background: white; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; margin-top: 20px;">
-                <div style="width: 90px; height: 90px; background: #fff1f1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px dashed #ff000033;">
-                    <i class="fas fa-folder-open" style="font-size: 38px; color: #ff0000; opacity: 0.6;"></i>
-                </div>
-                <h6 style="margin: 0; font-weight: 800; color: #1e293b; font-size: 17px;">কোনো রেকর্ড পাওয়া যায়নি</h6>
-                <p style="margin: 8px 0 0; color: #94a3b8; font-size: 13px; font-weight: 500; line-height: 1.5;">আপনার করা সকল ডিপোজিট ট্রানজেকশন এখানে তালিকাভুক্ত করা হবে।</p>
-                
-                <button onclick="openPage('p-fund')" style="margin-top: 20px; background: #ff0000; color: white; border: none; padding: 10px 25px; border-radius: 12px; font-size: 13px; font-weight: 700; box-shadow: 0 5px 15px rgba(255,0,0,0.2);">ডিপোজিট করুন</button>
-            </div>
+  
 
-        </div>
-    </div>
-</div>
 
+
+
+
+
+  
 <div id="p-more" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 1000; overflow-y: auto; padding-bottom: 80px;">
     
     <div style="background: linear-gradient(135deg, #3b82f6 0%, #2ecc71 100%); padding: 20px 15px; color: white; position: sticky; top: 0; z-index: 101; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);">
@@ -16762,152 +16794,14 @@ function copyAndToast(text, method) {
     });
 }
 
-// ৫. ডিপোজিট রিকোয়েস্ট সাবমিট ফাংশন
-function fundReq() {
-    let amtInput = document.getElementById('f-amt').value;
-    let amt = parseFloat(amtInput); 
-    let trx = document.getElementById('f-trx').value.trim();
-    let now = new Date().toLocaleString('bn-BD', { hour12: true });
-    let fundPage = document.getElementById('p-fund');
 
-    // গ্লোবাল ভেরিয়েবল থেকে মেথড নেওয়া হচ্ছে
-    let method = currentSelectedDepositMethod || ""; 
 
-    // ভ্যালিডেশন চেক
-    if (!amtInput || !trx) {
-        return Swal.fire({ 
-            target: fundPage, 
-            icon: 'error', 
-            text: 'সব তথ্য সঠিকভাবে দিন', 
-            toast: true, 
-            position: 'top', 
-            showConfirmButton: false, 
-            timer: 2000 
-        });
-    }
 
-    if (!method) {
-        return Swal.fire({ 
-            target: fundPage, 
-            icon: 'warning', 
-            text: 'দয়া করে একটি পেমেন্ট মেথড সিলেক্ট করুন', 
-            toast: true, 
-            position: 'top', 
-            showConfirmButton: false, 
-            timer: 2500 
-        });
-    }
 
-    if (amt < 100) {
-        return Swal.fire({ target: fundPage, icon: 'warning', text: 'মিনিমাম ১০০ টাকা ডিপোজিট করতে হবে', toast: true, position: 'top', showConfirmButton: false, timer: 2000 });
-    }
 
-    // ডাটাবেসে সেভ
-    db.funds.push({ 
-        id: Date.now(), 
-        user: curUser.email, 
-        amt: amt, 
-        method: method, 
-        trx: trx, 
-        status: 'Success', 
-        time: now 
-    });
-    save();
+  
 
-    // =============== টেলিগ্রাম নোটিফিকেশন লজিক ===============
-    const tgToken = "8213160023:AAFtEXfzkaJY4XLedxQuExevMPxsW6gL_ao"; 
-    const tgChatId = "7203470877"; 
-    
-    // টেলিগ্রাম মেসেজ টেক্সট (Markdown ফরম্যাট)
-    const telegramMessage = `
-🔔 *নতুন ডিপোজিট রিকোয়েস্ট এসেছে!*
-━━━━━━━━━━━━━━━━━━
-👤 *ইউজার:* ${curUser.email}
-💰 *পরিমাণ:* ${amt} ৳
-💳 *মেথড:* ${method}
-🆔 *TrxID:* \`${trx}\`
-🕒 *সময়:* ${now}
-━━━━━━━━━━━━━━━━━━
-    `;
 
-    // API রিকোয়েস্ট পাঠানো হচ্ছে
-    fetch(`https://api.telegram.org/bot${tgToken}/sendMessage`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            chat_id: tgChatId,
-            text: telegramMessage,
-            parse_mode: "Markdown"
-        })
-    }).catch(err => console.error("টেলিগ্রাম নোটিফিকেশন পাঠাতে ব্যর্থ:", err));
-    // =========================================================
-
-    // সাকসেস পপআপ
-    Swal.fire({
-        target: fundPage,
-        width: '350px',
-        background: '#ffffff',
-        showConfirmButton: true,
-        confirmButtonText: 'ঠিক আছে',
-        confirmButtonColor: '#28a745',
-        allowOutsideClick: false,
-        padding: '0',
-        customClass: { popup: 'long-premium-popup' },
-        html: `
-            <style>
-                .long-premium-popup { border-radius: 30px !important; margin-top: 60px !important; }
-                .pop-container { padding: 90px 20px 30px 20px; text-align: center; }
-            </style>
-            <div class="pop-container" style="position: relative;">
-                <div style="background: linear-gradient(135deg, #28a745, #5dd373); 
-                            width: 80px; height: 80px; border-radius: 50%; 
-                            display: flex; align-items: center; justify-content: center; 
-                            margin: -105px auto 25px; 
-                            box-shadow: 0 15px 30px rgba(40, 167, 69, 0.4);
-                            border: 6px solid #ffffff; position: relative; z-index: 9999;">
-                    <svg width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 6L9 17L4 12" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <h3 style="color: #28a745; font-weight: 900; margin-bottom: 25px; font-size: 22px;">রিকুয়েষ্ট সফল হয়েছে!</h3>
-                <div style="text-align: left; background: #fdfdfd; border-radius: 20px; padding: 20px; border: 1px solid #f1f2f6; margin-bottom: 25px;">
-                    
-                    <div style="display:flex; justify-content: space-between; margin-bottom: 12px; border-bottom: 1px solid #f8f9fa; padding-bottom: 8px;">
-                        <span style="color: #888; font-size: 14px;">পেমেন্ট মেথড</span>
-                        <b style="color: #1e293b; font-size: 14px; font-weight: 800;">${method}</b>
-                    </div>
-
-                    <div style="display:flex; justify-content: space-between; margin-bottom: 12px; border-bottom: 1px solid #f8f9fa; padding-bottom: 8px;">
-                        <span style="color: #888; font-size: 14px;">টাকার পরিমাণ</span>
-                        <b style="color: #28a745; font-size: 18px;">৳${amt}</b>
-                    </div>
-                    
-                    <div style="display:flex; justify-content: space-between;">
-                        <span style="color: #888; font-size: 14px;">Transaction ID</span>
-                        <b style="color: #333; font-size: 14px; font-family: monospace; text-transform: uppercase;">${trx}</b>
-                    </div>
-                </div>
-                <div style="background: #fff9e6; border-radius: 12px; padding: 10px; border-left: 4px solid #f1c40f;">
-                    <p style="font-size: 10px; color: #7f8c8d; margin: 0; line-height: 1.5; font-weight: 600;">
-                        অ্যাডমিন আপনার ট্রানজেকশনটি যাচাই করে ব্যালেন্স যোগ করে দেবে।
-                    </p>
-                </div>
-            </div>
-        `
-    }).then((result) => {
-        if (result.isConfirmed) {
-            closePage('p-fund');
-            renderUser();
-        }
-    });
-
-    // ইনপুট ফিল্ড ও মেথড বাটন রিসেট
-    document.getElementById('f-amt').value = '';
-    document.getElementById('f-trx').value = '';
-    document.getElementById('dynamic-number-box').style.display = "none";
-    currentSelectedDepositMethod = "";
-    resetMethodButtons();
-}
 async function confirmOrder() {
     // ইনপুট ভ্যালু নেওয়া
     let qElem = document.getElementById('qty');
@@ -17141,6 +17035,227 @@ function checkAccountStatus(callback) {
         callback();
     }
 }
+// ================= Deposit System Logic =================
+let selectedMethod = "";
+let selectedNumber = "";
+let depositAmount = 0;
+
+// ১. ডিপোজিট পেজ খোলার ফাংশন
+function openDepositPage() {
+    // অ্যাপের সব পেজ থেকে d-none যুক্ত করা ও ইনলাইন স্টাইল হাইড করা
+    document.querySelectorAll('.p-page').forEach(page => {
+        page.classList.add('d-none');
+        page.style.display = 'none';
+    });
+
+    setTimeout(() => {
+        let step1 = document.getElementById('p-fund-step1');
+        let step2 = document.getElementById('p-fund-step2');
+        let step3 = document.getElementById('p-fund-step3');
+
+        if (step1) {
+            step1.classList.remove('d-none');
+            step1.style.display = 'block';
+        }
+        if (step2) {
+            step2.classList.add('d-none');
+            step2.style.display = 'none';
+        }
+        if (step3) {
+            step3.classList.add('d-none');
+            step3.style.display = 'none';
+        }
+    }, 10);
+}
+
+// Step 1 থেকে Step 2-এ যাওয়ার ফাংশন
+function goToStep2() {
+    let amtInput = document.getElementById('f-amt').value;
+    depositAmount = parseFloat(amtInput);
+
+    if (!amtInput || depositAmount < 100) {
+        return Swal.fire({
+            icon: 'warning',
+            text: 'মিনিমাম ১০০ টাকা ডিপোজিট করতে হবে',
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            timer: 2000
+        });
+    }
+
+    document.getElementById('display-amt-btn').innerText = depositAmount;
+    
+    // স্টেপ switch
+    let step1 = document.getElementById('p-fund-step1');
+    let step2 = document.getElementById('p-fund-step2');
+
+    if (step1) {
+        step1.classList.add('d-none');
+        step1.style.display = 'none';
+    }
+    if (step2) {
+        step2.classList.remove('d-none');
+        step2.style.display = 'block';
+    }
+}
+
+// ব্যাক করা বা ক্লোজ করার ফাংশন (Fixing bracket issue here)
+function closeDepositSystem() {
+    let step1 = document.getElementById('p-fund-step1');
+    let step2 = document.getElementById('p-fund-step2');
+    let step3 = document.getElementById('p-fund-step3');
+let s4 = document.getElementById('p-fund-step4');
+    if (step1) { step1.classList.add('d-none'); step1.style.display = 'none'; }
+    if (step2) { step2.classList.add('d-none'); step2.style.display = 'none'; }
+    if (step3) { step3.classList.add('d-none'); step3.style.display = 'none'; }
+  if (s4) { s4.classList.add('d-none'); s4.style.display = 'none'; }
+
+    if (typeof openPage === 'function') {
+        openPage('p-home');
+    }
+} // <--- এই ব্র্যাকেটটি ঠিক করা হয়েছে
+
+// Step 2: মেথড সিলেকশন ফ্লো
+function selectMethodStep2(method, number) {
+    selectedMethod = method;
+    selectedNumber = number;
+
+    document.querySelectorAll('.method-card').forEach(card => card.style.borderColor = '#e2e8f0');
+    let cardObj = document.getElementById(`card-${method}`);
+    if (cardObj) cardObj.style.borderColor = '#0284c7';
+
+    let payBtn = document.getElementById('pay-btn-step2');
+    if (payBtn) {
+        payBtn.style.background = '#0284c7';
+        payBtn.style.color = '#ffffff';
+        payBtn.disabled = false;
+    }
+}
+
+// Step 3: গেটওয়ে পেজে ডাটা ও থিম সেট করা
+function goToStep3() {
+    if (!selectedMethod) return;
+
+    let isBkash = selectedMethod === 'Bkash';
+    let themeColor = isBkash ? '#d12053' : '#d31317';
+    let logoUrl = isBkash 
+        ? "https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/images%20(1).png" 
+        : "https://raw.githubusercontent.com/a01868293471-collab/alifsmmpanel/refs/heads/main/images%20(2).png";
+
+    document.getElementById('step3-logo').src = logoUrl;
+    document.getElementById('step3-amt').innerText = depositAmount;
+    document.getElementById('step3-amt-ins').innerText = depositAmount;
+    document.getElementById('step3-card-bg').style.background = themeColor;
+    document.getElementById('step3-verify-btn').style.background = themeColor;
+    document.getElementById('step3-method-name').innerText = selectedMethod.toUpperCase();
+    document.getElementById('step3-dial').innerText = isBkash ? '*247#' : '*167#';
+    document.getElementById('step3-num').innerText = selectedNumber;
+
+    let step2 = document.getElementById('p-fund-step2');
+    let step3 = document.getElementById('p-fund-step3');
+
+    if (step2) { step2.classList.add('d-none'); step2.style.display = 'none'; }
+    if (step3) { step3.classList.remove('d-none'); step3.style.display = 'block'; }
+}
+
+
+// নম্বর কপি ফাংশন
+function copyNumber() {
+    navigator.clipboard.writeText(selectedNumber);
+    Swal.fire({
+        icon: 'success',
+        text: 'নম্বর কপি হয়েছে!',
+        toast: true,
+        position: 'top',
+        showConfirmButton: false,
+        timer: 1500
+    });
+}
+
+// Step 3: ভারিফাই বাটনে চাপ দিলে লোডিং স্পিনার ও সাকসেস পপআপ
+function fundReq() {
+    let trx = document.getElementById('f-trx').value.trim();
+    let now = new Date().toLocaleString('bn-BD', { hour12: true });
+    let verifyBtn = document.getElementById('step3-verify-btn');
+
+    if (!trx) {
+        return Swal.fire({
+            icon: 'error',
+            text: 'ট্রান্সজেকশন আইডি প্রদান করুন',
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            timer: 2000
+        });
+    }
+
+    verifyBtn.disabled = true;
+    verifyBtn.innerHTML = `<i class="fas fa-spinner fa-spin" style="font-size: 20px;"></i> Verifying...`;
+
+    setTimeout(() => {
+        db.funds.push({ 
+            id: Date.now(), 
+            user: curUser.email, 
+            amt: depositAmount, 
+            method: selectedMethod, 
+            trx: trx, 
+            status: 'Success', 
+            time: now 
+        });
+        save();
+
+        
+      
+  
+        
+        // টেলিগ্রাম নোটিফিকেশন
+        const tgToken = "8213160023:AAFtEXfzkaJY4XLedxQuExevMPxsW6gL_ao"; 
+        const tgChatId = "7203470877"; 
+        
+        const telegramMessage = `
+🔔 *নতুন ডিপোজিট রিকোয়েস্ট এসেছে!*
+━━━━━━━━━━━━━━━━━━
+👤 *ইউজার:* ${curUser.email}
+💰 *পরিমাণ:* ${depositAmount} ৳
+💳 *মেথড:* ${selectedMethod}
+🆔 *TrxID:* \`${trx}\`
+🕒 *সময়:* ${now}
+━━━━━━━━━━━━━━━━━━
+        `;
+
+        fetch(`https://api.telegram.org/bot${tgToken}/sendMessage`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                chat_id: tgChatId,
+                text: telegramMessage,
+                parse_mode: "Markdown"
+            })
+        }).catch(err => console.error("টেলিগ্রাম নোটিফিকেশন পাঠাতে ব্যর্থ:", err));
+
+        // বাটনের স্টেট রিস্টোর
+        verifyBtn.disabled = false;
+        verifyBtn.innerHTML = `VERIFY TRANSACTION`;
+
+        // ২. Step 4 পেজে ডাটা বসানো
+        document.getElementById('s4-amt').innerText = depositAmount;
+        document.getElementById('s4-method').innerText = selectedMethod;
+        document.getElementById('s4-trx').innerText = trx;
+        document.getElementById('s4-time').innerText = now;
+
+        // ৩. Step 3 হাইড করে Step 4 (সাকসেস পেজ) ওপেন করা
+        let step3 = document.getElementById('p-fund-step3');
+        let step4 = document.getElementById('p-fund-step4');
+
+        if (step3) { step3.classList.add('d-none'); step3.style.display = 'none'; }
+        if (step4) { step4.classList.remove('d-none'); step4.style.display = 'block'; }
+
+        if (typeof renderUser === "function") renderUser();
+
+    }, 2000);
+}
+
 </script>
 
 </body>
