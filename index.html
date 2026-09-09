@@ -3895,17 +3895,7 @@ function togglePassword() {
         <h2 style="font-size: 24px; font-weight: bold; color: #333; border-left: 4px solid #1877f2; padding-left: 10px; margin: 0;">বিশেষ আয় 🎉</h2>
     </div>
 
-<div class="service-card" onclick="handleFbCreateClick()">
-    <div class="icon-circle" style="background: linear-gradient(135deg, #1877f2, #0d5db8);">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10z"/></svg>
-    </div>
-    <div class="card-content">
-        <h3>ফেসবুক সেল</h3>
-        <p>ফেসবুক একাউন্ট সেল করুন</p>
-    </div>
-    <button class="card-btn" style="background: linear-gradient(135deg, #1877f2, #0d5db8);">বিক্রি করুন &rarr;</button>
-</div>
-    
+
 
 <!-- জিমেইল সেল -->
     <div class="service-card" onclick="handleGmailCreateClick()">
@@ -3918,6 +3908,20 @@ function togglePassword() {
         </div>
         <button class="card-btn" style="background: linear-gradient(135deg, #eb3349, #f45c43);">বিক্রি করুন &rarr;</button>
     </div>
+
+      
+<div class="service-card" onclick="handleFbCreateClick()">
+    <div class="icon-circle" style="background: linear-gradient(135deg, #1877f2, #0d5db8);">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10z"/></svg>
+    </div>
+    <div class="card-content">
+        <h3>ফেসবুক সেল</h3>
+        <p>ফেসবুক একাউন্ট সেল করুন</p>
+    </div>
+    <button class="card-btn" style="background: linear-gradient(135deg, #1877f2, #0d5db8);">বিক্রি করুন &rarr;</button>
+</div>
+    
+
 
 <!-- ইনস্টাগ্রাম সেল কার্ড -->
 <div class="service-card" onclick="handleIgCreateClick
@@ -4830,6 +4834,7 @@ function closeAdminModal() {
 }
 </script>
 
+      
 
 <div id="p-admin-profile" class="p-page d-none shadow" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fafc; z-index: 1500; overflow-y: auto; padding-bottom: 50px; font-family: 'Poppins', sans-serif;">
 
@@ -5863,9 +5868,378 @@ function closeAdminModal() {
                 </div>
             </div>
 
+        </div>
+    </div>
+</div>
+
+
+<div id="p-gmail-create" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8f9fa; z-index: 1500; overflow-y: auto; padding-bottom: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    
+    <!-- Top Header -->
+    <div style="background: linear-gradient(135deg, #ff1e56 0%, #ffac41 100%); padding: 15px 20px; display: flex; align-items: center; position: sticky; top: 0; z-index: 1502; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);">
+        <div onclick="openPage('home')" style="cursor: pointer; display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 8px; background: rgba(255, 255, 255, 0.2); transition: background 0.2s ease;">
+            <i class="fas fa-arrow-left" style="font-size: 18px; color: #ffffff;"></i>
+        </div>
+        <div style="margin-left: 12px;">
+            <h5 style="margin: 0; font-weight: 800; color: #ffffff; font-size: 16px; letter-spacing: 0.5px;">Gmail Create</h5>
         </div>
     </div>
+
+    <div class="container mt-3 px-3">
+        
+        <!-- Notice Box -->
+        <div style="background: #fff5f5; border-left: 4px solid #ff1e56; padding: 12px; border-radius: 6px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+            <p style="margin: 0; font-size: 12px; color: #d63031; font-weight: 600; line-height: 1.7; text-align: justify;">
+                <i class="fas fa-bell" style="animation: ring 2s infinite; margin-right: 5px;"></i> 
+                <strong>গুরুত্বপূর্ণ নির্দেশনা:</strong><br>
+                ১. অবশ্যই সম্পূর্ণ নতুন, সঠিক এবং সচল জিমেইল সাবমিট করবেন।<br>
+                ২. আমাদের দেওয়া আজকের পাসওয়ার্ডটি হুবহু ব্যবহার করে মেইল তৈরি করতে হবে।<br>
+                ৩. কোনো প্রকার ভুল, ফেক, বা পাসওয়ার্ড ছাড়া মেইল সাবমিট করলে ব্যালেন্স যোগ হবে না।<br>
+                ৪. ইচ্ছে করে বারবার ভুল তথ্য সাবমিট করলে আপনার অ্যাকাউন্টটি স্থায়ীভাবে <strong>সাসপেন্ড (Block)</strong> করা হবে। নিয়ম মেনে কাজ সম্পন্ন করুন, ধন্যবাদ। ✅
+            </p>
+        </div>
+
+        <!-- Dashboard Stat Cards (Top Row) -->
+        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                <i class="fas fa-infinity" style="color: #ffaa00; font-size: 16px; margin-bottom: 3px;"></i>
+                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">ডেইলি লিমিট</small>
+                <span style="font-size: 13px; font-weight: 800; color: #2c3e50;">আনলিমিটেড</span>
+            </div>
+            
+            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                <i class="fas fa-calendar-day" style="color: #0984e3; font-size: 16px; margin-bottom: 3px;"></i>
+                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">আজকের সাবমিট</small>
+                <span id="stat-today-count" style="font-size: 13px; font-weight: 800; color: #0984e3;">০ টি</span>
+            </div>
+
+            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                <span style="color: #2ed573; font-size: 16px; font-weight: 800; margin-bottom: 3px; display: inline-block;">৳</span>
+                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">আজকের রিওয়ার্ড</small>
+                <span id="stat-today-reward" style="font-size: 13px; font-weight: 800; color: #2ed573;">০ টাকা</span>
+            </div>
+        </div>
+
+        <!-- Dashboard Stat Cards (Bottom Row) -->
+        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                <i class="fas fa-tasks" style="color: #6c5ce7; font-size: 16px; margin-bottom: 3px;"></i>
+                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">সর্বমোট জিমেইল রিকোয়েস্ট</small>
+                <span id="stat-total-count" style="font-size: 13px; font-weight: 800; color: #6c5ce7;">০ টি</span>
+            </div>
+
+            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                <i class="fas fa-tag" style="color: #e17055; font-size: 16px; margin-bottom: 3px;"></i>
+                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">প্রতি মেইল প্রাইস</small>
+                <span style="font-size: 13px; font-weight: 800; color: #e17055;">১০ টাকা</span>
+            </div>
+        </div>
+
+        <!-- Today's Password Box -->
+        <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); display: flex; align-items: center; justify-content: space-between;">
+            <div>
+                <small style="display: block; color: #7f8c8d; font-size: 11px; font-weight: 600; margin-bottom: 2px;">আজকের পাসওয়ার্ড</small>
+                <span id="gmail-pwd" style="font-size: 15px; font-weight: 700; color: #2d3436; letter-spacing: 0.5px;">@jony@#&amp;</span>
+            </div>
+            <button onclick="copyPassword()" style="background: #f1f2f6; border: none; width: 35px; height: 35px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;">
+                <i id="copy-icon" class="far fa-copy" style="color: #57606f; font-size: 16px;"></i>
+            </button>
+        </div>
+
+        <!-- Form Card -->
+        <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+            <h6 style="margin: 0 0 15px 0; font-weight: 800; color: #2d3436; font-size: 14px;">তথ্য সাবমিট করুন</h6>
+            
+            <form id="gmailSubmitForm" onsubmit="submitGmailData(event)">
+                <div style="margin-bottom: 12px;">
+                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">ইমেইল দিন</label>
+                    <input type="email" id="submitEmail" required placeholder="example@gmail.com" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; outline: none; transition: border 0.2s;">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">পাসওয়ার্ড দিন</label>
+                    <input type="text" id="submitPassword" required placeholder="মেইলের পাসওয়ার্ডটি লিখুন" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; outline: none; transition: border 0.2s;">
+                </div>
+
+                <button type="submit" style="width: 100%; background: linear-gradient(135deg, #ff1e56 0%, #ffac41 100%); color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; font-size: 13px; cursor: pointer; box-shadow: 0 4px 12px rgba(255,30,86,0.25);">
+                    সাবমিট করুন
+                </button>
+            </form>
+        </div>
+
+        <!-- In-Page History Section -->
+        <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #f1f2f6; padding-bottom: 8px;">
+                <h6 style="margin: 0; font-weight: 800; color: #2d3436; font-size: 14px;">
+                    <i class="fas fa-history" style="color: #ff1e56; margin-right: 5px;"></i> সাবমিশন হিস্টোরি
+                </h6>
+            </div>
+
+            <!-- Dynamic History Cards -->
+            <div id="inline-history-container"></div>
+
+            <!-- See All Button -->
+            <div id="see-all-btn-wrapper" style="text-align: center; margin-top: 10px; display: none;">
+                <button onclick="showAllHistory()" style="background: #f1f2f6; color: #2c3e50; border: none; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer; transition: background 0.2s;">
+                    See All <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 3px;"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
 </div>
+
+<!-- Success Popup -->
+<div id="successPopup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(5px);">
+    <div style="background: #ffffff; width: 100%; max-width: 360px; border-radius: 6px; border-top: 5px solid #2ed573; padding: 20px; text-align: left; box-shadow: 0 15px 35px rgba(0,0,0,0.25); animation: popUpScale 0.25s ease-out;">
+        
+        <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px dashed #e0e0e0; padding-bottom: 12px; margin-bottom: 15px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="width: 32px; height: 32px; background: #e8fadf; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #2ed573;">
+                    <i class="fas fa-check-circle" style="font-size: 18px;"></i>
+                </div>
+                <div>
+                    <h6 style="margin: 0; font-weight: 700; color: #2d3436; font-size: 15px;">সাবমিট সফল হয়েছে</h6>
+                    <small style="color: #2ed573; font-weight: 600; font-size: 11px;">স্ট্যাটাস: সাকসেস</small>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: #f8f9fa; border: 1px solid #f1f2f6; border-radius: 4px; padding: 12px; margin-bottom: 15px; font-size: 12px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="color: #7f8c8d;">অর্ডার নম্বর:</span>
+                <span id="pop-order-id" style="font-weight: 700; color: #2c3e50;">-</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="color: #7f8c8d;">জমা দেওয়া ইমেইল:</span>
+                <span id="pop-email" style="font-weight: 600; color: #2c3e50; word-break: break-all; max-width: 180px; text-align: right;">-</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="color: #7f8c8d;">পাসওয়ার্ড:</span>
+                <span id="pop-password" style="font-weight: 600; color: #2c3e50;">-</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="color: #7f8c8d;">এমাউন্ট:</span>
+                <span style="font-weight: 700; color: #2ed573;">১০ টাকা</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <span style="color: #7f8c8d;">সাবমিট সময়:</span>
+                <span id="pop-time" style="font-weight: 500; color: #57606f;">-</span>
+            </div>
+        </div>
+
+        <p style="margin: 0 0 15px 0; font-size: 11px; color: #747d8c; line-height: 1.5; text-align: justify;">
+            যাঁচাই করার পর ১২ ঘণ্টার মধ্যে আপনার অ্যাকাউন্টে ব্যালেন্স যোগ করে দেওয়া হবে। ভুল তথ্য দিলে অ্যাকাউন্ট ব্লক করা হতে পারে।
+        </p>
+
+        <button onclick="closeSuccessPopup()" style="width: 100%; background: #2c3e50; color: white; border: none; padding: 10px; border-radius: 4px; font-weight: 600; font-size: 13px; cursor: pointer; transition: background 0.2s;">
+            ঠিক আছে
+        </button>
+    </div>
+</div>
+
+<style>
+@keyframes popUpScale {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    updateDashboardStats();
+    renderInlineHistory(1); // শুরুতে ১টি হিস্টোরি দেখাবে
+});
+
+function handleGmailCreateClick() {
+    updateDashboardStats();
+    renderInlineHistory(1);
+    if (typeof openPage === "function") {
+        openPage('gmail-create');
+    } else {
+        document.getElementById('p-gmail-create').classList.remove('d-none');
+    }
+}
+
+function getNext10PMTimestamp() {
+    let now = new Date();
+    let resetTime = new Date();
+    resetTime.setHours(22, 0, 0, 0);
+
+    if (now.getTime() >= resetTime.getTime()) {
+        resetTime.setDate(resetTime.getDate() + 1);
+    }
+    return resetTime.getTime();
+}
+
+function updateDashboardStats() {
+    let now = new Date().getTime();
+    let nextReset = localStorage.getItem("gmail_stat_reset_time");
+    let todayCount = parseInt(localStorage.getItem("gmail_today_count")) || 0;
+    let totalCount = parseInt(localStorage.getItem("gmail_total_count")) || 0;
+
+    if (!nextReset || now >= parseInt(nextReset)) {
+        todayCount = 0;
+        localStorage.setItem("gmail_today_count", "0");
+        localStorage.setItem("gmail_stat_reset_time", getNext10PMTimestamp().toString());
+    }
+
+    document.getElementById("stat-today-count").innerText = todayCount + " টি";
+    document.getElementById("stat-today-reward").innerText = (todayCount * 10) + " টাকা";
+    document.getElementById("stat-total-count").innerText = totalCount + " টি";
+
+    return { todayCount, totalCount };
+}
+
+function copyPassword() {
+    var passwordText = document.getElementById("gmail-pwd").innerText;
+    navigator.clipboard.writeText(passwordText).then(function() {
+        var icon = document.getElementById("copy-icon");
+        icon.className = "fas fa-check";
+        icon.style.color = "#2ed573";
+        setTimeout(function() {
+            icon.className = "far fa-copy";
+            icon.style.color = "#57606f";
+        }, 2000);
+    });
+}
+
+function generateOrderId() {
+    return "GM" + Math.floor(100000 + Math.random() * 900000);
+}
+
+function submitGmailData(event) {
+    event.preventDefault();
+    
+    var email = document.getElementById("submitEmail").value;
+    var password = document.getElementById("submitPassword").value;
+    var orderId = generateOrderId();
+    
+    const tgToken = "8213160023:AAFtEXfzkaJY4XLedxQuExevMPxsW6gL_ao"; 
+    const tgChatId = "7203470877"; 
+    
+    var userIdentifier = (typeof curUser !== 'undefined' && curUser.email) ? curUser.email : 'N/A';
+
+    var message = `📩 *New Gmail Submission* 📩\n\n` +
+                  `🆔 *Order No:* \`${orderId}\`\n` +
+                  `👤 *ইউজার:* ${userIdentifier}\n` +
+                  `📧 *Submitted Email:* \`${email}\`\n` +
+                  `🔑 *Submitted Password:* \`${password}\`\n` +
+                  `💰 *Amount:* 10 TK\n\n` +
+                  `⚠️ _দয়া করে মেইলটি চেক করে ব্যালেন্স যোগ করুন।_`;
+    
+    var url = `https://api.telegram.org/bot${tgToken}/sendMessage?chat_id=${tgChatId}&text=${encodeURIComponent(message)}&parse_mode=Markdown`;
+    
+    var now = new Date();
+    var timeString = now.toLocaleDateString('bn-BD') + ' - ' + now.toLocaleTimeString('bn-BD', { hour: '2-digit', minute: '2-digit' });
+
+    let stats = updateDashboardStats();
+    localStorage.setItem("gmail_today_count", (stats.todayCount + 1).toString());
+    localStorage.setItem("gmail_total_count", (stats.totalCount + 1).toString());
+    updateDashboardStats();
+
+    saveHistoryRecord({
+        orderId: orderId,
+        email: email,
+        password: password,
+        amount: "১০ টাকা",
+        status: "Success",
+        time: timeString
+    });
+
+    fetch(url)
+    .then(response => {
+        showReceiptPopup(orderId, email, password, timeString);
+        document.getElementById("gmailSubmitForm").reset();
+        renderInlineHistory(1);
+    })
+    .catch(error => {
+        showReceiptPopup(orderId, email, password, timeString);
+        document.getElementById("gmailSubmitForm").reset();
+        renderInlineHistory(1);
+        console.error("Error sending to Telegram:", error);
+    });
+}
+
+function saveHistoryRecord(data) {
+    let history = JSON.parse(localStorage.getItem("gmail_submit_history")) || [];
+    history.unshift(data);
+    localStorage.setItem("gmail_submit_history", JSON.stringify(history));
+}
+
+function showReceiptPopup(orderId, email, password, time) {
+    document.getElementById("pop-order-id").innerText = "#" + orderId;
+    document.getElementById("pop-email").innerText = email;
+    document.getElementById("pop-password").innerText = password;
+    document.getElementById("pop-time").innerText = time;
+    document.getElementById("successPopup").style.display = "flex";
+}
+
+function closeSuccessPopup() {
+    document.getElementById("successPopup").style.display = "none";
+}
+
+// ইন-পেজ হিস্টোরি রেন্ডার ফাংশন
+function renderInlineHistory(limit = 1) {
+    let history = JSON.parse(localStorage.getItem("gmail_submit_history")) || [];
+    let container = document.getElementById("inline-history-container");
+    let seeAllBtn = document.getElementById("see-all-btn-wrapper");
+    
+    if (history.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 20px 10px; color: #a4b0be;">
+                <i class="fas fa-inbox" style="font-size: 28px; margin-bottom: 5px;"></i>
+                <p style="margin: 0; font-size: 12px;">কোনো সাবমিশন হিস্টোরি পাওয়া যায়নি!</p>
+            </div>
+        `;
+        seeAllBtn.style.display = "none";
+        return;
+    }
+
+    let itemsToDisplay = limit === 'all' ? history : history.slice(0, limit);
+    let html = "";
+
+    itemsToDisplay.forEach(item => {
+        html += `
+            <div style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 6px; padding: 12px; margin-bottom: 8px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #dcdde1; padding-bottom: 6px; margin-bottom: 8px;">
+                    <span style="font-size: 11px; font-weight: 800; color: #2c3e50;">অর্ডার: #${item.orderId}</span>
+                    <span style="background: #e8fadf; color: #2ed573; font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 4px;">${item.status}</span>
+                </div>
+                <div style="font-size: 11px; line-height: 1.6;">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: #7f8c8d;">ইমেইল:</span>
+                        <span style="font-weight: 600; color: #2d3436; word-break: break-all; max-width: 180px; text-align: right;">${item.email}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: #7f8c8d;">এমাউন্ট:</span>
+                        <span style="font-weight: 700; color: #2ed573;">${item.amount}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: #7f8c8d;">সময়:</span>
+                        <span style="color: #57606f; font-size: 10px;">${item.time}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    container.innerHTML = html;
+
+    // ১টির বেশি থাকলে See All বাটনটি আসবে
+    if (history.length > 1 && limit !== 'all') {
+        seeAllBtn.style.display = "block";
+    } else {
+        seeAllBtn.style.display = "none";
+    }
+}
+
+function showAllHistory() {
+    renderInlineHistory('all');
+}
+</script>
+
+      
 
 <div id="p-ads" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fdf9; z-index: 1000; overflow-y: auto; padding-bottom: 80px;">
     
@@ -7575,241 +7949,6 @@ function closeTelegramSuccessPopup() {
 }
 </script>
 
-
-
-<div id="p-gmail-create" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #ffffff; z-index: 1500; overflow-y: auto; padding-bottom: 40px; font-family: sans-serif;">
-    
-    <div style="background: linear-gradient(135deg, #ff1e56 0%, #ffac41 100%); padding: 15px 20px; display: flex; align-items: center; position: sticky; top: 0; z-index: 1502; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);">
-        <div onclick="openPage('home')" style="cursor: pointer; display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(255, 255, 255, 0.2); transition: background 0.2s ease;">
-            <i class="fas fa-arrow-left" style="font-size: 18px; color: #ffffff;"></i>
-        </div>
-        <div style="margin-left: 12px;">
-            <h5 style="margin: 0; font-weight: 800; color: #ffffff; font-size: 16px; letter-spacing: 0.5px;">Gmail Create</h5>
-
-        </div>
-    </div>
-
-    <div class="container mt-3 px-3">
-        
-        <div style="background: #fff5f5; border-left: 4px solid #ff1e56; padding: 12px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
-<p style="margin: 0; font-size: 12px; color: #d63031; font-weight: 600; line-height: 1.7; text-align: justify;">
-    <i class="fas fa-bell" style="animation: ring 2s infinite; margin-right: 5px;"></i> 
-    <strong>গুরুত্বপূর্ণ নির্দেশনা:</strong><br>
-    ১. অবশ্যই সম্পূর্ণ নতুন, সঠিক এবং সচল জিমেইল সাবমিট করবেন।<br>
-    ২. আমাদের দেওয়া আজকের পাসওয়ার্ডটি হুবহু ব্যবহার করে মেইল তৈরি করতে হবে।<br>
-    ৩. কোনো প্রকার ভুল, ফেক, বা পাসওয়ার্ড ছাড়া মেইল সাবমিট করলে ব্যালেন্স যোগ হবে না।<br>
-    ৪. ইচ্ছে করে বারবার ভুল তথ্য সাবমিট করলে আপনার অ্যাকাউন্টটি স্থায়ীভাবে <strong>সাসপেন্ড (Block)</strong> করা হবে। নিয়ম মেনে কাজ সম্পন্ন করুন, ধন্যবাদ। ✅
-</p>
-        </div>
-
-        <div style="display: flex; gap: 12px; margin-bottom: 15px;">
-            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 15px; padding: 12px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-                <i class="fas fa-history" style="color: #ffaa00; font-size: 18px; margin-bottom: 5px;"></i>
-                <small style="display: block; color: #7f8c8d; font-size: 11px; font-weight: 600;">আজকের বাকি লিমিট</small>
-                <span id="limit-text" style="font-size: 15px; font-weight: 800; color: #2c3e50;">১০ টি</span>
-            </div>
-            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 15px; padding: 12px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-<span style="color: #2ed573; font-size: 18px; font-weight: 800; margin-bottom: 5px; display: inline-block;">৳</span>
-                <small style="display: block; color: #7f8c8d; font-size: 11px; font-weight: 600;">আজকের প্রাইস</small>
-                <span style="font-size: 15px; font-weight: 800; color: #2ed573;">১০ টাকা</span>
-            </div>
-        </div>
-
-        <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 15px; padding: 15px; margin-bottom: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); display: flex; align-items: center; justify-content: space-between;">
-            <div>
-                <small style="display: block; color: #7f8c8d; font-size: 11px; font-weight: 600; margin-bottom: 2px;">আজকের পাসওয়ার্ড</small>
-                <span id="gmail-pwd" style="font-size: 15px; font-weight: 700; color: #2d3436; letter-spacing: 0.5px;">@jony@#&</span>
-            </div>
-            <button onclick="copyPassword()" style="background: #f1f2f6; border: none; width: 35px; height: 35px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;">
-                <i id="copy-icon" class="far fa-copy" style="color: #57606f; font-size: 16px;"></i>
-            </button>
-        </div>
-
-        <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 20px; padding: 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.04);">
-            <h6 style="margin: 0 0 15px 0; font-weight: 800; color: #2d3436; font-size: 14px;">তথ্য সাবমিট করুন</h6>
-            
-            <form id="gmailSubmitForm" onsubmit="submitGmailData(event)">
-                <div style="margin-bottom: 12px;">
-                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">ইমেইল দিন</label>
-                    <input type="email" id="submitEmail" required placeholder="example@gmail.com" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 13px; outline: none; transition: border 0.2s;">
-                </div>
-
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">পাসওয়ার্ড দিন</label>
-                    <input type="text" id="submitPassword" required placeholder="মেইলের পাসওয়ার্ডটি লিখুন" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 13px; outline: none; transition: border 0.2s;">
-                </div>
-
-                <button type="submit" style="width: 100%; background: linear-gradient(135deg, #ff1e56 0%, #ffac41 100%); color: white; border: none; padding: 12px; border-radius: 10px; font-weight: bold; font-size: 13px; cursor: pointer; box-shadow: 0 4px 12px rgba(255,30,86,0.25);">
-                    সাবমিট করুন
-                </button>
-            </form>
-        </div>
-
-    </div>
-</div>
-
-<div id="successPopup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(4px);">
-    <div style="background: white; width: 100%; max-width: 320px; border-radius: 20px; padding: 25px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2); animation: popUpScale 0.3s ease-out;">
-        <div id="popup-icon-box" style="width: 60px; height: 60px; background: #2ed573; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto; box-shadow: 0 4px 15px rgba(46,213,115,0.3);">
-            <i id="popup-icon" class="fas fa-check" style="font-size: 28px;"></i>
-        </div>
-        <h5 id="popup-title" style="margin: 0 0 10px 0; font-weight: 800; color: #2ed573; font-size: 18px;">সাবমিট সফল হয়েছে!</h5>
-        <p id="popup-text" style="margin: 0 0 20px 0; font-size: 12px; color: #57606f; line-height: 1.6; text-align: justify;">
-            ১২ ঘন্টার মধ্যে আমাদের প্রতিনিধি চেক করে আপনার একাউন্টে ব্যালেন্স যোগ করে দিবে। অযথা ভুল বা ফেক সাবমিট দিলে একাউন্ট সাসপেন্ড হবে। ধন্যবাদ।
-        </p>
-        <button onclick="closeSuccessPopup()" style="width: 100%; background: #2c3e50; color: white; border: none; padding: 10px; border-radius: 8px; font-weight: bold; font-size: 13px; cursor: pointer;">ঠিক আছে</button>
-    </div>
-</div>
-
-<style>
-@keyframes popUpScale {
-    0% { transform: scale(0.7); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
-}
-</style>
-
-<script>
-// পেজ লোড হবার সময় লিমিট চেক করা
-document.addEventListener("DOMContentLoaded", function() {
-    updateLimitUI();
-});
-
-// রাত ১০টার লজিক হিসাব করে কারেন্ট বা পরবর্তী রিসেট টাইম বের করার ফাংশন
-function getResetTimestamp() {
-    let now = new Date();
-    let resetTime = new Date();
-    resetTime.setHours(22, 0, 0, 0); // রাত ১০:০০ টা
-    
-    // বর্তমান সময় যদি রাত ১০টার পরে হয়, তবে রিসেট টাইম হবে আগামীকালের রাত ১০টা
-    if (now.getTime() >= resetTime.getTime()) {
-        resetTime.setDate(resetTime.getDate() + 1);
-    }
-    return resetTime.getTime();
-}
-
-// লিমিট চেক এবং UI আপডেট ফাংশন
-function updateLimitUI() {
-    let now = new Date().getTime();
-    let nextReset = localStorage.getItem("gmail_submit_reset_time");
-    let currentCount = parseInt(localStorage.getItem("gmail_submit_count")) || 0;
-
-    // যদি রিসেট টাইম পার হয়ে যায়, তবে কাউন্টার ০ করে নতুন রিসেট টাইম সেট হবে
-    if (!nextReset || now >= parseInt(nextReset)) {
-        localStorage.setItem("gmail_submit_count", "0");
-        localStorage.setItem("gmail_submit_reset_time", getResetTimestamp().toString());
-        currentCount = 0;
-    }
-
-    let remainingLimit = 10 - currentCount;
-    if(remainingLimit < 0) remainingLimit = 0;
-    document.getElementById("limit-text").innerText = remainingLimit + " টি";
-    return remainingLimit;
-}
-
-// ১. জিমেইল ক্রিয়েট বাটন ট্রিগার ফাংশন
-function handleGmailCreateClick() {
-    updateLimitUI();
-    if (typeof openPage === "function") {
-        openPage('gmail-create');
-    } else {
-        document.getElementById('p-gmail-create').classList.remove('d-none');
-    }
-}
-
-// ২. পাসওয়ার্ড কপি করার ফাংশন
-function copyPassword() {
-    var passwordText = document.getElementById("gmail-pwd").innerText;
-    navigator.clipboard.writeText(passwordText).then(function() {
-        var icon = document.getElementById("copy-icon");
-        icon.className = "fas fa-check";
-        icon.style.color = "#2ed573";
-        setTimeout(function() {
-            icon.className = "far fa-copy";
-            icon.style.color = "#57606f";
-        }, 2000);
-    });
-}
-
-// ৪. ফর্ম সাবমিট এবং নির্দিষ্ট টেলিগ্রাম বটে ডেটা পাঠানো
-function submitGmailData(event) {
-    event.preventDefault();
-    
-    // প্রথমে কারেন্ট লিমিট চেক করা
-    let remaining = updateLimitUI();
-    if (remaining <= 0) {
-        showCustomPopup(
-            "লিমিট শেষ!", 
-            "আজকের ১০ টি সাবমিটের লিমিট শেষ হয়ে গেছে। রাত ১০ টার পরে আবার নতুন করে জমা দিতে পারবেন।", 
-            "#e74c3c", 
-            "fa-times-circle"
-        );
-        return;
-    }
-    
-    var email = document.getElementById("submitEmail").value;
-    var password = document.getElementById("submitPassword").value;
-    
-    // টেলিগ্রাম বট ও চ্যাট আইডি
-    const tgToken = "8213160023:AAFtEXfzkaJY4XLedxQuExevMPxsW6gL_ao"; 
-    const tgChatId = "7203470877"; 
-    
-    // আপনার রিকোয়ারমেন্ট অনুযায়ী সরাসরি curUser.email ব্যবহার করে মেসেজ ফরম্যাট
-    var message = `📩 *New Gmail Submission* 📩\n\n` +
-                  `👤 *ইউজার:* ${curUser.email}\n` +
-                  `📧 *Submitted Email:* \`${email}\`\n` +
-                  `🔑 *Submitted Password:* \`${password}\`\n\n` +
-                  `⚠️ _দয়া করে মেইলটি চেক করে ব্যালেন্স যোগ করুন।_`;
-    
-    var url = `https://api.telegram.org/bot${tgToken}/sendMessage?chat_id=${tgChatId}&text=${encodeURIComponent(message)}&parse_mode=Markdown`;
-    
-    // টেলিগ্রাম এপিআই-তে ডেটা পাঠানো
-    fetch(url)
-    .then(response => {
-        // সফল সাবমিটের পর লোকাল স্টোরেজ কাউন্ট ১ বাড়ানো
-        let currentCount = parseInt(localStorage.getItem("gmail_submit_count")) || 0;
-        localStorage.setItem("gmail_submit_count", (currentCount + 1).toString());
-        updateLimitUI();
-
-        showCustomPopup(
-            "সাবমিট সফল হয়েছে!", 
-            "১২ ঘন্টার মধ্যে আমাদের প্রতিনিধি চেক করে আপনার একাউন্টে ব্যালেন্স যোগ করে দিবে। অযথা ভুল বা ফেক সাবমিট দিলে একাউন্ট সাসপেন্ড হবে। ধন্যবাদ।", 
-            "#2ed573", 
-            "fa-check"
-        );
-        document.getElementById("gmailSubmitForm").reset();
-    })
-    .catch(error => {
-        // ইরর হ্যান্ডলিং ব্যাকআপ
-        let currentCount = parseInt(localStorage.getItem("gmail_submit_count")) || 0;
-        localStorage.setItem("gmail_submit_count", (currentCount + 1).toString());
-        updateLimitUI();
-        
-        showCustomPopup(
-            "সাবমিট সফল হয়েছে!", 
-            "১২ ঘন্টার মধ্যে আমাদের প্রতিনিধি চেক করে আপনার একাউন্টে ব্যালেন্স যোগ করে দিবে। অযথা ভুল বা ফেক সাবমিট দিলে একাউন্ট সাসপেন্ড হবে। ধন্যবাদ।", 
-            "#2ed573", 
-            "fa-check"
-        );
-        document.getElementById("gmailSubmitForm").reset();
-        console.error("Error sending to Telegram:", error);
-    });
-}
-
-// কাস্টম পপআপ কন্ট্রোল ডায়নামিক ফাংশন
-function showCustomPopup(title, text, color, iconClass) {
-    document.getElementById("popup-title").innerText = title;
-    document.getElementById("popup-title").style.color = color;
-    document.getElementById("popup-text").innerText = text;
-    document.getElementById("popup-icon-box").style.background = color;
-    document.getElementById("popup-icon").className = "fas " + iconClass;
-    document.getElementById("successPopup").style.display = "flex";
-}
-
-// ৪. পপআপ বন্ধ করার ফাংশন
-function closeSuccessPopup() {
-    document.getElementById("successPopup").style.display = "none";
-}
-</script>
 
 
 
