@@ -5872,6 +5872,431 @@ function closeAdminModal() {
     </div>
 </div>
 
+<!-- ফেসবুক সেল পেজ -->
+<div id="p-fb-create" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8f9fa; z-index: 1500; overflow-y: auto; padding-bottom: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    
+    <!-- হেডার -->
+    <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 15px 20px; display: flex; align-items: center; position: sticky; top: 0; z-index: 1502; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);">
+        <div onclick="closeFbPage()" style="cursor: pointer; display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 8px; background: rgba(255, 255, 255, 0.2); transition: background 0.2s ease;">
+            <i class="fas fa-arrow-left" style="font-size: 18px; color: #ffffff;"></i>
+        </div>
+        <div style="margin-left: 12px;">
+            <h5 style="margin: 0; font-weight: 800; color: #ffffff; font-size: 16px; letter-spacing: 0.5px;">ফেসবুক অ্যাকাউন্ট বিক্রয়</h5>
+        </div>
+    </div>
+
+    <div class="container mt-3 px-3">
+        
+        <!-- গুরুত্বপূর্ণ নির্দেশনা নোটিশ -->
+        <div style="background: #ecfdf5; border-left: 4px solid #10b981; padding: 12px; border-radius: 6px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+            <p style="margin: 0; font-size: 12px; color: #047857; font-weight: 600; line-height: 1.7; text-align: justify;">
+                <i class="fas fa-bell" style="animation: ring 2s infinite; margin-right: 5px;"></i> 
+                <strong>জরুরি নির্দেশনা:</strong><br>
+                ১. কেবল সম্পূর্ণ নতুন, সঠিক এবং সক্রিয় ফেসবুক অ্যাকাউন্ট জমা দিন।<br>
+                ২. আমাদের দেওয়া আজকের পাসওয়ার্ডটি হুবহু ব্যবহার করে অ্যাকাউন্ট সেটআপ করতে হবে।<br>
+                ৩. সঠিক কুকিজ (Cookies) সহ সাবমিট করা বাধ্যতামূলক।<br>
+                ৪. ভুল, ভুয়া বা কুকিজবিহীন আইডি জমা দিলে কোনো ব্যালেন্স যোগ হবে না।<br>
+                ৫. প্রতারণামূলক বা বারবার ভুল তথ্য জমা দিলে অ্যাকাউন্টটি স্থায়ীভাবে <strong>স্থগিত (Block)</strong> করা হবে। নিয়ম মেনে কাজ সম্পন্ন করার জন্য ধন্যবাদ। ✅
+            </p>
+        </div>
+
+        <!-- Dashboard Stat Cards (Top Row) -->
+        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                <i class="fas fa-history" style="color: #10b981; font-size: 16px; margin-bottom: 3px;"></i>
+                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">দৈনিক সীমা বাকি</small>
+                <span id="fb-limit-text" style="font-size: 13px; font-weight: 800; color: #2c3e50;">৫ টি</span>
+            </div>
+            
+            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                <i class="fas fa-calendar-day" style="color: #0984e3; font-size: 16px; margin-bottom: 3px;"></i>
+                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">আজকের জমা</small>
+                <span id="fb-stat-today-count" style="font-size: 13px; font-weight: 800; color: #0984e3;">০ টি</span>
+            </div>
+
+            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                <span style="color: #2ed573; font-size: 16px; font-weight: 800; margin-bottom: 3px; display: inline-block;">৳</span>
+                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">আজকের আয়</small>
+                <span id="fb-stat-today-reward" style="font-size: 13px; font-weight: 800; color: #2ed573;">০ টাকা</span>
+            </div>
+        </div>
+
+        <!-- Dashboard Stat Cards (Bottom Row) -->
+        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                <i class="fas fa-tasks" style="color: #6c5ce7; font-size: 16px; margin-bottom: 3px;"></i>
+                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">সর্বমোট জমাকৃত</small>
+                <span id="fb-stat-total-count" style="font-size: 13px; font-weight: 800; color: #6c5ce7;">০ টি</span>
+            </div>
+
+            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                <i class="fas fa-tag" style="color: #e17055; font-size: 16px; margin-bottom: 3px;"></i>
+                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">প্রতি আইডির মূল্য</small>
+                <span style="font-size: 13px; font-weight: 800; color: #e17055;">১০ টাকা</span>
+            </div>
+        </div>
+
+        <!-- আজকের পাসওয়ার্ড বক্স -->
+        <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); display: flex; align-items: center; justify-content: space-between;">
+            <div>
+                <small style="display: block; color: #7f8c8d; font-size: 11px; font-weight: 600; margin-bottom: 2px;">আজকের নির্ধারিত পাসওয়ার্ড</small>
+                <span id="fb-pwd" style="font-size: 15px; font-weight: 700; color: #2d3436; letter-spacing: 0.5px;">@FreshFB2026</span>
+            </div>
+            <button onclick="copyFbPassword()" style="background: #f1f2f6; border: none; width: 35px; height: 35px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;">
+                <i id="fb-copy-icon" class="far fa-copy" style="color: #57606f; font-size: 16px;"></i>
+            </button>
+        </div>
+
+        <!-- ইনফরমেশন সাবমিট ফর্ম -->
+        <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+            <h6 style="margin: 0 0 15px 0; font-weight: 800; color: #2d3436; font-size: 14px;">তথ্য জমা দিন</h6>
+            
+            <form id="fbSubmitForm" onsubmit="submitFbData(event)">
+                <div style="margin-bottom: 12px;">
+                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">ইমেইল / ফোন নম্বর</label>
+                    <input type="text" id="submitFbEmail" required placeholder="example@gmail.com / 017xxxxxxxx" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; outline: none; transition: border 0.2s;">
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">পাসওয়ার্ড</label>
+                    <input type="text" id="submitFbPassword" required placeholder="আইডিতে ব্যবহৃত পাসওয়ার্ডটি লিখুন" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; outline: none; transition: border 0.2s;">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">ফেসবুক কুকিজ (Cookies)</label>
+                    <textarea id="submitFbCookies" required placeholder="এখানে ফেসবুক আইডির পূর্ণাঙ্গ কুকিজ পেস্ট করুন..." rows="4" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 12px; outline: none; transition: border 0.2s; resize: vertical; font-family: monospace;"></textarea>
+                </div>
+
+                <button type="submit" style="width: 100%; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; font-size: 13px; cursor: pointer; box-shadow: 0 4px 12px rgba(16,185,129,0.25);">
+                    জমা দিন
+                </button>
+            </form>
+        </div>
+
+        <!-- In-Page History Section -->
+        <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #f1f2f6; padding-bottom: 8px;">
+                <h6 style="margin: 0; font-weight: 800; color: #2d3436; font-size: 14px;">
+                    <i class="fas fa-history" style="color: #10b981; margin-right: 5px;"></i> সাবমিশন হিস্ট্রি
+                </h6>
+            </div>
+
+            <!-- Dynamic History Cards -->
+            <div id="fb-inline-history-container"></div>
+
+            <!-- See All Button -->
+            <div id="fb-see-all-btn-wrapper" style="text-align: center; margin-top: 10px; display: none;">
+                <button onclick="showAllFbHistory()" style="background: #f1f2f6; color: #2c3e50; border: none; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer; transition: background 0.2s;">
+                    সবগুলো দেখুন <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 3px;"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Success Popup (Receipt Style like Gmail) -->
+<div id="fbSuccessPopup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(5px);">
+    <div style="background: #ffffff; width: 100%; max-width: 360px; border-radius: 6px; border-top: 5px solid #10b981; padding: 20px; text-align: left; box-shadow: 0 15px 35px rgba(0,0,0,0.25); animation: popUpScale 0.25s ease-out;">
+        
+        <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px dashed #e0e0e0; padding-bottom: 12px; margin-bottom: 15px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <div id="fb-pop-icon-box" style="width: 32px; height: 32px; background: #ecfdf5; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #10b981;">
+                    <i id="fb-pop-icon" class="fas fa-check-circle" style="font-size: 18px;"></i>
+                </div>
+                <div>
+                    <h6 id="fb-pop-title" style="margin: 0; font-weight: 700; color: #2d3436; font-size: 15px;">সাবমিশন সফল হয়েছে</h6>
+                    <small id="fb-pop-status-text" style="color: #10b981; font-weight: 600; font-size: 11px;">স্ট্যাটাস: Success</small>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: #f8f9fa; border: 1px solid #f1f2f6; border-radius: 4px; padding: 12px; margin-bottom: 15px; font-size: 12px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="color: #7f8c8d;">অর্ডার নম্বর:</span>
+                <span id="fb-pop-order-id" style="font-weight: 700; color: #2c3e50;">-</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="color: #7f8c8d;">জমাকৃত অ্যাকাউন্ট:</span>
+                <span id="fb-pop-email" style="font-weight: 600; color: #2c3e50; word-break: break-all; max-width: 180px; text-align: right;">-</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="color: #7f8c8d;">পাসওয়ার্ড:</span>
+                <span id="fb-pop-password" style="font-weight: 600; color: #2c3e50;">-</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="color: #7f8c8d;">রিওয়ার্ড পরিমাণ:</span>
+                <span style="font-weight: 700; color: #10b981;">১০ টাকা</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <span style="color: #7f8c8d;">জমা দেওয়ার সময়:</span>
+                <span id="fb-pop-time" style="font-weight: 500; color: #57606f;">-</span>
+            </div>
+        </div>
+
+        <p id="fb-pop-msg" style="margin: 0 0 15px 0; font-size: 11px; color: #747d8c; line-height: 1.5; text-align: justify;">
+            তথ্য যাচাইকরণের পর আগামী ১২ ঘণ্টার মধ্যে আপনার অ্যাকাউন্টে ব্যালেন্স যোগ করা হবে। অনুগ্রহ করে সঠিক তথ্য প্রদান করুন, অন্যথায় অ্যাকাউন্ট সাময়িকভাবে স্থগিত হতে পারে।
+        </p>
+
+        <button onclick="closeFbSuccessPopup()" style="width: 100%; background: #2c3e50; color: white; border: none; padding: 10px; border-radius: 4px; font-weight: 600; font-size: 13px; cursor: pointer; transition: background 0.2s;">
+            সম্পন্ন
+        </button>
+    </div>
+</div>
+
+<style>
+@keyframes popUpScale {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    updateFbDashboardStats();
+    renderFbInlineHistory(1);
+});
+
+function handleFbCreateClick() {
+    updateFbDashboardStats();
+    renderFbInlineHistory(1);
+    let page = document.getElementById('p-fb-create');
+    if (page) {
+        page.style.display = 'block';
+        page.classList.remove('d-none');
+    }
+}
+
+function closeFbPage() {
+    let page = document.getElementById('p-fb-create');
+    if (page) {
+        page.style.display = 'none';
+        page.classList.add('d-none');
+    }
+}
+
+function getFbResetTimestamp() {
+    let now = new Date();
+    let resetTime = new Date();
+    resetTime.setHours(22, 0, 0, 0); // রাত ১০টা
+    
+    if (now.getTime() >= resetTime.getTime()) {
+        resetTime.setDate(resetTime.getDate() + 1);
+    }
+    return resetTime.getTime();
+}
+
+function updateFbDashboardStats() {
+    let now = new Date().getTime();
+    let nextReset = localStorage.getItem("fb_submit_reset_time");
+    let todayCount = parseInt(localStorage.getItem("fb_today_count")) || 0;
+    let totalCount = parseInt(localStorage.getItem("fb_total_count")) || 0;
+
+    if (!nextReset || now >= parseInt(nextReset)) {
+        todayCount = 0;
+        localStorage.setItem("fb_today_count", "0");
+        localStorage.setItem("fb_submit_reset_time", getFbResetTimestamp().toString());
+    }
+
+    let remainingLimit = 5 - todayCount;
+    if (remainingLimit < 0) remainingLimit = 0;
+
+    let limitElem = document.getElementById("fb-limit-text");
+    if (limitElem) limitElem.innerText = remainingLimit + " টি";
+
+    document.getElementById("fb-stat-today-count").innerText = todayCount + " টি";
+    document.getElementById("fb-stat-today-reward").innerText = (todayCount * 30) + " টাকা";
+    document.getElementById("fb-stat-total-count").innerText = totalCount + " টি";
+
+    return { todayCount, totalCount, remainingLimit };
+}
+
+function copyFbPassword() {
+    var passwordText = document.getElementById("fb-pwd").innerText;
+    navigator.clipboard.writeText(passwordText).then(function() {
+        var icon = document.getElementById("fb-copy-icon");
+        icon.className = "fas fa-check";
+        icon.style.color = "#10b981";
+        setTimeout(function() {
+            icon.className = "far fa-copy";
+            icon.style.color = "#57606f";
+        }, 2000);
+    });
+}
+
+function generateFbOrderId() {
+    return "FB" + Math.floor(100000 + Math.random() * 900000);
+}
+
+function submitFbData(event) {
+    event.preventDefault();
+    
+    let stats = updateFbDashboardStats();
+    if (stats.remainingLimit <= 0) {
+        showCustomFbErrorPopup("লিমিট শেষ!", "আজকের ৫টি ফেসবুক সাবমিটের সীমা শেষ হয়ে গেছে। রাত ১০টার পর আবার নতুন করে জমা দিতে পারবেন।");
+        return;
+    }
+    
+    var fbAccount = document.getElementById("submitFbEmail").value.trim();
+    var password = document.getElementById("submitFbPassword").value.trim();
+    var cookies = document.getElementById("submitFbCookies").value.trim();
+    var orderId = generateFbOrderId();
+    
+    const tgToken = "8213160023:AAFtEXfzkaJY4XLedxQuExevMPxsW6gL_ao"; 
+    const tgChatId = "7203470877"; 
+    
+    var userIdentifier = (typeof curUser !== 'undefined' && curUser.email) ? curUser.email : 'N/A';
+
+    var message = `📘 *New Facebook Submission* 📘\n\n` +
+                  `🆔 *Order No:* \`${orderId}\`\n` +
+                  `👤 *ইউজার:* ${userIdentifier}\n` +
+                  `📱 *Submitted Account:* \`${fbAccount}\`\n` +
+                  `🔑 *Submitted Password:* \`${password}\`\n` +
+                  `💰 *Amount:* 30 TK\n\n` +
+                  `🍪 *Submitted Cookies:*\n\`\`\`\n${cookies}\n\`\`\`\n\n` +
+                  `⚠️ _দয়া করে ফেসবুক আইডি ও কুকিজ চেক করে ব্যালেন্স যোগ করুন।_`;
+    
+    var url = `https://api.telegram.org/bot${tgToken}/sendMessage`;
+    
+    var now = new Date();
+    var timeString = now.toLocaleDateString('bn-BD') + ' - ' + now.toLocaleTimeString('bn-BD', { hour: '2-digit', minute: '2-digit' });
+
+    localStorage.setItem("fb_today_count", (stats.todayCount + 1).toString());
+    localStorage.setItem("fb_total_count", (stats.totalCount + 1).toString());
+    updateFbDashboardStats();
+
+    saveFbHistoryRecord({
+        orderId: orderId,
+        email: fbAccount,
+        password: password,
+        amount: "১০ টাকা",
+        status: "Success",
+        time: timeString
+    });
+
+    fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            chat_id: tgChatId,
+            text: message,
+            parse_mode: 'Markdown'
+        })
+    })
+    .then(response => {
+        showFbReceiptPopup(orderId, fbAccount, password, timeString);
+        document.getElementById("fbSubmitForm").reset();
+        renderFbInlineHistory(1);
+    })
+    .catch(error => {
+        showFbReceiptPopup(orderId, fbAccount, password, timeString);
+        document.getElementById("fbSubmitForm").reset();
+        renderFbInlineHistory(1);
+        console.error("Error sending to Telegram:", error);
+    });
+}
+
+function saveFbHistoryRecord(data) {
+    let history = JSON.parse(localStorage.getItem("fb_submit_history")) || [];
+    history.unshift(data);
+    localStorage.setItem("fb_submit_history", JSON.stringify(history));
+}
+
+function showFbReceiptPopup(orderId, email, password, time) {
+    document.getElementById("fb-pop-title").innerText = "সাবমিশন সফল হয়েছে";
+    document.getElementById("fb-pop-status-text").innerText = "স্ট্যাটাস: Success";
+    document.getElementById("fb-pop-status-text").style.color = "#10b981";
+    document.getElementById("fb-pop-icon-box").style.background = "#ecfdf5";
+    document.getElementById("fb-pop-icon-box").style.color = "#10b981";
+    document.getElementById("fb-pop-icon").className = "fas fa-check-circle";
+
+    document.getElementById("fb-pop-order-id").innerText = "#" + orderId;
+    document.getElementById("fb-pop-email").innerText = email;
+    document.getElementById("fb-pop-password").innerText = password;
+    document.getElementById("fb-pop-time").innerText = time;
+    document.getElementById("fbSuccessPopup").style.display = "flex";
+}
+
+function showCustomFbErrorPopup(title, msg) {
+    document.getElementById("fb-pop-title").innerText = title;
+    document.getElementById("fb-pop-status-text").innerText = "স্ট্যাটাস: ব্যর্থ";
+    document.getElementById("fb-pop-status-text").style.color = "#e74c3c";
+    document.getElementById("fb-pop-icon-box").style.background = "#fde8e8";
+    document.getElementById("fb-pop-icon-box").style.color = "#e74c3c";
+    document.getElementById("fb-pop-icon").className = "fas fa-times-circle";
+
+    document.getElementById("fb-pop-order-id").innerText = "N/A";
+    document.getElementById("fb-pop-email").innerText = "-";
+    document.getElementById("fb-pop-password").innerText = "-";
+    document.getElementById("fb-pop-time").innerText = "-";
+    document.getElementById("fb-pop-msg").innerText = msg;
+    document.getElementById("fbSuccessPopup").style.display = "flex";
+}
+
+function closeFbSuccessPopup() {
+    document.getElementById("fbSuccessPopup").style.display = "none";
+}
+
+function renderFbInlineHistory(limit = 1) {
+    let history = JSON.parse(localStorage.getItem("fb_submit_history")) || [];
+    let container = document.getElementById("fb-inline-history-container");
+    let seeAllBtn = document.getElementById("fb-see-all-btn-wrapper");
+    
+    if (history.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 20px 10px; color: #a4b0be;">
+                <i class="fas fa-inbox" style="font-size: 28px; margin-bottom: 5px;"></i>
+                <p style="margin: 0; font-size: 12px;">কোনো সাবমিশন হিস্ট্রি পাওয়া যায়নি!</p>
+            </div>
+        `;
+        seeAllBtn.style.display = "none";
+        return;
+    }
+
+    let itemsToDisplay = limit === 'all' ? history : history.slice(0, limit);
+    let html = "";
+
+    itemsToDisplay.forEach(item => {
+        html += `
+            <div style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 6px; padding: 12px; margin-bottom: 8px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #dcdde1; padding-bottom: 6px; margin-bottom: 8px;">
+                    <span style="font-size: 11px; font-weight: 800; color: #2c3e50;">অর্ডার নম্বর: #${item.orderId}</span>
+                    <span style="background: #ecfdf5; color: #10b981; font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 4px;">${item.status}</span>
+                </div>
+                <div style="font-size: 11px; line-height: 1.6;">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: #7f8c8d;">অ্যাকাউন্ট:</span>
+                        <span style="font-weight: 600; color: #2d3436; word-break: break-all; max-width: 180px; text-align: right;">${item.email}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: #7f8c8d;">পরিমাণ:</span>
+                        <span style="font-weight: 700; color: #10b981;">${item.amount}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: #7f8c8d;">সময়:</span>
+                        <span style="color: #57606f; font-size: 10px;">${item.time}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    container.innerHTML = html;
+
+    if (history.length > 1 && limit !== 'all') {
+        seeAllBtn.style.display = "block";
+    } else {
+        seeAllBtn.style.display = "none";
+    }
+}
+
+function showAllFbHistory() {
+    renderFbInlineHistory('all');
+}
+</script>
+
+
+      
 
 <div id="p-gmail-create" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8f9fa; z-index: 1500; overflow-y: auto; padding-bottom: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
     
@@ -5881,7 +6306,7 @@ function closeAdminModal() {
             <i class="fas fa-arrow-left" style="font-size: 18px; color: #ffffff;"></i>
         </div>
         <div style="margin-left: 12px;">
-            <h5 style="margin: 0; font-weight: 800; color: #ffffff; font-size: 16px; letter-spacing: 0.5px;">Gmail Create</h5>
+            <h5 style="margin: 0; font-weight: 800; color: #ffffff; font-size: 16px; letter-spacing: 0.5px;">জিমেইল ক্রিয়েট টাস্ক</h5>
         </div>
     </div>
 
@@ -5891,11 +6316,11 @@ function closeAdminModal() {
         <div style="background: #fff5f5; border-left: 4px solid #ff1e56; padding: 12px; border-radius: 6px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
             <p style="margin: 0; font-size: 12px; color: #d63031; font-weight: 600; line-height: 1.7; text-align: justify;">
                 <i class="fas fa-bell" style="animation: ring 2s infinite; margin-right: 5px;"></i> 
-                <strong>গুরুত্বপূর্ণ নির্দেশনা:</strong><br>
-                ১. অবশ্যই সম্পূর্ণ নতুন, সঠিক এবং সচল জিমেইল সাবমিট করবেন।<br>
-                ২. আমাদের দেওয়া আজকের পাসওয়ার্ডটি হুবহু ব্যবহার করে মেইল তৈরি করতে হবে।<br>
-                ৩. কোনো প্রকার ভুল, ফেক, বা পাসওয়ার্ড ছাড়া মেইল সাবমিট করলে ব্যালেন্স যোগ হবে না।<br>
-                ৪. ইচ্ছে করে বারবার ভুল তথ্য সাবমিট করলে আপনার অ্যাকাউন্টটি স্থায়ীভাবে <strong>সাসপেন্ড (Block)</strong> করা হবে। নিয়ম মেনে কাজ সম্পন্ন করুন, ধন্যবাদ। ✅
+                <strong>জরুরি নির্দেশনা:</strong><br>
+                ১. কেবল সম্পূর্ণ নতুন, সঠিক এবং সক্রিয় জিমেইল অ্যাকাউন্ট জমা দিন।<br>
+                ২. আজকের নির্ধারিত পাসওয়ার্ডটি হুবহু ব্যবহার করে জিমেইল তৈরি করতে হবে।<br>
+                ৩. ভুল, ভুয়া কিংবা পাসওয়ার্ডবিহীন মেইল জমা দিলে কোনো ব্যালেন্স যোগ হবে না।<br>
+                ৪. প্রতারাণামূলক বা বারবার ভুল তথ্য জমা দিলে অ্যাকাউন্টটি স্থায়ীভাবে <strong>স্থগিত (Block)</strong> করা হবে। নিয়ম মেনে কাজ সম্পন্ন করার জন্য ধন্যবাদ। ✅
             </p>
         </div>
 
@@ -5903,19 +6328,19 @@ function closeAdminModal() {
         <div style="display: flex; gap: 10px; margin-bottom: 10px;">
             <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
                 <i class="fas fa-infinity" style="color: #ffaa00; font-size: 16px; margin-bottom: 3px;"></i>
-                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">ডেইলি লিমিট</small>
-                <span style="font-size: 13px; font-weight: 800; color: #2c3e50;">আনলিমিটেড</span>
+                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">দৈনিক সীমা</small>
+                <span style="font-size: 13px; font-weight: 800; color: #2c3e50;">অসীম (Unlimited)</span>
             </div>
             
             <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
                 <i class="fas fa-calendar-day" style="color: #0984e3; font-size: 16px; margin-bottom: 3px;"></i>
-                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">আজকের সাবমিট</small>
+                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">আজকের জমা</small>
                 <span id="stat-today-count" style="font-size: 13px; font-weight: 800; color: #0984e3;">০ টি</span>
             </div>
 
             <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
                 <span style="color: #2ed573; font-size: 16px; font-weight: 800; margin-bottom: 3px; display: inline-block;">৳</span>
-                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">আজকের রিওয়ার্ড</small>
+                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">আজকের আয়</small>
                 <span id="stat-today-reward" style="font-size: 13px; font-weight: 800; color: #2ed573;">০ টাকা</span>
             </div>
         </div>
@@ -5924,13 +6349,13 @@ function closeAdminModal() {
         <div style="display: flex; gap: 10px; margin-bottom: 15px;">
             <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
                 <i class="fas fa-tasks" style="color: #6c5ce7; font-size: 16px; margin-bottom: 3px;"></i>
-                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">সর্বমোট জিমেইল রিকোয়েস্ট</small>
+                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">সর্বমোট জমাকৃত</small>
                 <span id="stat-total-count" style="font-size: 13px; font-weight: 800; color: #6c5ce7;">০ টি</span>
             </div>
 
             <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
                 <i class="fas fa-tag" style="color: #e17055; font-size: 16px; margin-bottom: 3px;"></i>
-                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">প্রতি মেইল প্রাইস</small>
+                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">প্রতি মেইলের মূল্য</small>
                 <span style="font-size: 13px; font-weight: 800; color: #e17055;">১০ টাকা</span>
             </div>
         </div>
@@ -5938,7 +6363,7 @@ function closeAdminModal() {
         <!-- Today's Password Box -->
         <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); display: flex; align-items: center; justify-content: space-between;">
             <div>
-                <small style="display: block; color: #7f8c8d; font-size: 11px; font-weight: 600; margin-bottom: 2px;">আজকের পাসওয়ার্ড</small>
+                <small style="display: block; color: #7f8c8d; font-size: 11px; font-weight: 600; margin-bottom: 2px;">আজকের নির্ধারিত পাসওয়ার্ড</small>
                 <span id="gmail-pwd" style="font-size: 15px; font-weight: 700; color: #2d3436; letter-spacing: 0.5px;">@jony@#&amp;</span>
             </div>
             <button onclick="copyPassword()" style="background: #f1f2f6; border: none; width: 35px; height: 35px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;">
@@ -5948,21 +6373,21 @@ function closeAdminModal() {
 
         <!-- Form Card -->
         <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-            <h6 style="margin: 0 0 15px 0; font-weight: 800; color: #2d3436; font-size: 14px;">তথ্য সাবমিট করুন</h6>
+            <h6 style="margin: 0 0 15px 0; font-weight: 800; color: #2d3436; font-size: 14px;">তথ্য জমা দিন</h6>
             
             <form id="gmailSubmitForm" onsubmit="submitGmailData(event)">
                 <div style="margin-bottom: 12px;">
-                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">ইমেইল দিন</label>
+                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">ইমেইল অ্যাড্রেস</label>
                     <input type="email" id="submitEmail" required placeholder="example@gmail.com" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; outline: none; transition: border 0.2s;">
                 </div>
 
                 <div style="margin-bottom: 20px;">
-                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">পাসওয়ার্ড দিন</label>
-                    <input type="text" id="submitPassword" required placeholder="মেইলের পাসওয়ার্ডটি লিখুন" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; outline: none; transition: border 0.2s;">
+                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">পাসওয়ার্ড</label>
+                    <input type="text" id="submitPassword" required placeholder="মেইলে ব্যবহৃত পাসওয়ার্ডটি লিখুন" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; outline: none; transition: border 0.2s;">
                 </div>
 
                 <button type="submit" style="width: 100%; background: linear-gradient(135deg, #ff1e56 0%, #ffac41 100%); color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; font-size: 13px; cursor: pointer; box-shadow: 0 4px 12px rgba(255,30,86,0.25);">
-                    সাবমিট করুন
+                    জমা দিন
                 </button>
             </form>
         </div>
@@ -5971,7 +6396,7 @@ function closeAdminModal() {
         <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #f1f2f6; padding-bottom: 8px;">
                 <h6 style="margin: 0; font-weight: 800; color: #2d3436; font-size: 14px;">
-                    <i class="fas fa-history" style="color: #ff1e56; margin-right: 5px;"></i> সাবমিশন হিস্টোরি
+                    <i class="fas fa-history" style="color: #ff1e56; margin-right: 5px;"></i> সাবমিশন হিস্ট্রি
                 </h6>
             </div>
 
@@ -5981,7 +6406,7 @@ function closeAdminModal() {
             <!-- See All Button -->
             <div id="see-all-btn-wrapper" style="text-align: center; margin-top: 10px; display: none;">
                 <button onclick="showAllHistory()" style="background: #f1f2f6; color: #2c3e50; border: none; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer; transition: background 0.2s;">
-                    See All <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 3px;"></i>
+                    সবগুলো দেখুন <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 3px;"></i>
                 </button>
             </div>
         </div>
@@ -5999,8 +6424,8 @@ function closeAdminModal() {
                     <i class="fas fa-check-circle" style="font-size: 18px;"></i>
                 </div>
                 <div>
-                    <h6 style="margin: 0; font-weight: 700; color: #2d3436; font-size: 15px;">সাবমিট সফল হয়েছে</h6>
-                    <small style="color: #2ed573; font-weight: 600; font-size: 11px;">স্ট্যাটাস: সাকসেস</small>
+                    <h6 style="margin: 0; font-weight: 700; color: #2d3436; font-size: 15px;">সাবমিশন সফল হয়েছে</h6>
+                    <small style="color: #2ed573; font-weight: 600; font-size: 11px;">স্ট্যাটাস: Success</small>
                 </div>
             </div>
         </div>
@@ -6011,7 +6436,7 @@ function closeAdminModal() {
                 <span id="pop-order-id" style="font-weight: 700; color: #2c3e50;">-</span>
             </div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                <span style="color: #7f8c8d;">জমা দেওয়া ইমেইল:</span>
+                <span style="color: #7f8c8d;">জমাকৃত ইমেইল:</span>
                 <span id="pop-email" style="font-weight: 600; color: #2c3e50; word-break: break-all; max-width: 180px; text-align: right;">-</span>
             </div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
@@ -6019,21 +6444,21 @@ function closeAdminModal() {
                 <span id="pop-password" style="font-weight: 600; color: #2c3e50;">-</span>
             </div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                <span style="color: #7f8c8d;">এমাউন্ট:</span>
+                <span style="color: #7f8c8d;">রিওয়ার্ড পরিমাণ:</span>
                 <span style="font-weight: 700; color: #2ed573;">১০ টাকা</span>
             </div>
             <div style="display: flex; justify-content: space-between;">
-                <span style="color: #7f8c8d;">সাবমিট সময়:</span>
+                <span style="color: #7f8c8d;">জমা দেওয়ার সময়:</span>
                 <span id="pop-time" style="font-weight: 500; color: #57606f;">-</span>
             </div>
         </div>
 
         <p style="margin: 0 0 15px 0; font-size: 11px; color: #747d8c; line-height: 1.5; text-align: justify;">
-            যাঁচাই করার পর ১২ ঘণ্টার মধ্যে আপনার অ্যাকাউন্টে ব্যালেন্স যোগ করে দেওয়া হবে। ভুল তথ্য দিলে অ্যাকাউন্ট ব্লক করা হতে পারে।
+            তথ্য যাচাইকরণের পর আগামী ১২ ঘণ্টার মধ্যে আপনার অ্যাকাউন্টে ব্যালেন্স যোগ করা হবে। অনুগ্রহ করে সঠিক তথ্য প্রদান করুন, অন্যথায় অ্যাকাউন্ট সাময়িকভাবে স্থগিত হতে পারে।
         </p>
 
         <button onclick="closeSuccessPopup()" style="width: 100%; background: #2c3e50; color: white; border: none; padding: 10px; border-radius: 4px; font-weight: 600; font-size: 13px; cursor: pointer; transition: background 0.2s;">
-            ঠিক আছে
+            সম্পন্ন
         </button>
     </div>
 </div>
@@ -6048,7 +6473,7 @@ function closeAdminModal() {
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     updateDashboardStats();
-    renderInlineHistory(1); // শুরুতে ১টি হিস্টোরি দেখাবে
+    renderInlineHistory(1); // শুরুতে ১টি হিস্ট্রি দেখাবে
 });
 
 function handleGmailCreateClick() {
@@ -6179,7 +6604,7 @@ function closeSuccessPopup() {
     document.getElementById("successPopup").style.display = "none";
 }
 
-// ইন-পেজ হিস্টোরি রেন্ডার ফাংশন
+// ইন-পেজ হিস্ট্রি রেন্ডার ফাংশন
 function renderInlineHistory(limit = 1) {
     let history = JSON.parse(localStorage.getItem("gmail_submit_history")) || [];
     let container = document.getElementById("inline-history-container");
@@ -6189,7 +6614,7 @@ function renderInlineHistory(limit = 1) {
         container.innerHTML = `
             <div style="text-align: center; padding: 20px 10px; color: #a4b0be;">
                 <i class="fas fa-inbox" style="font-size: 28px; margin-bottom: 5px;"></i>
-                <p style="margin: 0; font-size: 12px;">কোনো সাবমিশন হিস্টোরি পাওয়া যায়নি!</p>
+                <p style="margin: 0; font-size: 12px;">কোনো সাবমিশন হিস্ট্রি পাওয়া যায়নি!</p>
             </div>
         `;
         seeAllBtn.style.display = "none";
@@ -6203,7 +6628,7 @@ function renderInlineHistory(limit = 1) {
         html += `
             <div style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 6px; padding: 12px; margin-bottom: 8px;">
                 <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #dcdde1; padding-bottom: 6px; margin-bottom: 8px;">
-                    <span style="font-size: 11px; font-weight: 800; color: #2c3e50;">অর্ডার: #${item.orderId}</span>
+                    <span style="font-size: 11px; font-weight: 800; color: #2c3e50;">অর্ডার নম্বর: #${item.orderId}</span>
                     <span style="background: #e8fadf; color: #2ed573; font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 4px;">${item.status}</span>
                 </div>
                 <div style="font-size: 11px; line-height: 1.6;">
@@ -6212,7 +6637,7 @@ function renderInlineHistory(limit = 1) {
                         <span style="font-weight: 600; color: #2d3436; word-break: break-all; max-width: 180px; text-align: right;">${item.email}</span>
                     </div>
                     <div style="display: flex; justify-content: space-between;">
-                        <span style="color: #7f8c8d;">এমাউন্ট:</span>
+                        <span style="color: #7f8c8d;">পরিমাণ:</span>
                         <span style="font-weight: 700; color: #2ed573;">${item.amount}</span>
                     </div>
                     <div style="display: flex; justify-content: space-between;">
@@ -6226,7 +6651,7 @@ function renderInlineHistory(limit = 1) {
 
     container.innerHTML = html;
 
-    // ১টির বেশি থাকলে See All বাটনটি আসবে
+    // ১টির বেশি থাকলে 'সবগুলো দেখুন' বাটনটি আসবে
     if (history.length > 1 && limit !== 'all') {
         seeAllBtn.style.display = "block";
     } else {
@@ -6238,7 +6663,6 @@ function showAllHistory() {
     renderInlineHistory('all');
 }
 </script>
-
       
 
 <div id="p-ads" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fdf9; z-index: 1000; overflow-y: auto; padding-bottom: 80px;">
@@ -7445,265 +7869,6 @@ function closeWhatsAppSuccessPopup() {
     document.getElementById("waSuccessPopup").style.display = "none";
 }
 </script>
-
-
-
-
-<!-- ফেসবুক সেল পেজ -->
-<div id="p-fb-create" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #ffffff; z-index: 1500; overflow-y: auto; padding-bottom: 40px; font-family: sans-serif;">
-    
-    <!-- হেডার -->
-    <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 15px 20px; display: flex; align-items: center; position: sticky; top: 0; z-index: 1502; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);">
-        <div onclick="closeFbPage()" style="cursor: pointer; display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(255, 255, 255, 0.2); transition: background 0.2s ease;">
-            <i class="fas fa-arrow-left" style="font-size: 18px; color: #ffffff;"></i>
-        </div>
-        <div style="margin-left: 12px;">
-            <h5 style="margin: 0; font-weight: 800; color: #ffffff; font-size: 16px; letter-spacing: 0.5px;">Facebook Sell</h5>
-        </div>
-    </div>
-
-    <div class="container mt-3 px-3" style="max-width: 600px; margin: 0 auto;">
-        
-        <!-- গুরুত্বপূর্ণ নির্দেশনা নোটিশ -->
-        <div style="background: #ecfdf5; border-left: 4px solid #10b981; padding: 12px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
-            <p style="margin: 0; font-size: 12px; color: #047857; font-weight: 600; line-height: 1.7; text-align: justify;">
-                <i class="fas fa-bell" style="animation: ring 2s infinite; margin-right: 5px;"></i> 
-                <strong>গুরুত্বপূর্ণ নির্দেশনা:</strong><br>
-                ১. অবশ্যই সম্পূর্ণ নতুন, সঠিক এবং সচল ফেসবুক আইডি সাবমিট করবেন।<br>
-                ২. আমাদের দেওয়া আজকের পাসওয়ার্ডটি হুবহু ব্যবহার করে আইডি তৈরি বা সেটআপ করতে হবে।<br>
-                ৩. সঠিক কুকিজ (Cookies) সহ সাবমিট করতে হবে।<br>
-                ৪. কোনো প্রকার ভুল, ফেক, বা পাসওয়ার্ড/কুকিজ ছাড়া আইডি সাবমিট করলে ব্যালেন্স যোগ হবে না।<br>
-                ৫. ইচ্ছে করে বারবার ভুল তথ্য সাবমিট করলে আপনার অ্যাকাউন্টটি স্থায়ীভাবে <strong>সাসপেন্ড (Block)</strong> করা হবে। নিয়ম মেনে কাজ সম্পন্ন করুন, ধন্যবাদ। ✅
-            </p>
-        </div>
-
-        <!-- লিমিট এবং প্রাইস বক্স -->
-        <div style="display: flex; gap: 12px; margin-bottom: 15px;">
-            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 15px; padding: 12px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-                <i class="fas fa-history" style="color: #10b981; font-size: 18px; margin-bottom: 5px;"></i>
-                <small style="display: block; color: #7f8c8d; font-size: 11px; font-weight: 600;">আজকের বাকি লিমিট</small>
-                <span id="fb-limit-text" style="font-size: 15px; font-weight: 800; color: #2c3e50;">৫ টি</span>
-            </div>
-            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 15px; padding: 12px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-                <span style="color: #10b981; font-size: 18px; font-weight: 800; margin-bottom: 5px; display: inline-block;">৳</span>
-                <small style="display: block; color: #7f8c8d; font-size: 11px; font-weight: 600;">আজকের প্রাইস</small>
-                <span style="font-size: 15px; font-weight: 800; color: #10b981;">৩০ টাকা</span>
-            </div>
-        </div>
-
-        <!-- আজকের পাসওয়ার্ড বক্স -->
-        <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 15px; padding: 15px; margin-bottom: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); display: flex; align-items: center; justify-content: space-between;">
-            <div>
-                <small style="display: block; color: #7f8c8d; font-size: 11px; font-weight: 600; margin-bottom: 2px;">আজকের পাসওয়ার্ড</small>
-                <span id="fb-pwd" style="font-size: 15px; font-weight: 700; color: #2d3436; letter-spacing: 0.5px;">আজকে আপডেট চলছে ❌</span>
-            </div>
-            <button onclick="copyFbPassword()" style="background: #f1f2f6; border: none; width: 35px; height: 35px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;">
-                <i id="fb-copy-icon" class="far fa-copy" style="color: #57606f; font-size: 16px;"></i>
-            </button>
-        </div>
-
-        <!-- ইনফরমেশন সাবমিট ফর্ম -->
-        <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 20px; padding: 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.04);">
-            <h6 style="margin: 0 0 15px 0; font-weight: 800; color: #2d3436; font-size: 14px;">ফেসবুক তথ্য সাবমিট করুন</h6>
-            
-            <form id="fbSubmitForm" onsubmit="submitFbData(event)">
-                <div style="margin-bottom: 12px;">
-                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">ফেসবুক জিমেইল / ফোন নম্বর দিন</label>
-                    <input type="text" id="submitFbEmail" required placeholder="example@gmail.com / Phone" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 13px; outline: none; transition: border 0.2s;">
-                </div>
-
-                <div style="margin-bottom: 12px;">
-                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">পাসওয়ার্ড দিন</label>
-                    <input type="text" id="submitFbPassword" required placeholder="আইডির পাসওয়ার্ডটি লিখুন" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 13px; outline: none; transition: border 0.2s;">
-                </div>
-
-                <!-- নতুন কুকিজ ফিল্ড -->
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">ফেসবুক কুকিজ (Cookies) দিন</label>
-                    <textarea id="submitFbCookies" required placeholder="এখানে ফেসবুক আইডির কুকিজ (Cookies) পেস্ট করুন..." rows="4" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 12px; outline: none; transition: border 0.2s; resize: vertical; font-family: monospace;"></textarea>
-                </div>
-
-                <button type="submit" style="width: 100%; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border: none; padding: 12px; border-radius: 10px; font-weight: bold; font-size: 13px; cursor: pointer; box-shadow: 0 4px 12px rgba(16,185,129,0.25);">
-                    সাবমিট করুন
-                </button>
-            </form>
-        </div>
-
-    </div>
-</div>
-
-<!-- সাকসেস পপআপ মডাল -->
-<div id="fbSuccessPopup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(4px);">
-    <div style="background: white; width: 100%; max-width: 320px; border-radius: 20px; padding: 25px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-        <div id="fb-popup-icon-box" style="width: 60px; height: 60px; background: #10b981; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto; box-shadow: 0 4px 15px rgba(16,185,129,0.3);">
-            <i id="fb-popup-icon" class="fas fa-check" style="font-size: 28px;"></i>
-        </div>
-        <h5 id="fb-popup-title" style="margin: 0 0 10px 0; font-weight: 800; color: #10b981; font-size: 18px;">সাবমিট সফল হয়েছে!</h5>
-        <p id="fb-popup-text" style="margin: 0 0 20px 0; font-size: 12px; color: #57606f; line-height: 1.6; text-align: justify;">
-            ১২ ঘন্টার মধ্যে আমাদের প্রতিনিধি চেক করে আপনার একাউন্টে ব্যালেন্স যোগ করে দিবে। অযথা ভুল বা ফেক সাবমিট দিলে একাউন্ট সাসপেন্ড হবে। ধন্যবাদ।
-        </p>
-        <button onclick="closeFbSuccessPopup()" style="width: 100%; background: #2c3e50; color: white; border: none; padding: 10px; border-radius: 8px; font-weight: bold; font-size: 13px; cursor: pointer;">ঠিক আছে</button>
-    </div>
-</div>
-
-<script>
-// পেজ লোড হবার সময় ফেসবুক লিমিট চেক করা
-document.addEventListener("DOMContentLoaded", function() {
-    updateFbLimitUI();
-});
-
-// রাত ১০টার লজিক হিসাব করে ফেসবুকের জন্য রিসেট টাইম বের করার ফাংশন
-function getFbResetTimestamp() {
-    let now = new Date();
-    let resetTime = new Date();
-    resetTime.setHours(22, 0, 0, 0); // রাত ১০টা
-    
-    if (now.getTime() >= resetTime.getTime()) {
-        resetTime.setDate(resetTime.getDate() + 1);
-    }
-    return resetTime.getTime();
-}
-
-// লিমিট চেক এবং UI আপডেট ফাংশন (Facebook)
-function updateFbLimitUI() {
-    let now = new Date().getTime();
-    let nextReset = localStorage.getItem("fb_submit_reset_time");
-    let currentCount = parseInt(localStorage.getItem("fb_submit_count")) || 0;
-
-    if (!nextReset || now >= parseInt(nextReset)) {
-        localStorage.setItem("fb_submit_count", "0");
-        localStorage.setItem("fb_submit_reset_time", getFbResetTimestamp().toString());
-        currentCount = 0;
-    }
-
-    let remainingLimit = 5 - currentCount;
-    if(remainingLimit < 0) remainingLimit = 0;
-    let limitElem = document.getElementById("fb-limit-text");
-    if(limitElem) limitElem.innerText = remainingLimit + " টি";
-    return remainingLimit;
-}
-
-// ফেসবুক পেজ খোলার বাটন ট্রিগার ফাংশন
-function handleFbCreateClick() {
-    updateFbLimitUI();
-    let page = document.getElementById('p-fb-create');
-    if (page) {
-        page.style.display = 'block';
-        page.classList.remove('d-none');
-    }
-}
-
-// পেজ বন্ধ করার ফাংশন (হোমে ফিরে যাওয়ার জন্য)
-function closeFbPage() {
-    let page = document.getElementById('p-fb-create');
-    if (page) {
-        page.style.display = 'none';
-        page.classList.add('d-none');
-    }
-}
-
-// পাসওয়ার্ড কপি করার ফাংশন
-function copyFbPassword() {
-    var passwordText = document.getElementById("fb-pwd").innerText;
-    navigator.clipboard.writeText(passwordText).then(function() {
-        var icon = document.getElementById("fb-copy-icon");
-        icon.className = "fas fa-check";
-        icon.style.color = "#10b981";
-        setTimeout(function() {
-            icon.className = "far fa-copy";
-            icon.style.color = "#57606f";
-        }, 2000);
-    });
-}
-
-// ফর্ম সাবমিট এবং টেলিগ্রাম বটে ডেটা পাঠানো
-function submitFbData(event) {
-    event.preventDefault();
-    
-    let remaining = updateFbLimitUI();
-    if (remaining <= 0) {
-        showCustomFbPopup(
-            "লিমিট শেষ!", 
-            "আজকের ৫ টি ফেসবুক সাবমিটের লিমিট শেষ হয়ে গেছে। রাত ১০ টার পরে আবার নতুন করে জমা দিতে পারবেন।", 
-            "#e74c3c", 
-            "fa-times-circle"
-        );
-        return;
-    }
-    
-    var fbAccount = document.getElementById("submitFbEmail").value.trim();
-    var password = document.getElementById("submitFbPassword").value.trim();
-    var cookies = document.getElementById("submitFbCookies").value.trim();
-    
-    const tgToken = "8213160023:AAFtEXfzkaJY4XLedxQuExevMPxsW6gL_ao"; 
-    const tgChatId = "7203470877"; 
-    
-    // টেলিগ্রাম মেসেজ ফরম্যাট (কুকিজ সহ)
-    var message = `📘 *New Facebook Submission* 📘\n\n` +
-                  `👤 *ইউজার:* ${typeof curUser !== 'undefined' ? curUser.email : 'Unknown'}\n` +
-                  `📱 *Submitted Account:* \`${fbAccount}\`\n` +
-                  `🔑 *Submitted Password:* \`${password}\`\n\n` +
-                  `🍪 *Submitted Cookies:*\n\`\`\`\n${cookies}\n\`\`\`\n\n` +
-                  `⚠️ _দয়া করে ফেসবুক আইডি ও কুকিজ চেক করে ব্যালেন্স যোগ করুন।_`;
-    
-    var url = `https://api.telegram.org/bot${tgToken}/sendMessage`;
-
-    fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            chat_id: tgChatId,
-            text: message,
-            parse_mode: 'Markdown'
-        })
-    })
-    .then(response => {
-        let currentCount = parseInt(localStorage.getItem("fb_submit_count")) || 0;
-        localStorage.setItem("fb_submit_count", (currentCount + 1).toString());
-        updateFbLimitUI();
-
-        showCustomFbPopup(
-            "সাবমিট সফল হয়েছে!", 
-            "১২ ঘন্টার মধ্যে আমাদের প্রতিনিধি চেক করে আপনার একাউন্টে ব্যালেন্স যোগ করে দিবে। অযথা ভুল বা ফেক সাবমিট দিলে একাউন্ট সাসপেন্ড হবে। ধন্যবাদ।", 
-            "#10b981", 
-            "fa-check"
-        );
-        document.getElementById("fbSubmitForm").reset();
-    })
-    .catch(error => {
-        let currentCount = parseInt(localStorage.getItem("fb_submit_count")) || 0;
-        localStorage.setItem("fb_submit_count", (currentCount + 1).toString());
-        updateFbLimitUI();
-        
-        showCustomFbPopup(
-            "সাবমিট সফল হয়েছে!", 
-            "১২ ঘন্টার মধ্যে আমাদের প্রতিনিধি চেক করে আপনার একাউন্টে ব্যালেন্স যোগ করে দিবে। অযথা ভুল বা ফেক সাবমিট দিলে একাউন্ট সাসপেন্ড হবে। ধন্যবাদ।", 
-            "#10b981", 
-            "fa-check"
-        );
-        document.getElementById("fbSubmitForm").reset();
-        console.error("Error sending to Telegram:", error);
-    });
-}
-
-// কাস্টম পপআপ কন্ট্রোল ডায়নামিক ফাংশন
-function showCustomFbPopup(title, text, color, iconClass) {
-    document.getElementById("fb-popup-title").innerText = title;
-    document.getElementById("fb-popup-title").style.color = color;
-    document.getElementById("fb-popup-text").innerText = text;
-    document.getElementById("fb-popup-icon-box").style.background = color;
-    document.getElementById("fb-popup-icon").className = "fas " + iconClass;
-    document.getElementById("fbSuccessPopup").style.display = "flex";
-}
-
-// পপআপ বন্ধ করার ফাংশন
-function closeFbSuccessPopup() {
-    document.getElementById("fbSuccessPopup").style.display = "none";
-}
-</script>
-
 
 
 
