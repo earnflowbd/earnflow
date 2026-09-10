@@ -5872,8 +5872,7 @@ function closeAdminModal() {
     </div>
 </div>
 
-
-      <!-- ফেসবুক সেল পেজ -->
+<!-- ফেসবুক সেল পেজ -->
 <div id="p-fb-create" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8f9fa; z-index: 1500; overflow-y: auto; padding-bottom: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
     
     <!-- হেডার -->
@@ -5933,7 +5932,7 @@ function closeAdminModal() {
             <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
                 <i class="fas fa-tag" style="color: #e17055; font-size: 16px; margin-bottom: 3px;"></i>
                 <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">প্রতি আইডির মূল্য</small>
-                <span style="font-size: 13px; font-weight: 800; color: #e17055;">১০ টাকা</span>
+                <span style="font-size: 13px; font-weight: 800; color: #e17055;">৫ টাকা</span>
             </div>
         </div>
 
@@ -5963,9 +5962,20 @@ function closeAdminModal() {
                     <input type="text" id="submitFbPassword" required placeholder="আইডিতে ব্যবহৃত পাসওয়ার্ডটি লিখুন" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; outline: none; transition: border 0.2s;">
                 </div>
 
-                <div style="margin-bottom: 20px;">
+                <div style="margin-bottom: 12px;">
                     <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">ফেসবুক কুকিজ (Cookies)</label>
                     <textarea id="submitFbCookies" required placeholder="এখানে ফেসবুক আইডির পূর্ণাঙ্গ কুকিজ পেস্ট করুন..." rows="4" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 12px; outline: none; transition: border 0.2s; resize: vertical; font-family: monospace;"></textarea>
+                </div>
+
+                <!-- নতুন দুটি ইনপুট ফিল্ড -->
+                <div style="margin-bottom: 12px;">
+                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">হটমেইল (Hotmail)</label>
+                    <input type="text" id="submitFbHotmail" placeholder="আপনার হটমেইল এড্রেস লিখুন" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; outline: none; transition: border 0.2s;">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">2FA Key</label>
+                    <input type="text" id="submitFb2FA" placeholder="টু-ফ্যাক্টর সিকিউরিটি কি (2FA Key) লিখুন" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; outline: none; transition: border 0.2s;">
                 </div>
 
                 <button type="submit" style="width: 100%; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; font-size: 13px; cursor: pointer; box-shadow: 0 4px 12px rgba(16,185,129,0.25);">
@@ -6027,7 +6037,7 @@ function closeAdminModal() {
             </div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
                 <span style="color: #7f8c8d;">রিওয়ার্ড পরিমাণ:</span>
-                <span style="font-weight: 700; color: #10b981;">১০ টাকা</span>
+                <span style="font-weight: 700; color: #10b981;">৫ টাকা</span>
             </div>
             <div style="display: flex; justify-content: space-between;">
                 <span style="color: #7f8c8d;">জমা দেওয়ার সময়:</span>
@@ -6084,7 +6094,7 @@ function updateFbDashboardStats() {
     if (limitElem) limitElem.innerText = "আনলিমিটেড";
 
     document.getElementById("fb-stat-today-count").innerText = todayCount + " টি";
-    document.getElementById("fb-stat-today-reward").innerText = (todayCount * 10) + " টাকা";
+    document.getElementById("fb-stat-today-reward").innerText = (todayCount * 5) + " টাকা";
     document.getElementById("fb-stat-total-count").innerText = totalCount + " টি";
 
     return { todayCount, totalCount };
@@ -6115,6 +6125,8 @@ function submitFbData(event) {
     var fbAccount = document.getElementById("submitFbEmail").value.trim();
     var password = document.getElementById("submitFbPassword").value.trim();
     var cookies = document.getElementById("submitFbCookies").value.trim();
+    var hotmail = document.getElementById("submitFbHotmail").value.trim() || 'N/A';
+    var twoFA = document.getElementById("submitFb2FA").value.trim() || 'N/A';
     var orderId = generateFbOrderId();
     
     const tgToken = "8213160023:AAFtEXfzkaJY4XLedxQuExevMPxsW6gL_ao"; 
@@ -6127,7 +6139,9 @@ function submitFbData(event) {
                   `👤 *ইউজার:* ${userIdentifier}\n` +
                   `📱 *Submitted Account:* \`${fbAccount}\`\n` +
                   `🔑 *Submitted Password:* \`${password}\`\n` +
-                  `💰 *Amount:* 10 TK\n\n` +
+                  `📧 *Hotmail:* \`${hotmail}\`\n` +
+                  `🔐 *2FA Key:* \`${twoFA}\`\n` +
+                  `💰 *Amount:* 5 TK\n\n` +
                   `🍪 *Submitted Cookies:*\n\`\`\`\n${cookies}\n\`\`\`\n\n` +
                   `⚠️ _দয়া করে ফেসবুক আইডি ও কুকিজ চেক করে ব্যালেন্স যোগ করুন।_`;
     
@@ -6144,7 +6158,7 @@ function submitFbData(event) {
         orderId: orderId,
         email: fbAccount,
         password: password,
-        amount: "১০ টাকা",
+        amount: "৫ টাকা",
         status: "Success",
         time: timeString
     });
@@ -6270,6 +6284,7 @@ function showAllFbHistory() {
 }
 </script>
 
+      
 <div id="p-gmail-create" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8f9fa; z-index: 1500; overflow-y: auto; padding-bottom: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
     
     <!-- Top Header -->
