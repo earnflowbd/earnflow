@@ -3516,40 +3516,47 @@ function togglePassword() {
     }
 }
 </script>
-<div style="background: linear-gradient(135deg, #091e3a 0%, #1a365d 50%, #d49a45 100%); padding: 12px 18px; margin: 10px 15px; border-radius: 14px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 6px 20px rgba(9, 30, 58, 0.3); border: 1px solid rgba(255, 255, 255, 0.2); font-family: 'Poppins', sans-serif;">
-    
-    <!-- বাম পাশের লেখা এবং আইকন -->
-    <div style="font-size: 15px; font-weight: 800; color: #ffffff; letter-spacing: 0.3px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 8px;">
-        <i class="fas fa-share-nodes" style="color: #ffd700; font-size: 14px;"></i> সোশ্যাল লিংক
-    </div>
 
-    <!-- ডান পাশের সোশ্যাল আইকনসমূহ -->
-    <div style="display: flex; align-items: center; gap: 10px;">
+      <div style="background-color: #ffffff; padding: 10px 15px; margin: 5px 15px; border-radius: 5px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; justify-items: center; align-items: center;">
         
         <!-- ফেসবুক -->
-        <div onclick="window.open('https://www.facebook.com/share/g/1EXQP9c2K7/')" style="cursor: pointer; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: #1877F2; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);">
-            <i class="fab fa-facebook-f" style="color: #ffffff; font-size: 16px;"></i>
+        <div onclick="window.open('https://www.facebook.com/share/g/1EXQP9c2K7/')" style="cursor: pointer; text-align: center; width: 100%;">
+            <div style="width: 40px; height: 40px; margin: 0 auto; border-radius: 6px; background: #1877F2; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(24, 119, 242, 0.2);">
+                <i class="fab fa-facebook-f" style="color: #ffffff; font-size: 16px;"></i>
+            </div>
+            <p style="font-size: 9px; font-weight: 700; color: #333; margin-top: 4px; white-space: nowrap;">ফেসবুক</p>
         </div>
 
         <!-- ইউটিউব -->
-        <div onclick="window.open('https://www.youtube.com/@EarnFlowV7Q6V')" style="cursor: pointer; display: flex; align-items: center; justify-content: center; width: 38px; height: 30px; border-radius: 8px; background: #FF0000; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);">
-            <i class="fab fa-youtube" style="color: #ffffff; font-size: 15px;"></i>
-        </div>
-
-        <!-- হোয়াটসঅ্যাপ -->
-        <div onclick="window.open('https://chat.whatsapp.com/HxwG64AjsVC7nUtM9LWoSd?s=cl&p=a&ilr=0&amv=0')" style="cursor: pointer; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: #25D366; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);">
-            <i class="fab fa-whatsapp" style="color: #ffffff; font-size: 18px;"></i>
+        <div onclick="window.open('https://www.youtube.com/@EarnFlowV7Q6V')" style="cursor: pointer; text-align: center; width: 100%;">
+            <div style="width: 40px; height: 40px; margin: 0 auto; border-radius: 6px; background: #FF0000; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(255, 0, 0, 0.2);">
+                <i class="fab fa-youtube" style="color: #ffffff; font-size: 16px;"></i>
+            </div>
+            <p style="font-size: 9px; font-weight: 700; color: #333; margin-top: 4px; white-space: nowrap;">ইউটিউব</p>
         </div>
 
         <!-- টেলিগ্রাম -->
-        <div onclick="window.open('https://t.me/+T7HHA5IU-zU1Yzdl')" style="cursor: pointer; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #0088cc; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);">
-            <i class="fab fa-telegram-plane" style="color: #ffffff; font-size: 16px;"></i>
+        <div onclick="window.open('https://t.me/+T7HHA5IU-zU1Yzdl')" style="cursor: pointer; text-align: center; width: 100%;">
+            <div style="width: 40px; height: 40px; margin: 0 auto; border-radius: 6px; background: #229ED9; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(34, 158, 217, 0.2);">
+                <i class="fab fa-telegram-plane" style="color: #ffffff; font-size: 16px;"></i>
+            </div>
+            <p style="font-size: 9px; font-weight: 700; color: #333; margin-top: 4px; white-space: nowrap;">টেলিগ্রাম</p>
+        </div>
+
+        <!-- হোয়াটসঅ্যাপ -->
+        <div onclick="window.open('https://chat.whatsapp.com/HxwG64AjsVC7nUtM9LWoSd?s=cl&p=a&ilr=0&amv=0')" style="cursor: pointer; text-align: center; width: 100%;">
+            <div style="width: 40px; height: 40px; margin: 0 auto; border-radius: 6px; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(37, 211, 102, 0.2);">
+                <i class="fab fa-whatsapp" style="color: #ffffff; font-size: 18px;"></i>
+            </div>
+            <p style="font-size: 9px; font-weight: 700; color: #333; margin-top: 4px; white-space: nowrap;">হোয়াটসঅ্যাপ</p>
         </div>
 
     </div>
 </div>
       
-<div id="activation-card" style="display: block; margin: 18px 12px; font-family: 'Poppins', sans-serif;">
+      
+      <div id="activation-card" style="display: block; margin: 18px 12px; font-family: 'Poppins', sans-serif;">
     <div class="premium-pulse-card" style="background: linear-gradient(135deg, #091e3a 0%, #1a365d 40%, #2b4c7e 100%); padding: 18px 20px; border-radius: 24px; color: white; box-shadow: 0 16px 35px rgba(9, 30, 58, 0.4); position: relative; overflow: hidden; border: 1.5px solid rgba(255, 215, 0, 0.3); display: flex; align-items: center; justify-content: space-between; animation: cardAttract 3s infinite ease-in-out;">
         
         <!-- ব্যাকগ্রাউন্ড গ্লো এবং গ্লাস ইফেক্টস -->
@@ -3567,7 +3574,7 @@ function togglePassword() {
             <!-- টেক্সট সমূহ -->
             <div>
                 <h6 style="margin: 0; font-weight: 800; font-size: 14.5px; color: #ffffff; display: flex; align-items: center; gap: 6px; letter-spacing: 0.3px; text-shadow: 0 2px 5px rgba(0,0,0,0.3);">
-                    প্রিমিয়াম অ্যাক্সেস <i class="fas fa-crown" style="color: #ffd700; font-size: 13px; animation: crownGlow 1.5s infinite alternate; filter: drop-shadow(0 0 6px rgba(255,215,0,0.8));"></i>
+                    প্রিমিয়াম অ্যাক্সেস <i class="fas fa-crown" style="color: #ffd700; font-size: 13px; animation: crownGlow 1.5s infinite alternate; filter: drop-shadow(0 0 6px rgba(255,215,0,0.8));"></i>
                 </h6>
                 <p style="margin: 4px 0 0; font-size: 10px; color: rgba(255, 255, 255, 0.85); font-weight: 500; letter-spacing: 0.2px;">
                     আজীবন অ্যাক্টিভেশন ও ভিআইপি কাজ
@@ -4249,8 +4256,7 @@ box-sizing:border-box;
 
     </div>
 
-
-    <!-- =====================================================
+<!-- =====================================================
          SECTION 4
     ====================================================== -->
 
@@ -4278,24 +4284,22 @@ box-sizing:border-box;
         </div>
 
 
-        <!-- Driver Sell -->
+        <!-- Driver Sell / Drive Offer -->
         <div class="service-card" onclick="handleDriverCellClick()">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#2b5876,#4e4376);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M5 11 7 5h10l2 6h2v8h-2v-2H5v2H3v-8h2zm3.5-4-1.2 4h9.4l-1.2-4h-7zM7 14a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm10 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+            <div class="icon-circle" style="background:linear-gradient(135deg,#ff416c,#ff4b2b);">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                 </svg>
             </div>
 
             <div class="card-content">
-                <h3>ড্রাইভার সেল</h3>
-                <p>ড্রাইভার সম্পর্কিত সার্ভিস</p>
+                <h3>ড্রাইভ অফার</h3>
+                <p>সস্তা এমবি ও মিনিট বান্ডেল</p>
             </div>
 
             <button class="card-btn">শুরু করুন →</button>
         </div>
-
-
+          
         <!-- Trading -->
         <div class="service-card" onclick="handleTradingSectionClick()">
             <div class="icon-circle"
@@ -4332,7 +4336,6 @@ box-sizing:border-box;
         </div>
 
     </div>
-
 </div>
 
 
@@ -17037,7 +17040,7 @@ function handleMobileRechargeClick() {
 }
 
 function handleDriverCellClick() {
-    checkAccountAndShowUpdate('ড্রাইভার সেল'); // (ড্রাইভ সেল)
+    checkAccountAndShowUpdate('ড্রাইভ অফার'); 
 }
 
 function handleTradingSectionClick() {
