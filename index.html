@@ -3544,14 +3544,13 @@ function togglePassword() {
             <p style="font-size: 9px; font-weight: 700; color: #333; margin-top: 4px; white-space: nowrap;">টেলিগ্রাম</p>
         </div>
 
-        <!-- হোয়াটসঅ্যাপ -->
-        <div onclick="window.open('https://chat.whatsapp.com/HxwG64AjsVC7nUtM9LWoSd?s=cl&p=a&ilr=0&amv=0')" style="cursor: pointer; text-align: center; width: 100%;">
-            <div style="width: 40px; height: 40px; margin: 0 auto; border-radius: 6px; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(37, 211, 102, 0.2);">
-                <i class="fab fa-whatsapp" style="color: #ffffff; font-size: 18px;"></i>
-            </div>
-            <p style="font-size: 9px; font-weight: 700; color: #333; margin-top: 4px; white-space: nowrap;">হোয়াটসঅ্যাপ</p>
-        </div>
-
+<!-- টেলিগ্রাম -->
+<div onclick="window.open('https://t.me/+vUlNtslBvxcxZDNl')" style="cursor: pointer; text-align: center; width: 100%;">
+  <div style="width: 40px; height: 40px; margin: 0 auto; border-radius: 6px; background: #229ED9; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(34, 158, 217, 0.2);">
+    <i class="fab fa-telegram-plane" style="color: #ffffff; font-size: 16px;"></i>
+  </div>
+  <p style="font-size: 9px; font-weight: 700; color: #333; margin-top: 4px; white-space: nowrap;">টেলিগ্রাম গ্রুপ</p>
+</div>
     </div>
 </div>
       
@@ -3568,7 +3567,7 @@ function togglePassword() {
             <!-- ফি বক্স -->
             <div style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(14px); width: 52px; height: 52px; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1.5px solid rgba(255, 215, 0, 0.5); box-shadow: inset 0 0 12px rgba(255,255,255,0.15);">
                 <span style="font-size: 8.5px; font-weight: 800; color: #ffd700; text-transform: uppercase; letter-spacing: 0.8px;">ফি</span>
-                <span style="font-weight: 900; color: #ffffff; font-size: 16px; line-height: 1.1;">৳১০০</span>
+                <span style="font-weight: 900; color: #ffffff; font-size: 16px; line-height: 1.1;">৳২০</span>
             </div>
             
             <!-- টেক্সট সমূহ -->
@@ -3667,6 +3666,8 @@ function togglePassword() {
 .activate-btn:active {
     transform: scale(0.92);
 }
+  
+
 </style>
 
 <style>
@@ -3681,667 +3682,471 @@ function togglePassword() {
     <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin: 10px 0;">
         
 
-
 <style>
-    /* মেইন গ্রিড কন্টেইনার - ১৫টি বাটন, ৩ লাইনে ৫টি করে */
-    .premium-grid-container {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr); /* প্রতি লাইনে ৫টি বাটন */
-        gap: 15px 5px; /* উপর-নিচ ১৫px এবং পাশাপাশি ৫px গ্যাপ */
-        padding: 15px 10px;
+    /* মেইন কন্টেইনার স্টাইল */
+    #bkash-service-wrapper {
+        background: #fff;
+        margin: 10px 0;
+        padding: 20px 15px;
+        border-radius: 14px;
+        box-shadow: 0 8px 30px rgba(0,0,0,.06);
+        border: 1px solid #f2f2f2;
         width: 100%;
         box-sizing: border-box;
-        background-color: transparent;
+        font-family: 'Poppins', sans-serif;
     }
 
-    /* প্রতিটি বাটন আইটেম */
-    .grid-nav-item {
-        cursor: pointer;
-        text-align: center;
-        transition: transform 0.2s;
+    /* সেকশন হেডার */
+    .section-header-box h2 {
+        font-size: 16px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 12px;
+    }
+
+    /* সার্ভিস গ্রিড কন্টেইনার (মোবাইলে ২ কলাম বা আপনার পছন্দমতো) */
+    .service-section-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 10px;
+    }
+
+    @media (min-width: 768px) {
+        .service-section-container {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    /* বড় প্রিমিয়াম কার্ড ডিজাইন */
+    .service-card {
+        background: #ffffff;
+        border: 1px solid #f0f0f0;
+        border-radius: 12px;
+        padding: 12px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        cursor: pointer;
     }
 
-    /* বাটন সার্কেল ডিজাইন */
-    .premium-circle {
+    .service-card:active {
+        transform: scale(0.96);
+    }
+
+    /* বড় আইকন সার্কেল */
+    .icon-circle {
         width: 50px;
         height: 50px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #ff0000 0%, #ff9900 100%);
+        border-radius: 12px;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-bottom: 8px;
-        box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
-        border: 2px solid #ffffff;
-        position: relative;
-        overflow: hidden;
-        transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
     }
 
-    /* গ্লোসি শাইন ইফেক্ট */
-    .premium-circle::after {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: rgba(255,255,255,0.15);
-        transform: rotate(45deg);
+    .icon-circle svg {
+        width: 24px;
+        height: 24px;
+        fill: #fff;
     }
 
-    /* আইকন স্টাইল */
-    .grid-nav-item i {
-        color: white;
-        font-size: 18px;
-        z-index: 1;
-        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    /* কার্ডের টেক্সট */
+    .card-content h3 {
+        font-size: 13px;
+        font-weight: 700;
+        color: #222;
+        margin: 0 0 2px 0;
     }
 
-    /* টেক্সট স্টাইল */
-    .grid-nav-item span {
-        font-size: 9px;
-        font-weight: 800;
-        color: #ff0000;
-        display: block;
-        text-transform: uppercase;
-        line-height: 1.1;
-        text-align: center;
-        font-family: sans-serif;
-    }
-
-    /* ক্লিক করলে রিয়েল বাটন ইফেক্ট */
-    .grid-nav-item:active .premium-circle {
-        transform: scale(0.9);
-        opacity: 0.8;
-    }
-</style>
-
-
-<style>
-    /* মেইন গ্রিড কন্টেইনার - ছবির মতো ফুল-উইডথ এবং স্লিম স্পেসিং */
-    .premium-photo-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr); /* এক লাইনে ৫টি বাটন */
-        gap: 12px 2px; /* উপর-নিচ ১২px এবং পাশাপাশি মাত্র ২px গ্যাপ */
-        padding: 10px 0; /* উপর-নিচ প্যাডিং, কিনারায় কোনো প্যাডিং নেই */
-        width: 100%;
-        box-sizing: border-box;
-        background-color: transparent;
-    }
-
-    /* প্রতিটি বাটন আইটেম - ছবির মতো বড় */
-    .photo-grid-item {
-        cursor: pointer;
-        text-align: center;
-        transition: transform 0.2s;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        width: 100%; /* গ্রিড সেলের পুরো উইডথ নেবে */
-    }
-
-    /* বাটন সার্কেল ডিজাইন - ছবির মতো বড় এবং গ্লসি */
-    .photo-circle {
-        width: 65px; /* বাটন বড় করা হয়েছে */
-        height: 65px; /* বাটন বড় করা হয়েছে */
-        border-radius: 50%;
-        background: linear-gradient(135deg, #ff0000 0%, #ff9900 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 6px;
-        box-shadow: 0 4px 10px rgba(255, 0, 0, 0.15);
-        border: 2.5px solid #ffffff; /* ছবির মতো মোটা সাদা বর্ডার */
-        position: relative;
-        overflow: hidden;
-        transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    /* গ্লোসি শাইন ইফেক্ট (ছবিতে নেই, কিন্তু প্রলেশনের জন্য দেওয়া হয়েছে) */
-    .photo-circle::after {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: rgba(255,255,255,0.1);
-        transform: rotate(45deg);
-    }
-
-    /* আইকন স্টাইল - ছবির মতো স্লিম এবং বড় */
-    .photo-grid-item i {
-        color: white;
-        font-size: 24px; /* আইকন বড় করা হয়েছে */
-        z-index: 1;
-        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-    }
-
-    /* টেক্সট স্টাইল - ছবির মতো ক্লিন এবং ছোট */
-    .photo-grid-item span {
-        font-size: 10px; /* ফন্ট ছবির মতো ক্লিন করার জন্য অ্যাডজাস্ট করা হয়েছে */
-        font-weight: 700; /* ছবিতে টেক্সট খুব বোল্ড নয় */
-        color: #333333; /* ছবিতে টেক্সট কালার লাল নয়, ডার্ক গ্রে */
-        display: block;
-        text-transform: none; /* ছবিতে টেক্সট সব ক্যাপিটাল নয় */
+    .card-content p {
+        font-size: 10px;
+        color: #777;
+        margin: 0 0 10px 0;
         line-height: 1.2;
-        text-align: center;
-        font-family: 'Poppins', sans-serif;
-        padding: 0 2px; /* টেক্সট গ্রিডের বাইরে না যাওয়ার জন্য হালকা প্যাডিং */
     }
 
-    /* ক্লিক করলে রিয়েল বাটন ইফেক্ট */
-    .photo-grid-item:active .photo-circle {
-        transform: scale(0.9);
-        opacity: 0.8;
+    /* নিচের অ্যাকশন বাটন (শুরু করুন / বিক্রি করুন) */
+    .card-btn {
+        background: #fdf2f2;
+        color: #ff3d00;
+        border: none;
+        padding: 5px 10px;
+        font-size: 10px;
+        font-weight: 700;
+        border-radius: 6px;
+        cursor: pointer;
+        width: 100%;
+        transition: 0.2s;
+    }
+
+    .card-btn.dark-btn {
+        background: #f2f2f2;
+        color: #333;
+    }
+
+    .service-card:hover .card-btn {
+        background: #ff3d00;
+        color: #fff;
+    }
+
+    /* লুকানো এক্সট্রা সেকশন অ্যানিমেশন */
+    #extra-services-container {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out, opacity 0.3s ease;
+        opacity: 0;
     }
 </style>
-
 
 
 <!-- =========================================================
-     AYPOTH SERVICE SECTION
-     4 CARDS IN ONE ROW
+     BKASH STYLE BIG CARDS SERVICE MENU
 ========================================================= -->
 
-<div id="hf1vod"
-style="
-background:#fff;
-margin:10px 0;
-padding:20px 15px;
-border-radius:14px;
-box-shadow:0 8px 30px rgba(0,0,0,.06);
-border:1px solid #f2f2f2;
-width:100%;
-box-sizing:border-box;
-">
-
-    <!-- =====================================================
-         SECTION 1
-    ====================================================== -->
+<div id="bkash-service-wrapper">
 
     <div class="section-header-box">
-        <h2>🎉 বিশেষ আয়</h2>
+        <h2>🎉 বিশেষ সার্ভিস</h2>
     </div>
 
+    <!-- মূল ৪টি বড় কার্ড (সবসময় সামনে থাকবে) -->
     <div class="service-section-container">
 
-        <!-- Gmail -->
+        <!-- ১. জিমেইল সেল -->
         <div class="service-card" onclick="handleGmailCreateClick()">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#eb3349,#f45c43);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-                </svg>
+            <div class="icon-circle" style="background:linear-gradient(135deg,#eb3349,#f45c43);">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
             </div>
-
             <div class="card-content">
                 <h3>জিমেইল সেল</h3>
                 <p>জিমেইল বানিয়ে আয়</p>
             </div>
-
             <button class="card-btn">বিক্রি করুন →</button>
         </div>
 
 
-        <!-- Facebook -->
-        <div class="service-card" onclick="handleFbCreateClick()">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#1877f2,#0d5db8);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.7-1.6h1.8V3.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.5v3h2.8v8h3.2z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>ফেসবুক সেল</h3>
-                <p>ফেসবুক একাউন্ট সেল করুন</p>
-            </div>
-
-            <button class="card-btn">বিক্রি করুন →</button>
-        </div>
-
-
-        <!-- Instagram -->
-        <div class="service-card" onclick="handleIgCreateClick()">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#f09433,#e6683c,#dc2743);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.5 6.5a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>ইনস্টাগ্রাম সেল</h3>
-                <p>ইনস্টাগ্রাম একাউন্ট সেল করুন</p>
-            </div>
-
-            <button class="card-btn">বিক্রি করুন →</button>
-        </div>
-
-
-        <!-- Telegram -->
-        <div class="service-card" onclick="handleTelegramSellClick()">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#2aabee,#229ed9);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M21.8 4.6 18.7 19c-.2 1-0.8 1.2-1.6.8l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.8.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L7.2 13l-4.5-1.4c-1-.3-1-1 .2-1.5L20.5 3c.9-.3 1.7.2 1.3 1.6z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>টেলিগ্রাম সেল</h3>
-                <p>চ্যানেল বা একাউন্ট সেল</p>
-            </div>
-
-            <button class="card-btn">বিক্রি করুন →</button>
-        </div>
-
-
-        <!-- WhatsApp -->
-        <div class="service-card" onclick="handleWhatsAppSellClick()">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#25d366,#128c7e);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 2a10 10 0 0 0-8.7 15l-1 4 4.1-1A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.4.6.6-2.3-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.3-.6-1.5-.7-.2-.1-.4-.1-.5.1-.2.2-.6.7-.7.8-.1.2-.3.2-.5.1-1.4-.7-2.3-1.2-3.2-2.7-.2-.3.2-.3.6-1 .1-.2.1-.3 0-.5s-.5-1.2-.7-1.6c-.2-.4-.4-.3-.5-.3h-.4c-.2 0-.5.1-.7.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.3c.1.2 1.6 2.5 3.9 3.4 1.4.6 2 .6 2.7.5.4-.1 1.3-.5 1.5-1 .2-.5.2-.9.1-1-.1-.1-.2-.1-.4-.2z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>হোয়াটসঅ্যাপ সেল</h3>
-                <p>হোয়াটসঅ্যাপ একাউন্ট সেল</p>
-            </div>
-
-            <button class="card-btn">বিক্রি করুন →</button>
-        </div>
-
-
-        <!-- AI Marketing -->
-        <div class="service-card" onclick="handleAiMarketingClick()">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#654ea3,#eaafc8);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 2a2 2 0 0 1 2 2v1.1a7 7 0 0 1 5.9 5.9H21a2 2 0 1 1 0 4h-1.1a7 7 0 0 1-5.9 5.9V22a2 2 0 1 1-4 0v-1.1A7 7 0 0 1 4.1 15H3a2 2 0 1 1 0-4h1.1A7 7 0 0 1 10 5.1V4a2 2 0 0 1 2-2zm0 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>এআই মার্কেটিং</h3>
-                <p>কৃত্রিম বুদ্ধিমত্তার কাজ</p>
-            </div>
-
-            <button class="card-btn">শুরু করুন →</button>
-        </div>
-
-
-        <!-- Reselling -->
-        <div class="service-card" onclick="handleResellingClick()">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#f7971e,#ffd200);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M7 4h10l2 4H5l2-4zm-3 6h16v10H4V10zm4 2v6h2v-6H8zm6 0v6h2v-6h-2z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>রিসেলিং করুন</h3>
-                <p>পণ্যের রিসেলিং করে আয়</p>
-            </div>
-
-            <button class="card-btn dark-btn">শুরু করুন →</button>
-        </div>
-
-
-        <!-- Vendorship -->
-        <div class="service-card" onclick="handleVendorshipClick()">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#11998e,#38ef7d);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3zm0 4 4 1.5V11c0 3.3-2 6.4-4 7.6C10 17.4 8 14.3 8 11V7.5L12 6z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>ভেন্ডরশীপ নিন</h3>
-                <p>ভেন্ডর হয়ে ব্যবসা করুন</p>
-            </div>
-
-            <button class="card-btn">আবেদন করুন →</button>
-        </div>
-
+<!-- রেফার বাটন (মাই টিম ফাংশন যুক্ত) -->
+<div class="service-card" onclick="handleTeamClick()">
+    <div class="icon-circle" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
+        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
     </div>
-
-
-    <!-- =====================================================
-         SECTION 2
-    ====================================================== -->
-
-    <div class="section-header-box">
-        <h2>🎊 সার্ভিস সমূহ</h2>
+    <div class="card-content">
+        <h3>রেফার করুন</h3>
+        <p>বন্ধুদের রেফার করে আয়</p>
     </div>
-
-    <div class="service-section-container">
-
-        <!-- Page Follower -->
-        <div class="service-card" onclick="handlePageFollowerClick()">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#11998e,#38ef7d);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm-8 9a8 8 0 0 1 16 0H4z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>ফলোয়ার সার্ভিস</h3>
-                <p>আপনার পেজের ফলোয়ার বাড়ান</p>
-            </div>
-
-            <button class="card-btn">শুরু করুন →</button>
-        </div>
-
-
-        <!-- Graphics -->
-        <div class="service-card" onclick="handleGraphicsDesignClick()">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#833ab4,#fd1d1d);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm3 4v10h10V7H7zm2 2h6v6H9V9z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>গ্রাফিক্স ডিজাইন</h3>
-                <p>লোগো ও ব্যানার ডিজাইন</p>
-            </div>
-
-            <button class="card-btn">শুরু করুন →</button>
-        </div>
-
-
-        <!-- Data Entry -->
-        <div class="service-card" onclick="handleDataEntryClick()">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#3a7bd5,#3a6073);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm2 4v2h10V7H7zm0 4v2h10v-2H7zm0 4v2h7v-2H7z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>ডাটা এন্ট্রি জব</h3>
-                <p>টাইপিং ও কপি-পেস্ট কাজ</p>
-            </div>
-
-            <button class="card-btn">কাজ নিন →</button>
-        </div>
-
-
-        <!-- Game Top Up -->
-        <div class="service-card" onclick="handleGameTopUpClick()">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#ff416c,#ff4b2b);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M7 6h10a5 5 0 0 1 4.9 6l-1 5A3 3 0 0 1 16 19l-2.5-3h-3L8 19a3 3 0 0 1-4.9-2l-1-5A5 5 0 0 1 7 6zm1 4H7v1H6v2h1v1h2v-1h1v-2H9v-1H8zm7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm3 2a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>গেম টপ-আপ</h3>
-                <p>ডায়মন্ড ও ইউসি সেল</p>
-            </div>
-
-            <button class="card-btn">টপ-আপ →</button>
-        </div>
-
-    </div>
-
-
-    <!-- =====================================================
-         SECTION 3
-    ====================================================== -->
-
-    <div class="section-header-box">
-        <h2>🎁 টার্গেট বোনাস</h2>
-    </div>
-
-    <div class="service-section-container">
-
-        <!-- Rank -->
-        <div class="service-card" onclick="handleIncomeClick('rank')">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#11998e,#38ef7d);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 2 15 8l6 .9-4.4 4.4 1 6.2-5.6-3-5.6 3 1-6.2L3 8.9 9 8l3-6z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>র‍্যাংক</h3>
-                <p>লিডারবোর্ড অবস্থান দেখুন</p>
-            </div>
-
-            <button class="card-btn">বিস্তারিত →</button>
-        </div>
-
-
-        <!-- Daily -->
-        <div class="service-card" onclick="handleBonusClick('daily')">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#00b09b,#96c93d);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 5v4.6l3 1.8-1 1.7-4-2.5V7h2z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>দৈনিক বোনাস</h3>
-                <p>প্রতিদিনের টার্গেট পূরণ</p>
-            </div>
-
-            <button class="card-btn">বিস্তারিত →</button>
-        </div>
-
-
-        <!-- Weekly -->
-        <div class="service-card" onclick="handleBonusClick('weekly')">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#2193b0,#6dd5ed);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M7 3h10v2h2v16H5V5h2V3zm0 6h10V7H7v2zm0 4h10v-2H7v2zm0 4h7v-2H7v2z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>সাপ্তাহিক বোনাস</h3>
-                <p>সাপ্তাহিক টার্গেট বোনাস</p>
-            </div>
-
-            <button class="card-btn">বিস্তারিত →</button>
-        </div>
-
-
-        <!-- Monthly -->
-        <div class="service-card" onclick="handleBonusClick('monthly')">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#f7971e,#ffd200);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M6 2h12v3h2v17H4V5h2V2zm2 2v3h8V4H8zm-2 7h12V9H6v2zm0 4h12v-2H6v2zm0 4h8v-2H6v2z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>মাসিক বোনাস</h3>
-                <p>মাসিক টার্গেট পূরণ</p>
-            </div>
-
-            <button class="card-btn dark-btn">বিস্তারিত →</button>
-        </div>
-
-
-        <!-- Yearly -->
-        <div class="service-card" onclick="handleBonusClick('yearly')">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#ff416c,#ff4b2b);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M7 2h10v3h2v17H5V5h2V2zm2 2v3h6V4H9zm-2 7h10V9H7v2zm0 4h10v-2H7v2zm0 4h6v-2H7v2z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>বার্ষিক বোনাস</h3>
-                <p>বার্ষিক টার্গেট বোনাস</p>
-            </div>
-
-            <button class="card-btn">বিস্তারিত →</button>
-        </div>
-
-
-        <!-- Lifetime -->
-        <div class="service-card" onclick="handleBonusClick('lifetime')">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#7f00ff,#e100ff);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 6c-2.5-4-9-3.5-9 1.5 0 3.4 4.2 6.2 9 10.5 4.8-4.3 9-7.1 9-10.5C21 2.5 14.5 2 12 6z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>আজীবন বোনাস</h3>
-                <p>বড় বোনাস অর্জন করুন</p>
-            </div>
-
-            <button class="card-btn">বিস্তারিত →</button>
-        </div>
-
-
-        <!-- Welcome -->
-        <div class="service-card" onclick="handleIncomeClick('welcome')">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#f2994a,#f2c94c);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 2 14.8 8l6.2.7-4.7 4.2 1.3 6.1L12 16l-5.6 3 1.3-6.1L3 8.7 9.2 8 12 2z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>ওয়েলকাম অফার</h3>
-                <p>নতুনদের জন্য বোনাস</p>
-            </div>
-
-            <button class="card-btn dark-btn">বিস্তারিত →</button>
-        </div>
-
-
-        <!-- Leaderboard -->
-        <div class="service-card" onclick="handleLeaderboardClick()">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#f2994a,#f2c94c);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M7 3h10v4h3v4a5 5 0 0 1-4 4.9A5 5 0 0 1 13 19v2h4v2H7v-2h4v-2.1A5 5 0 0 1 8 15.9 5 5 0 0 1 4 11V7h3V3zm2 2v7a3 3 0 0 0 6 0V5H9zM6 9v2a3 3 0 0 0 1 2.2V9H6zm12 0v4.2a3 3 0 0 0 1-2.2V9h-1z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>লিডারবোর্ড</h3>
-                <p>শীর্ষ ব্যবহারকারী তালিকা</p>
-            </div>
-
-            <button class="card-btn dark-btn">দেখুন →</button>
-        </div>
-
-    </div>
-
-<!-- =====================================================
-         SECTION 4
-    ====================================================== -->
-
-    <div class="section-header-box">
-        <h2>⚡ অন্যান্য সার্ভিস</h2>
-    </div>
-
-    <div class="service-section-container">
-
-        <!-- Mobile Recharge -->
-        <div class="service-card" onclick="handleMobileRechargeClick()">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#ff416c,#ff4b2b);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm1 3v12h8V5H8zm4 14a1.3 1.3 0 1 0 0 2.6A1.3 1.3 0 0 0 12 19z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>মোবাইল রিচার্জ</h3>
-                <p>খুব সহজে মোবাইল রিচার্জ</p>
-            </div>
-
-            <button class="card-btn">রিচার্জ →</button>
-        </div>
-
-
-        <!-- Driver Sell / Drive Offer -->
-        <div class="service-card" onclick="handleDriverCellClick()">
-            <div class="icon-circle" style="background:linear-gradient(135deg,#ff416c,#ff4b2b);">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>ড্রাইভ অফার</h3>
-                <p>সস্তা এমবি ও মিনিট বান্ডেল</p>
-            </div>
-
-            <button class="card-btn">শুরু করুন →</button>
-        </div>
-          
-        <!-- Trading -->
-        <div class="service-card" onclick="handleTradingSectionClick()">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#00b09b,#96c93d);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M4 18h16v2H2V4h2v14zm2-3 4-5 3 3 5-7 1.6 1.2-6.3 8.8-3.1-3.1L7.6 16 6 15z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>ট্রেডিং সেকশন</h3>
-                <p>ট্রেড করে আয় ও অভিজ্ঞতা</p>
-            </div>
-
-            <button class="card-btn">ট্রেড করুন →</button>
-        </div>
-
-
-        <!-- See More -->
-        <div class="service-card" onclick="handleSeeMoreClick()">
-            <div class="icon-circle"
-                 style="background:linear-gradient(135deg,#7f7f7f,#333);">
-                <svg viewBox="0 0 24 24">
-                    <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm4 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm6 0a2 2 0 1 0 0 4 2 2 0 0 0-4 0zm-6 6a2 2 0 1 0 0 4 2 2 0 0 0-4 0zm6 0a2 2 0 1 0 0 4 2 2 0 0 0-4 0z"/>
-                </svg>
-            </div>
-
-            <div class="card-content">
-                <h3>আরো দেখুন</h3>
-                <p>সব সার্ভিস একসাথে দেখুন</p>
-            </div>
-
-            <button class="card-btn">সব দেখুন →</button>
-        </div>
-
-    </div>
+    <button class="card-btn">শুরু করুন →</button>
 </div>
 
+      
+<!-- ৩. উইথড্র (সানসেট অরেঞ্জ স্টাইল) -->
+<div class="service-card" onclick="openPage('p-withdraw')">
+    <div class="icon-circle" style="background: linear-gradient(135deg, #ff4e50 0%, #f9d423 100%);">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="#fff">
+            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+        </svg>
+    </div>
+    <div class="card-content">
+        <h3>উইথড্র</h3>
+        <p>টাকা উত্তোলন করুন</p>
+    </div>
+    <button class="card-btn">উইথড্র করুন →</button>
+</div>
 
-<!-- =========================================================
-     CSS
-========================================================= -->
+        
+          <!-- ৪. আরও দেখুন (কালারফুল স্টাইল) -->
+        <div class="service-card" onclick="toggleMoreServices()">
+            <div class="icon-circle" id="more-icon-circle" style="background: linear-gradient(135deg, #f7971e, #ffd200);">
+                <svg id="more-arrow-svg" viewBox="0 0 24 24" style="transition: transform 0.3s ease;"><path d="M7 10l5 5 5-5z"/></svg>
+            </div>
+            <div class="card-content">
+                <h3 id="more-text">আরও দেখুন</h3>
+                <p>সব সার্ভিস একসাথে দেখুন</p>
+            </div>
+            <button class="card-btn dark-btn">সব দেখুন ↓</button>
+        </div>
+    </div>
+
+    <!-- লুকানো এক্সট্রা সার্ভিস সেকশন (ক্লিক করলে স্মুথলি ওপেন হবে) -->
+    <div id="extra-services-container">
+        <hr style="border: none; border-top: 1px solid #eee; margin: 15px 0;">
+
+        <div class="section-header-box">
+            <h2>🎊 অন্যান্য সার্ভিস ও প্রজেক্ট সমূহ</h2>
+        </div>
+
+        <div class="service-section-container">
+
+            <!-- ফেসবুক সেল -->
+            <div class="service-card" onclick="handleFbCreateClick()">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#1877f2,#0d5db8);">
+                    <svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.7-1.6h1.8V3.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.5v3h2.8v8h3.2z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>ফেসবুক সেল</h3>
+                    <p>ফেসবুক একাউন্ট সেল</p>
+                </div>
+                <button class="card-btn">বিক্রি করুন →</button>
+            </div>
+
+            <!-- ইনস্টাগ্রাম সেল -->
+            <div class="service-card" onclick="handleIgCreateClick()">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#f09433,#dc2743);">
+                    <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.5 6.5a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>ইনস্টাগ্রাম সেল</h3>
+                    <p>ইনস্টাগ্রাম একাউন্ট সেল</p>
+                </div>
+                <button class="card-btn">বিক্রি করুন →</button>
+            </div>
+
+            <!-- হোয়াটসঅ্যাপ সেল -->
+            <div class="service-card" onclick="handleWhatsAppSellClick()">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#25d366,#128c7e);">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.7 15l-1 4 4.1-1A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.4.6.6-2.3-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.3-.6-1.5-.7-.2-.1-.4-.1-.5.1-.2.2-.6.7-.7.8-.1.2-.3.2-.5.1-1.4-.7-2.3-1.2-3.2-2.7-.2-.3.2-.3.6-1 .1-.2.1-.3 0-.5s-.5-1.2-.7-1.6c-.2-.4-.4-.3-.5-.3h-.4c-.2 0-.5.1-.7.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.3c.1.2 1.6 2.5 3.9 3.4 1.4.6 2 .6 2.7.5.4-.1 1.3-.5 1.5-1 .2-.5.2-.9.1-1-.1-.1-.2-.1-.4-.2z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>হোয়াটসঅ্যাপ সেল</h3>
+                    <p>হোয়াটসঅ্যাপ একাউন্ট সেল</p>
+                </div>
+                <button class="card-btn">বিক্রি করুন →</button>
+            </div>
+
+            <!-- এআই মার্কেটিং -->
+            <div class="service-card" onclick="handleAiMarketingClick()">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#654ea3,#eaafc8);">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2v1.1a7 7 0 0 1 5.9 5.9H21a2 2 0 1 1 0 4h-1.1a7 7 0 0 1-5.9 5.9V22a2 2 0 1 1-4 0v-1.1A7 7 0 0 1 4.1 15H3a2 2 0 1 1 0-4h1.1A7 7 0 0 1 10 5.1V4a2 2 0 0 1 2-2zm0 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>এআই মার্কেটিং</h3>
+                    <p>কৃত্রিম বুদ্ধিমত্তার কাজ</p>
+                </div>
+                <button class="card-btn">শুরু করুন →</button>
+            </div>
+
+            <!-- রিসেলিং করুন -->
+            <div class="service-card" onclick="handleResellingClick()">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#f7971e,#ffd200);">
+                    <svg viewBox="0 0 24 24"><path d="M7 4h10l2 4H5l2-4zm-3 6h16v10H4V10zm4 2v6h2v-6H8zm6 0v6h2v-6h-2z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>রিসেলিং করুন</h3>
+                    <p>পণ্যের রিসেলিং করে আয়</p>
+                </div>
+                <button class="card-btn dark-btn">শুরু করুন →</button>
+            </div>
+
+            <!-- ভেন্ডরশীপ নিন -->
+            <div class="service-card" onclick="handleVendorshipClick()">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#11998e,#38ef7d);">
+                    <svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3zm0 4 4 1.5V11c0 3.3-2 6.4-4 7.6C10 17.4 8 14.3 8 11V7.5L12 6z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>ভেন্ডরশীপ নিন</h3>
+                    <p>ভেন্ডর হয়ে ব্যবসা করুন</p>
+                </div>
+                <button class="card-btn">আবেদন করুন →</button>
+            </div>
+
+            <!-- ফলোয়ার সার্ভিস -->
+            <div class="service-card" onclick="handlePageFollowerClick()">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#11998e,#38ef7d);">
+                    <svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm-8 9a8 8 0 0 1 16 0H4z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>ফলোয়ার সার্ভিস</h3>
+                    <p>আপনার পেজের ফলোয়ার বাড়ান</p>
+                </div>
+                <button class="card-btn">শুরু করুন →</button>
+            </div>
+
+            <!-- গ্রাফিক্স ডিজাইন -->
+            <div class="service-card" onclick="handleGraphicsDesignClick()">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#833ab4,#fd1d1d);">
+                    <svg viewBox="0 0 24 24"><path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm3 4v10h10V7H7zm2 2h6v6H9V9z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>গ্রাফিক্স ডিজাইন</h3>
+                    <p>লোগো ও ব্যানার ডিজাইন</p>
+                </div>
+                <button class="card-btn">শুরু করুন →</button>
+            </div>
+
+            <!-- ডাটা এন্ট্রি জব -->
+            <div class="service-card" onclick="handleDataEntryClick()">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#3a7bd5,#3a6073);">
+                    <svg viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm2 4v2h10V7H7zm0 4v2h10v-2H7zm0 4v2h7v-2H7z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>ডাটা এন্ট্রি জব</h3>
+                    <p>টাইপিং ও কপি-পেস্ট কাজ</p>
+                </div>
+                <button class="card-btn">কাজ নিন →</button>
+            </div>
+
+            <!-- গেম টপ-আপ -->
+            <div class="service-card" onclick="handleGameTopUpClick()">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#ff416c,#ff4b2b);">
+                    <svg viewBox="0 0 24 24"><path d="M7 6h10a5 5 0 0 1 4.9 6l-1 5A3 3 0 0 1 16 19l-2.5-3h-3L8 19a3 3 0 0 1-4.9-2l-1-5A5 5 0 0 1 7 6zm1 4H7v1H6v2h1v1h2v-1h1v-2H9v-1H8zm7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm3 2a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>গেম টপ-আপ</h3>
+                    <p>ডায়মন্ড ও ইউসি সেল</p>
+                </div>
+                <button class="card-btn">টপ-আপ →</button>
+            </div>
+
+            <!-- র‍্যাংক -->
+            <div class="service-card" onclick="handleIncomeClick('rank')">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#11998e,#38ef7d);">
+                    <svg viewBox="0 0 24 24"><path d="M12 2 15 8l6 .9-4.4 4.4 1 6.2-5.6-3-5.6 3 1-6.2L3 8.9 9 8l3-6z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>র‍্যাংক</h3>
+                    <p>লিডারবোর্ড অবস্থান</p>
+                </div>
+                <button class="card-btn">বিস্তারিত →</button>
+            </div>
+
+            <!-- দৈনিক বোনাস -->
+            <div class="service-card" onclick="handleBonusClick('daily')">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#00b09b,#96c93d);">
+                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 5v4.6l3 1.8-1 1.7-4-2.5V7h2z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>দৈনিক বোনাস</h3>
+                    <p>প্রতিদিনের টার্গেট পূরণ</p>
+                </div>
+                <button class="card-btn">বিস্তারিত →</button>
+            </div>
+
+            <!-- সাপ্তাহিক বোনাস -->
+            <div class="service-card" onclick="handleBonusClick('weekly')">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#2193b0,#6dd5ed);">
+                    <svg viewBox="0 0 24 24"><path d="M7 3h10v2h2v16H5V5h2V3zm0 6h10V7H7v2zm0 4h10v-2H7v2zm0 4h7v-2H7v2z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>সাপ্তাহিক বোনাস</h3>
+                    <p>সাপ্তাহিক টার্গেট বোনাস</p>
+                </div>
+                <button class="card-btn">বিস্তারিত →</button>
+            </div>
+
+            <!-- মাসিক বোনাস -->
+            <div class="service-card" onclick="handleBonusClick('monthly')">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#f7971e,#ffd200);">
+                    <svg viewBox="0 0 24 24"><path d="M6 2h12v3h2v17H4V5h2V2zm2 2v3h8V4H8zm-2 7h12V9H6v2zm0 4h12v-2H6v2zm0 4h8v-2H6v2z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>মাসিক বোনাস</h3>
+                    <p>মাসিক টার্গেট পূরণ</p>
+                </div>
+                <button class="card-btn dark-btn">বিস্তারিত →</button>
+            </div>
+
+            <!-- বার্ষিক বোনাস -->
+            <div class="service-card" onclick="handleBonusClick('yearly')">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#ff416c,#ff4b2b);">
+                    <svg viewBox="0 0 24 24"><path d="M7 2h10v3h2v17H5V5h2V2zm2 2v3h6V4H9zm-2 7h10V9H7v2zm0 4h10v-2H7v2zm0 4h6v-2H7v2z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>বার্ষিক বোনাস</h3>
+                    <p>বার্ষিক টার্গেট বোনাস</p>
+                </div>
+                <button class="card-btn">বিস্তারিত →</button>
+            </div>
+
+            <!-- আজীবন বোনাস -->
+            <div class="service-card" onclick="handleBonusClick('lifetime')">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#7f00ff,#e100ff);">
+                    <svg viewBox="0 0 24 24"><path d="M12 6c-2.5-4-9-3.5-9 1.5 0 3.4 4.2 6.2 9 10.5 4.8-4.3 9-7.1 9-10.5C21 2.5 14.5 2 12 6z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>আজীবন বোনাস</h3>
+                    <p>বড় বোনাস অর্জন করুন</p>
+                </div>
+                <button class="card-btn">বিস্তারিত →</button>
+            </div>
+
+            <!-- ওয়েলকাম অফার -->
+            <div class="service-card" onclick="handleIncomeClick('welcome')">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#f2994a,#f2c94c);">
+                    <svg viewBox="0 0 24 24"><path d="M12 2 14.8 8l6.2.7-4.7 4.2 1.3 6.1L12 16l-5.6 3 1.3-6.1L3 8.7 9.2 8 12 2z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>ওয়েলকাম অফার</h3>
+                    <p>নতুনদের জন্য বোনাস</p>
+                </div>
+                <button class="card-btn dark-btn">বিস্তারিত →</button>
+            </div>
+
+            <!-- লিডারবোর্ড -->
+            <div class="service-card" onclick="handleLeaderboardClick()">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#f2994a,#f2c94c);">
+                    <svg viewBox="0 0 24 24"><path d="M7 3h10v4h3v4a5 5 0 0 1-4 4.9A5 5 0 0 1 13 19v2h4v2H7v-2h4v-2.1A5 5 0 0 1 8 15.9 5 5 0 0 1 4 11V7h3V3zm2 2v7a3 3 0 0 0 6 0V5H9zM6 9v2a3 3 0 0 0 1 2.2V9H6zm12 0v4.2a3 3 0 0 0 1-2.2V9h-1z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>লিডারবোর্ড</h3>
+                    <p>শীর্ষ ব্যবহারকারী তালিকা</p>
+                </div>
+                <button class="card-btn dark-btn">দেখুন →</button>
+            </div>
+
+            <!-- মোবাইল রিচার্জ -->
+            <div class="service-card" onclick="handleMobileRechargeClick()">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#ff416c,#ff4b2b);">
+                    <svg viewBox="0 0 24 24"><path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm1 3v12h8V5H8zm4 14a1.3 1.3 0 1 0 0 2.6A1.3 1.3 0 0 0 12 19z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>মোবাইল রিচার্জ</h3>
+                    <p>খুব সহজে মোবাইল রিচার্জ</p>
+                </div>
+                <button class="card-btn">রিচার্জ →</button>
+            </div>
+
+            <!-- ড্রাইভ অফার -->
+            <div class="service-card" onclick="handleDriverCellClick()">
+                <div class="icon-circle" style="background:linear-gradient(135deg,#ff416c,#ff4b2b);">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                </div>
+                <div class="card-content">
+                    <h3>ড্রাইভ অফার</h3>
+                    <p>সস্তা এমবি ও মিনিট বান্ডেল</p>
+                </div>
+                <button class="card-btn">শুরু করুন →</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- JavaScript for Smooth Toggle -->
+<script>
+    function toggleMoreServices() {
+        const extraContainer = document.getElementById('extra-services-container');
+        const arrowSvg = document.getElementById('more-arrow-svg');
+        const moreText = document.getElementById('more-text');
+
+        if (extraContainer.style.maxHeight && extraContainer.style.maxHeight !== '0px') {
+            extraContainer.style.maxHeight = '0px';
+            extraContainer.style.opacity = '0';
+            arrowSvg.style.transform = 'rotate(0deg)';
+            moreText.innerText = 'আরও দেখুন';
+        } else {
+            extraContainer.style.maxHeight = extraContainer.scrollHeight + 'px';
+            extraContainer.style.opacity = '1';
+            arrowSvg.style.transform = 'rotate(180deg)';
+            moreText.innerText = 'কম দেখুন';
+        }
+    }
+</script>
+
 
 <style>
 
@@ -6108,9 +5913,7 @@ function closeAdminModal() {
 
         </div>
 
-
-
-        <!-- WITHDRAW NOTICE -->
+<!-- WITHDRAW NOTICE -->
         <div class="withdraw-notice">
 
             <div class="notice-top">
@@ -6149,7 +5952,7 @@ function closeAdminModal() {
                         <i class="fas fa-check"></i>
                     </div>
                     <div>
-                        সর্বনিম্ন উত্তোলন <b>১০০ টাকা</b> এবং সর্বোচ্চ
+                        সর্বনিম্ন উত্তোলন <b>৫০ টাকা</b> এবং সর্বোচ্চ
                         উত্তোলন <b>২৫,০০০ টাকা</b>।
                     </div>
                 </div>
@@ -6160,8 +5963,8 @@ function closeAdminModal() {
                         <i class="fas fa-check"></i>
                     </div>
                     <div>
-                        ২৪ ঘণ্টার মধ্যে সর্বোচ্চ <b>১ বার</b> উত্তোলন
-                        করা যাবে।
+                        প্রতিদিন রাত ১২টার পর নতুন লিমিট অনুযায়ী 
+                        <b>১ বার</b> উত্তোলন করা যাবে।
                     </div>
                 </div>
 
@@ -6171,8 +5974,8 @@ function closeAdminModal() {
                         <i class="fas fa-check"></i>
                     </div>
                     <div>
-                        ১০০ থেকে ৩০০ টাকা উত্তোলনে
-                        <b>৫ টাকা চার্জ</b>।
+                        ৫০ বা ১০০ টাকা উত্তোলনে
+                        <b>ফিক্সড ৫ টাকা চার্জ</b>।
                     </div>
                 </div>
 
@@ -6182,7 +5985,7 @@ function closeAdminModal() {
                         <i class="fas fa-check"></i>
                     </div>
                     <div>
-                        ৩০০ টাকার বেশি উত্তোলনে
+                        ২০০ টাকা বা তার বেশি উত্তোলনে
                         <b>২% চার্জ</b> কাটা হবে।
                     </div>
                 </div>
@@ -6301,50 +6104,6 @@ function closeAdminModal() {
                         max="25000"
                         placeholder="Enter amount">
 
-                </div>
-
-            </div>
-
-
-
-            <!-- FEE PREVIEW -->
-            <div class="fee-preview">
-
-                <div class="fee-row">
-                    <span>
-                        <i class="fas fa-receipt"></i>
-                        Withdrawal Amount
-                    </span>
-
-                    <strong id="withdraw-preview">
-                        ৳ 0.00
-                    </strong>
-                </div>
-
-
-                <div class="fee-row">
-                    <span>
-                        <i class="fas fa-percent"></i>
-                        Estimated Charge
-                    </span>
-
-                    <strong id="withdraw-fee">
-                        ৳ 0.00
-                    </strong>
-                </div>
-
-
-                <div class="fee-divider"></div>
-
-
-                <div class="fee-row total-row">
-                    <span>
-                        You Receive
-                    </span>
-
-                    <strong id="withdraw-receive">
-                        ৳ 0.00
-                    </strong>
                 </div>
 
             </div>
@@ -7892,118 +7651,168 @@ function showAllFbHistory() {
     renderFbInlineHistory('all');
 }
 </script>
-
-      
-<div id="p-gmail-create" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8f9fa; z-index: 1500; overflow-y: auto; padding-bottom: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+<!-- Gmail Create Task Page -->
+<div id="p-gmail-create" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f4f6f9; z-index: 1500; overflow-y: auto; padding-bottom: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
     
-    <!-- Top Header -->
-    <div style="background: linear-gradient(135deg, #ff1e56 0%, #ffac41 100%); padding: 15px 20px; display: flex; align-items: center; position: sticky; top: 0; z-index: 1502; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);">
-        <div onclick="openPage('home')" style="cursor: pointer; display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 8px; background: rgba(255, 255, 255, 0.2); transition: background 0.2s ease;">
-            <i class="fas fa-arrow-left" style="font-size: 18px; color: #ffffff;"></i>
+    <!-- Top Header with History Icon -->
+    <div style="background: linear-gradient(135deg, #ff1e56 0%, #ffac41 100%); padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1502; box-shadow: 0 4px 15px rgba(255, 30, 86, 0.2);">
+        <div style="display: flex; align-items: center;">
+            <div onclick="openPage('home')" style="cursor: pointer; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 10px; background: rgba(255, 255, 255, 0.2); transition: background 0.2s;">
+                <i class="fas fa-arrow-left" style="font-size: 16px; color: #ffffff;"></i>
+            </div>
+            <div style="margin-left: 14px;">
+                <h5 style="margin: 0; font-weight: 700; color: #ffffff; font-size: 16px; letter-spacing: 0.3px;">জিমেইল ক্রিয়েট টাস্ক</h5>
+            </div>
         </div>
-        <div style="margin-left: 12px;">
-            <h5 style="margin: 0; font-weight: 800; color: #ffffff; font-size: 16px; letter-spacing: 0.5px;">জিমেইল ক্রিয়েট টাস্ক</h5>
+        <!-- History Icon Button -->
+        <div onclick="openGmailHistoryPage()" style="cursor: pointer; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 10px; background: rgba(255, 255, 255, 0.2); transition: background 0.2s;">
+            <i class="fas fa-history" style="font-size: 16px; color: #ffffff;"></i>
         </div>
     </div>
 
-    <div class="container mt-3 px-3">
+    <div style="max-width: 480px; margin: 0 auto; padding: 16px;">
         
         <!-- Notice Box -->
-        <div style="background: #fff5f5; border-left: 4px solid #ff1e56; padding: 12px; border-radius: 6px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
-            <p style="margin: 0; font-size: 12px; color: #d63031; font-weight: 600; line-height: 1.7; text-align: justify;">
-                <i class="fas fa-bell" style="animation: ring 2s infinite; margin-right: 5px;"></i> 
-                <strong>জরুরি নির্দেশনা:</strong><br>
-                ১. কেবল সম্পূর্ণ নতুন, সঠিক এবং সক্রিয় জিমেইল অ্যাকাউন্ট জমা দিন।<br>
-                ২. আজকের নির্ধারিত পাসওয়ার্ডটি হুবহু ব্যবহার করে জিমেইল তৈরি করতে হবে।<br>
-                ৩. ভুল, ভুয়া কিংবা পাসওয়ার্ডবিহীন মেইল জমা দিলে কোনো ব্যালেন্স যোগ হবে না।<br>
-                ৪. প্রতারাণামূলক বা বারবার ভুল তথ্য জমা দিলে অ্যাকাউন্টটি স্থায়ীভাবে <strong>স্থগিত (Block)</strong> করা হবে। নিয়ম মেনে কাজ সম্পন্ন করার জন্য ধন্যবাদ। ✅
+        <div style="background: #ffffff; border-left: 4px solid #ff1e56; padding: 14px 16px; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+            <p style="margin: 0; font-size: 12px; color: #4b6584; font-weight: 600; line-height: 1.8; text-align: justify;">
+                <i class="fas fa-bell" style="color: #ff1e56; margin-right: 6px;"></i> 
+                <strong style="color: #2d3436;">জরুরি নির্দেশনা:</strong><br>
+                ১. কেবল সম্পূর্ণ নতুন, সঠিক এবং সক্রিয় জিমেইল অ্যাকাউন্ট জমা দিন。<br>
+                ২. আজকের নির্ধারিত পাসওয়ার্ডটি হুবহু ব্যবহার করে জিমেইল তৈরি করুন।<br>
+                ৩. সাবমিট করার পর স্ট্যাটাস <strong>Pending</strong> থাকবে, অনুমোদনের পর ব্যালেন্স যোগ হবে।<br>
+                ৪. ভুল তথ্য জমা দিলে অ্যাকাউন্ট স্থায়ীভাবে <strong>Block</strong> হতে পারে। ✅
             </p>
         </div>
 
         <!-- Dashboard Stat Cards (Top Row) -->
         <div style="display: flex; gap: 10px; margin-bottom: 10px;">
-            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-                <i class="fas fa-infinity" style="color: #ffaa00; font-size: 16px; margin-bottom: 3px;"></i>
-                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">দৈনিক সীমা</small>
-                <span style="font-size: 13px; font-weight: 800; color: #2c3e50;">(Unlimited)</span>
+            <div style="flex: 1; background: #ffffff; border: 1px solid #edf2f7; border-radius: 10px; padding: 12px 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+                <i class="fas fa-infinity" style="color: #ffaa00; font-size: 16px; margin-bottom: 4px;"></i>
+                <small style="display: block; color: #a0aec0; font-size: 10px; font-weight: 700;">দৈনিক সীমা</small>
+                <span style="font-size: 12px; font-weight: 800; color: #2d3436;">Unlimited</span>
             </div>
             
-            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-                <i class="fas fa-calendar-day" style="color: #0984e3; font-size: 16px; margin-bottom: 3px;"></i>
-                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">আজকের জমা</small>
+            <div style="flex: 1; background: #ffffff; border: 1px solid #edf2f7; border-radius: 10px; padding: 12px 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+                <i class="fas fa-calendar-day" style="color: #0984e3; font-size: 16px; margin-bottom: 4px;"></i>
+                <small style="display: block; color: #a0aec0; font-size: 10px; font-weight: 700;">আজকের জমা</small>
                 <span id="stat-today-count" style="font-size: 13px; font-weight: 800; color: #0984e3;">০ টি</span>
             </div>
 
-            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-                <span style="color: #2ed573; font-size: 16px; font-weight: 800; margin-bottom: 3px; display: inline-block;">৳</span>
-                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">আজকের আয়</small>
+            <div style="flex: 1; background: #ffffff; border: 1px solid #edf2f7; border-radius: 10px; padding: 12px 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+                <span style="color: #2ed573; font-size: 15px; font-weight: 800; margin-bottom: 2px; display: inline-block;">৳</span>
+                <small style="display: block; color: #a0aec0; font-size: 10px; font-weight: 700;">অনুমোদিত আয়</small>
                 <span id="stat-today-reward" style="font-size: 13px; font-weight: 800; color: #2ed573;">০ টাকা</span>
             </div>
         </div>
 
         <!-- Dashboard Stat Cards (Bottom Row) -->
-        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
-            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-                <i class="fas fa-tasks" style="color: #6c5ce7; font-size: 16px; margin-bottom: 3px;"></i>
-                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">সর্বমোট জমাকৃত</small>
+        <div style="display: flex; gap: 10px; margin-bottom: 16px;">
+            <div style="flex: 1; background: #ffffff; border: 1px solid #edf2f7; border-radius: 10px; padding: 12px 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+                <i class="fas fa-tasks" style="color: #6c5ce7; font-size: 16px; margin-bottom: 4px;"></i>
+                <small style="display: block; color: #a0aec0; font-size: 10px; font-weight: 700;">সর্বমোট জমাকৃত</small>
                 <span id="stat-total-count" style="font-size: 13px; font-weight: 800; color: #6c5ce7;">০ টি</span>
             </div>
 
-            <div style="flex: 1; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-                <i class="fas fa-tag" style="color: #e17055; font-size: 16px; margin-bottom: 3px;"></i>
-                <small style="display: block; color: #7f8c8d; font-size: 10px; font-weight: 600;">প্রতি মেইলের মূল্য</small>
+            <div style="flex: 1; background: #ffffff; border: 1px solid #edf2f7; border-radius: 10px; padding: 12px 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+                <i class="fas fa-tag" style="color: #e17055; font-size: 16px; margin-bottom: 4px;"></i>
+                <small style="display: block; color: #a0aec0; font-size: 10px; font-weight: 700;">প্রতি মেইলের মূল্য</small>
                 <span style="font-size: 13px; font-weight: 800; color: #e17055;">১০ টাকা</span>
             </div>
         </div>
 
         <!-- Today's Password Box -->
-        <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); display: flex; align-items: center; justify-content: space-between;">
+        <div style="background: #ffffff; border: 1px solid #edf2f7; border-radius: 10px; padding: 14px 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); display: flex; align-items: center; justify-content: space-between;">
             <div>
-                <small style="display: block; color: #7f8c8d; font-size: 11px; font-weight: 600; margin-bottom: 2px;">আজকের নির্ধারিত পাসওয়ার্ড</small>
-                <span id="gmail-pwd" style="font-size: 15px; font-weight: 700; color: #2d3436; letter-spacing: 0.5px;">@jony@#&amp;</span>
+                <small style="display: block; color: #a0aec0; font-size: 11px; font-weight: 700; margin-bottom: 3px;">আজকের নির্ধারিত পাসওয়ার্ড</small>
+                <span id="gmail-pwd" style="font-size: 15px; font-weight: 800; color: #2d3436; letter-spacing: 0.5px;">@jony@#&amp;</span>
             </div>
-            <button onclick="copyPassword()" style="background: #f1f2f6; border: none; width: 35px; height: 35px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;">
-                <i id="copy-icon" class="far fa-copy" style="color: #57606f; font-size: 16px;"></i>
+            <button onclick="copyPasswordSafe()" style="background: #f7f9fc; border: 1px solid #e2e8f0; width: 38px; height: 38px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;">
+                <i id="copy-icon" class="far fa-copy" style="color: #4a5568; font-size: 15px;"></i>
             </button>
         </div>
 
         <!-- Form Card -->
-        <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-            <h6 style="margin: 0 0 15px 0; font-weight: 800; color: #2d3436; font-size: 14px;">তথ্য জমা দিন</h6>
+        <div style="background: #ffffff; border: 1px solid #edf2f7; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+            <h6 style="margin: 0 0 16px 0; font-weight: 800; color: #2d3436; font-size: 14px; border-bottom: 2px solid #f7f9fc; padding-bottom: 8px;">তথ্য জমা দিন</h6>
             
-            <form id="gmailSubmitForm" onsubmit="submitGmailData(event)">
-                <div style="margin-bottom: 12px;">
-                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">ইমেইল অ্যাড্রেস</label>
-                    <input type="email" id="submitEmail" required placeholder="example@gmail.com" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; outline: none; transition: border 0.2s;">
+            <form id="gmailSubmitForm" onsubmit="submitGmailTaskData(event)">
+                <div style="margin-bottom: 14px;">
+                    <label style="display: block; font-size: 11px; font-weight: 700; color: #4a5568; margin-bottom: 6px;">ইমেইল অ্যাড্রেস</label>
+                    <input type="email" id="submitEmail" required placeholder="example@gmail.com" style="width: 100%; padding: 11px 14px; border: 1px solid #cbd5e0; border-radius: 8px; font-size: 13px; outline: none; background: #fff;">
+                </div>
+
+                <div style="margin-bottom: 14px;">
+                    <label style="display: block; font-size: 11px; font-weight: 700; color: #4a5568; margin-bottom: 6px;">পাসওয়ার্ড</label>
+                    <input type="text" id="submitPassword" required placeholder="মেইলে ব্যবহৃত পাসওয়ার্ড লিখুন" style="width: 100%; padding: 11px 14px; border: 1px solid #cbd5e0; border-radius: 8px; font-size: 13px; outline: none; background: #fff;">
                 </div>
 
                 <div style="margin-bottom: 20px;">
-                    <label style="display: block; font-size: 11px; font-weight: 700; color: #57606f; margin-bottom: 5px;">পাসওয়ার্ড</label>
-                    <input type="text" id="submitPassword" required placeholder="মেইলে ব্যবহৃত পাসওয়ার্ডটি লিখুন" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; outline: none; transition: border 0.2s;">
+                    <label style="display: block; font-size: 11px; font-weight: 700; color: #4a5568; margin-bottom: 6px;">2FA Key</label>
+                    <input type="text" id="submit2fa" required placeholder="2FA সিক্রেট কি লিখুন" style="width: 100%; padding: 11px 14px; border: 1px solid #cbd5e0; border-radius: 8px; font-size: 13px; outline: none; background: #fff;">
                 </div>
 
-                <button type="submit" style="width: 100%; background: linear-gradient(135deg, #ff1e56 0%, #ffac41 100%); color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; font-size: 13px; cursor: pointer; box-shadow: 0 4px 12px rgba(255,30,86,0.25);">
+                <button type="submit" id="submitBtn" style="width: 100%; background: linear-gradient(135deg, #ff1e56 0%, #ffac41 100%); color: white; border: none; padding: 13px; border-radius: 8px; font-weight: 800; font-size: 14px; cursor: pointer; box-shadow: 0 4px 15px rgba(255,30,86,0.25);">
                     জমা দিন
                 </button>
             </form>
         </div>
 
-        <!-- In-Page History Section -->
-        <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #f1f2f6; padding-bottom: 8px;">
+    </div>
+</div>
+
+
+<!-- Gmail History Page -->
+<div id="p-gmail-history" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f4f6f9; z-index: 1501; overflow-y: auto; padding-bottom: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    
+    <!-- Header -->
+    <div style="background: linear-gradient(135deg, #ff1e56 0%, #ffac41 100%); padding: 16px 20px; display: flex; align-items: center; position: sticky; top: 0; z-index: 1502; box-shadow: 0 4px 15px rgba(255, 30, 86, 0.2);">
+        <div onclick="closeGmailHistoryPage()" style="cursor: pointer; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 10px; background: rgba(255, 255, 255, 0.2); transition: background 0.2s;">
+            <i class="fas fa-arrow-left" style="font-size: 16px; color: #ffffff;"></i>
+        </div>
+        <div style="margin-left: 14px;">
+            <h5 style="margin: 0; font-weight: 700; color: #ffffff; font-size: 16px; letter-spacing: 0.3px;">Gmail History</h5>
+        </div>
+    </div>
+
+    <div style="max-width: 480px; margin: 0 auto; padding: 16px;">
+        
+        <!-- 4 Filter Button Cards -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 16px;">
+            <button onclick="filterGmailHistory('all', this)" class="history-filter-btn" style="background: #fff5f5; border: 2px solid #ff1e56; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                <i class="fas fa-list-ul" style="color: #ff1e56; font-size: 16px; margin-bottom: 4px; display: block;"></i>
+                <span style="font-size: 12px; font-weight: 800; color: #2d3436;">All</span>
+            </button>
+            
+            <button onclick="filterGmailHistory('pending', this)" class="history-filter-btn" style="background: #ffffff; border: 2px solid #edf2f7; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                <i class="fas fa-clock" style="color: #f39c12; font-size: 16px; margin-bottom: 4px; display: block;"></i>
+                <span style="font-size: 12px; font-weight: 800; color: #2d3436;">Pending</span>
+            </button>
+
+            <button onclick="filterGmailHistory('approved', this)" class="history-filter-btn" style="background: #ffffff; border: 2px solid #edf2f7; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                <i class="fas fa-check-circle" style="color: #2ed573; font-size: 16px; margin-bottom: 4px; display: block;"></i>
+                <span style="font-size: 12px; font-weight: 800; color: #2d3436;">Approved</span>
+            </button>
+
+            <button onclick="filterGmailHistory('rejected', this)" class="history-filter-btn" style="background: #ffffff; border: 2px solid #edf2f7; border-radius: 10px; padding: 12px; text-align: center; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                <i class="fas fa-times-circle" style="color: #d63031; font-size: 16px; margin-bottom: 4px; display: block;"></i>
+                <span style="font-size: 12px; font-weight: 800; color: #2d3436;">Rejected</span>
+            </button>
+        </div>
+
+        <!-- History Container -->
+        <div style="background: #ffffff; border: 1px solid #edf2f7; border-radius: 12px; padding: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; border-bottom: 1px solid #f7f9fc; padding-bottom: 8px;">
                 <h6 style="margin: 0; font-weight: 800; color: #2d3436; font-size: 14px;">
-                    <i class="fas fa-history" style="color: #ff1e56; margin-right: 5px;"></i> সাবমিশন হিস্ট্রি
+                    <i class="fas fa-history" style="color: #ff1e56; margin-right: 6px;"></i> সাবমিশন তালিকা
                 </h6>
+                <button onclick="fetchGmailSheetHistory()" style="background: #f7f9fc; border: 1px solid #e2e8f0; color: #0984e3; font-size: 11px; padding: 5px 10px; border-radius: 6px; cursor: pointer; font-weight: 700;">
+                    <i class="fas fa-sync-alt"></i> রিফ্রেশ
+                </button>
             </div>
 
-            <!-- Dynamic History Cards -->
-            <div id="inline-history-container"></div>
-
-            <!-- See All Button -->
-            <div id="see-all-btn-wrapper" style="text-align: center; margin-top: 10px; display: none;">
-                <button onclick="showAllHistory()" style="background: #f1f2f6; color: #2c3e50; border: none; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer; transition: background 0.2s;">
-                    সবগুলো দেখুন <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 3px;"></i>
-                </button>
+            <!-- Dynamic Filtered History Cards -->
+            <div id="full-history-container">
+                <div style="text-align: center; padding: 20px; color: #a0aec0; font-size: 12px;">হিস্ট্রি লোড হচ্ছে...</div>
             </div>
         </div>
 
@@ -8011,49 +7820,55 @@ function showAllFbHistory() {
 </div>
 
 <!-- Success Popup -->
-<div id="successPopup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(5px);">
-    <div style="background: #ffffff; width: 100%; max-width: 360px; border-radius: 6px; border-top: 5px solid #2ed573; padding: 20px; text-align: left; box-shadow: 0 15px 35px rgba(0,0,0,0.25); animation: popUpScale 0.25s ease-out;">
+<div id="successPopup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(4px);">
+    <div style="background: #ffffff; width: 100%; max-width: 340px; border-radius: 12px; border-top: 5px solid #f39c12; padding: 20px; text-align: left; box-shadow: 0 20px 40px rgba(0,0,0,0.2); animation: popUpScale 0.25s ease-out;">
         
-        <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px dashed #e0e0e0; padding-bottom: 12px; margin-bottom: 15px;">
-            <div style="display: flex; align-items: center; gap: 10px;">
-                <div style="width: 32px; height: 32px; background: #e8fadf; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #2ed573;">
-                    <i class="fas fa-check-circle" style="font-size: 18px;"></i>
-                </div>
-                <div>
-                    <h6 style="margin: 0; font-weight: 700; color: #2d3436; font-size: 15px;">সাবমিশন সফল হয়েছে</h6>
-                    <small style="color: #2ed573; font-weight: 600; font-size: 11px;">স্ট্যাটাস: Success</small>
-                </div>
+        <div style="display: flex; align-items: center; gap: 12px; border-bottom: 1px dashed #edf2f7; padding-bottom: 12px; margin-bottom: 14px;">
+            <div style="width: 36px; height: 36px; background: #fef5e7; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #f39c12;">
+                <i class="fas fa-clock" style="font-size: 18px;"></i>
+            </div>
+            <div>
+                <h6 style="margin: 0; font-weight: 800; color: #2d3436; font-size: 14px;">সাবমিশন সফল হয়েছে</h6>
+                <small style="color: #f39c12; font-weight: 700; font-size: 11px;">স্ট্যাটাস: Pending</small>
             </div>
         </div>
 
-        <div style="background: #f8f9fa; border: 1px solid #f1f2f6; border-radius: 4px; padding: 12px; margin-bottom: 15px; font-size: 12px;">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                <span style="color: #7f8c8d;">অর্ডার নম্বর:</span>
-                <span id="pop-order-id" style="font-weight: 700; color: #2c3e50;">-</span>
+        <div style="background: #f7f9fc; border: 1px solid #edf2f7; border-radius: 8px; padding: 12px; margin-bottom: 14px; font-size: 12px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span style="color: #718096;">অর্ডার নম্বর:</span>
+                <span id="pop-order-id" style="font-weight: 700; color: #2d3436;">-</span>
             </div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                <span style="color: #7f8c8d;">জমাকৃত ইমেইল:</span>
-                <span id="pop-email" style="font-weight: 600; color: #2c3e50; word-break: break-all; max-width: 180px; text-align: right;">-</span>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span style="color: #718096;">রেফার কোড:</span>
+                <span id="pop-refer" style="font-weight: 700; color: #0984e3;">-</span>
             </div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                <span style="color: #7f8c8d;">পাসওয়ার্ড:</span>
-                <span id="pop-password" style="font-weight: 600; color: #2c3e50;">-</span>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span style="color: #718096;">ইমেইল:</span>
+                <span id="pop-email" style="font-weight: 600; color: #2d3436; word-break: break-all; max-width: 170px; text-align: right;">-</span>
             </div>
-            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                <span style="color: #7f8c8d;">রিওয়ার্ড পরিমাণ:</span>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span style="color: #718096;">পাসওয়ার্ড:</span>
+                <span id="pop-password" style="font-weight: 600; color: #2d3436;">-</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span style="color: #718096;">2FA Key:</span>
+                <span id="pop-2fa" style="font-weight: 600; color: #6c5ce7; word-break: break-all; max-width: 170px; text-align: right;">-</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span style="color: #718096;">রিওয়ার্ড:</span>
                 <span style="font-weight: 700; color: #2ed573;">১০ টাকা</span>
             </div>
             <div style="display: flex; justify-content: space-between;">
-                <span style="color: #7f8c8d;">জমা দেওয়ার সময়:</span>
-                <span id="pop-time" style="font-weight: 500; color: #57606f;">-</span>
+                <span style="color: #718096;">সময়:</span>
+                <span id="pop-time" style="font-weight: 500; color: #4a5568; font-size: 10px;">-</span>
             </div>
         </div>
 
-        <p style="margin: 0 0 15px 0; font-size: 11px; color: #747d8c; line-height: 1.5; text-align: justify;">
-            তথ্য যাচাইকরণের পর আগামী ১২ ঘণ্টার মধ্যে আপনার অ্যাকাউন্টে ব্যালেন্স যোগ করা হবে। অনুগ্রহ করে সঠিক তথ্য প্রদান করুন, অন্যথায় অ্যাকাউন্ট সাময়িকভাবে স্থগিত হতে পারে।
+        <p style="margin: 0 0 16px 0; font-size: 11px; color: #718096; line-height: 1.6; text-align: justify;">
+            আপনার সাবমিশনটি পেন্ডিং আছে। গুগল শিট থেকে অ্যাপ্রুভ হওয়ার পর ব্যালেন্সে টাকা যুক্ত হবে।
         </p>
 
-        <button onclick="closeSuccessPopup()" style="width: 100%; background: #2c3e50; color: white; border: none; padding: 10px; border-radius: 4px; font-weight: 600; font-size: 13px; cursor: pointer; transition: background 0.2s;">
+        <button onclick="closeSuccessPopup()" style="width: 100%; background: #2d3436; color: white; border: none; padding: 11px; border-radius: 8px; font-weight: 700; font-size: 13px; cursor: pointer;">
             সম্পন্ন
         </button>
     </div>
@@ -8067,178 +7882,250 @@ function showAllFbHistory() {
 </style>
 
 <script>
+const GMAIL_SHEETDB_API_URL = "https://sheetdb.io/api/v1/juro1zgwed7g7"; 
+let gmailGlobalHistory = [];
+let gmailCurrentFilter = 'all';
+
 document.addEventListener("DOMContentLoaded", function() {
-    updateDashboardStats();
-    renderInlineHistory(1); // শুরুতে ১টি হিস্ট্রি দেখাবে
+    fetchGmailSheetHistory();
 });
 
-function handleGmailCreateClick() {
-    updateDashboardStats();
-    renderInlineHistory(1);
-    if (typeof openPage === "function") {
-        openPage('gmail-create');
-    } else {
-        document.getElementById('p-gmail-create').classList.remove('d-none');
+// History Page Open & Close
+function openGmailHistoryPage() {
+    let historyPage = document.getElementById('p-gmail-history');
+    if(historyPage) {
+        historyPage.classList.remove('d-none');
+        historyPage.style.display = "block";
+        fetchGmailSheetHistory();
     }
 }
 
-function getNext10PMTimestamp() {
-    let now = new Date();
-    let resetTime = new Date();
-    resetTime.setHours(22, 0, 0, 0);
-
-    if (now.getTime() >= resetTime.getTime()) {
-        resetTime.setDate(resetTime.getDate() + 1);
+function closeGmailHistoryPage() {
+    let historyPage = document.getElementById('p-gmail-history');
+    if(historyPage) {
+        historyPage.classList.add('d-none');
+        historyPage.style.display = "none";
     }
-    return resetTime.getTime();
 }
 
-function updateDashboardStats() {
-    let now = new Date().getTime();
-    let nextReset = localStorage.getItem("gmail_stat_reset_time");
-    let todayCount = parseInt(localStorage.getItem("gmail_today_count")) || 0;
-    let totalCount = parseInt(localStorage.getItem("gmail_total_count")) || 0;
-
-    if (!nextReset || now >= parseInt(nextReset)) {
-        todayCount = 0;
-        localStorage.setItem("gmail_today_count", "0");
-        localStorage.setItem("gmail_stat_reset_time", getNext10PMTimestamp().toString());
-    }
-
-    document.getElementById("stat-today-count").innerText = todayCount + " টি";
-    document.getElementById("stat-today-reward").innerText = (todayCount * 10) + " টাকা";
-    document.getElementById("stat-total-count").innerText = totalCount + " টি";
-
-    return { todayCount, totalCount };
-}
-
-function copyPassword() {
-    var passwordText = document.getElementById("gmail-pwd").innerText;
+function copyPasswordSafe() {
+    var pwdElement = document.getElementById("gmail-pwd");
+    if(!pwdElement) return;
+    var passwordText = pwdElement.innerText;
+    
     navigator.clipboard.writeText(passwordText).then(function() {
         var icon = document.getElementById("copy-icon");
-        icon.className = "fas fa-check";
-        icon.style.color = "#2ed573";
-        setTimeout(function() {
-            icon.className = "far fa-copy";
-            icon.style.color = "#57606f";
-        }, 2000);
+        if(icon) {
+            icon.className = "fas fa-check";
+            icon.style.color = "#2ed573";
+            setTimeout(function() {
+                icon.className = "far fa-copy";
+                icon.style.color = "#4a5568";
+            }, 2000);
+        }
     });
 }
 
-function generateOrderId() {
+function generateGmailOrderId() {
     return "GM" + Math.floor(100000 + Math.random() * 900000);
 }
 
-function submitGmailData(event) {
+function submitGmailTaskData(event) {
     event.preventDefault();
     
-    var email = document.getElementById("submitEmail").value;
-    var password = document.getElementById("submitPassword").value;
-    var orderId = generateOrderId();
-    
-    const tgToken = "8213160023:AAFtEXfzkaJY4XLedxQuExevMPxsW6gL_ao"; 
-    const tgChatId = "7203470877"; 
-    
-    var userIdentifier = (typeof curUser !== 'undefined' && curUser.email) ? curUser.email : 'N/A';
+    var emailInput = document.getElementById("submitEmail");
+    var passwordInput = document.getElementById("submitPassword");
+    var twoFaInput = document.getElementById("submit2fa");
+    var submitBtn = document.getElementById("submitBtn");
 
-    var message = `📩 *New Gmail Submission* 📩\n\n` +
-                  `🆔 *Order No:* \`${orderId}\`\n` +
-                  `👤 *ইউজার:* ${userIdentifier}\n` +
-                  `📧 *Submitted Email:* \`${email}\`\n` +
-                  `🔑 *Submitted Password:* \`${password}\`\n` +
-                  `💰 *Amount:* 10 TK\n\n` +
-                  `⚠️ _দয়া করে মেইলটি চেক করে ব্যালেন্স যোগ করুন।_`;
+    if(!emailInput || !passwordInput || !twoFaInput) return;
+
+    var email = emailInput.value;
+    var password = passwordInput.value;
+    var twoFaKey = twoFaInput.value;
+    var orderId = generateGmailOrderId();
     
-    var url = `https://api.telegram.org/bot${tgToken}/sendMessage?chat_id=${tgChatId}&text=${encodeURIComponent(message)}&parse_mode=Markdown`;
+    let userReferCode = 'N/A';
+    try {
+        if (typeof User !== 'undefined' && User.referCode) {
+            userReferCode = User.referCode;
+        } else if (typeof curUser !== 'undefined' && curUser.referCode) {
+            userReferCode = curUser.referCode;
+        } else if (localStorage.getItem('v7_referCode')) {
+            userReferCode = localStorage.getItem('v7_referCode');
+        } else if (localStorage.getItem('userReferCode')) {
+            userReferCode = localStorage.getItem('userReferCode');
+        }
+    } catch(e) {
+        console.log("Refer code fetch error:", e);
+    }
     
     var now = new Date();
     var timeString = now.toLocaleDateString('bn-BD') + ' - ' + now.toLocaleTimeString('bn-BD', { hour: '2-digit', minute: '2-digit' });
 
-    let stats = updateDashboardStats();
-    localStorage.setItem("gmail_today_count", (stats.todayCount + 1).toString());
-    localStorage.setItem("gmail_total_count", (stats.totalCount + 1).toString());
-    updateDashboardStats();
+    if(submitBtn) {
+        submitBtn.innerText = "জমা হচ্ছে...";
+        submitBtn.disabled = true;
+    }
 
-    saveHistoryRecord({
-        orderId: orderId,
-        email: email,
-        password: password,
-        amount: "১০ টাকা",
-        status: "Success",
-        time: timeString
-    });
+    var requestData = {
+        data: [{
+            orderId: orderId,
+            user: userReferCode,
+            email: email,
+            password: password,
+            twofa: twoFaKey,
+            amount: "১০ টাকা",
+            status: "Pending",
+            time: timeString
+        }]
+    };
 
-    fetch(url)
-    .then(response => {
-        showReceiptPopup(orderId, email, password, timeString);
-        document.getElementById("gmailSubmitForm").reset();
-        renderInlineHistory(1);
+    fetch(GMAIL_SHEETDB_API_URL, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(requestData)
+    })
+    .then(response => response.json())
+    .then(resData => {
+        if(submitBtn) {
+            submitBtn.innerText = "জমা দিন";
+            submitBtn.disabled = false;
+        }
+        showGmailReceiptPopup(orderId, userReferCode, email, password, twoFaKey, timeString);
+        let form = document.getElementById("gmailSubmitForm");
+        if(form) form.reset();
+        fetchGmailSheetHistory(); 
     })
     .catch(error => {
-        showReceiptPopup(orderId, email, password, timeString);
-        document.getElementById("gmailSubmitForm").reset();
-        renderInlineHistory(1);
-        console.error("Error sending to Telegram:", error);
+        if(submitBtn) {
+            submitBtn.innerText = "জমা দিন";
+            submitBtn.disabled = false;
+        }
+        alert("ডাটা জমা দিতে সমস্যা হয়েছে। দয়া করে আবার চেষ্টা করুন।");
+        console.error("Error:", error);
     });
 }
 
-function saveHistoryRecord(data) {
-    let history = JSON.parse(localStorage.getItem("gmail_submit_history")) || [];
-    history.unshift(data);
-    localStorage.setItem("gmail_submit_history", JSON.stringify(history));
-}
-
-function showReceiptPopup(orderId, email, password, time) {
-    document.getElementById("pop-order-id").innerText = "#" + orderId;
-    document.getElementById("pop-email").innerText = email;
-    document.getElementById("pop-password").innerText = password;
-    document.getElementById("pop-time").innerText = time;
-    document.getElementById("successPopup").style.display = "flex";
+function showGmailReceiptPopup(orderId, referCode, email, password, twofa, time) {
+    let setVal = (id, val) => { let el = document.getElementById(id); if(el) el.innerText = val; };
+    setVal("pop-order-id", "#" + orderId);
+    setVal("pop-refer", referCode);
+    setVal("pop-email", email);
+    setVal("pop-password", password);
+    setVal("pop-2fa", twofa);
+    setVal("pop-time", time);
+    
+    let popup = document.getElementById("successPopup");
+    if(popup) popup.style.display = "flex";
 }
 
 function closeSuccessPopup() {
-    document.getElementById("successPopup").style.display = "none";
+    let popup = document.getElementById("successPopup");
+    if(popup) popup.style.display = "none";
 }
 
-// ইন-পেজ হিস্ট্রি রেন্ডার ফাংশন
-function renderInlineHistory(limit = 1) {
-    let history = JSON.parse(localStorage.getItem("gmail_submit_history")) || [];
-    let container = document.getElementById("inline-history-container");
-    let seeAllBtn = document.getElementById("see-all-btn-wrapper");
+function fetchGmailSheetHistory() {
+    let container = document.getElementById("full-history-container");
+    if(container) {
+        container.innerHTML = `<div style="text-align: center; padding: 20px; color: #a0aec0; font-size: 12px;">ডাটা লোড হচ্ছে...</div>`;
+    }
+
+    fetch(GMAIL_SHEETDB_API_URL)
+    .then(response => response.json())
+    .then(history => {
+        gmailGlobalHistory = Array.isArray(history) ? history.reverse() : []; 
+        updateGmailStats(gmailGlobalHistory);
+        renderGmailFilteredHistory();
+    })
+    .catch(error => {
+        if(container) {
+            container.innerHTML = `<div style="text-align: center; padding: 20px; color: #ff1e56; font-size: 12px;">ডাটা লোড করতে ব্যর্থ হয়েছে!</div>`;
+        }
+        console.error("Error fetching history:", error);
+    });
+}
+
+function filterGmailHistory(status, btnElement) {
+    gmailCurrentFilter = status;
     
-    if (history.length === 0) {
+    let buttons = document.querySelectorAll('.history-filter-btn');
+    if(buttons && buttons.length > 0) {
+        buttons.forEach(btn => {
+            btn.style.borderColor = '#edf2f7';
+            btn.style.background = '#ffffff';
+        });
+    }
+    
+    if(btnElement) {
+        btnElement.style.borderColor = '#ff1e56';
+        btnElement.style.background = '#fff5f5';
+    }
+
+    renderGmailFilteredHistory();
+}
+
+function renderGmailFilteredHistory() {
+    let container = document.getElementById("full-history-container");
+    if (!container) return;
+    
+    let filteredData = gmailGlobalHistory;
+    if (gmailCurrentFilter !== 'all') {
+        filteredData = gmailGlobalHistory.filter(item => item.status && item.status.toLowerCase() === gmailCurrentFilter);
+    }
+
+    if (!filteredData || filteredData.length === 0) {
         container.innerHTML = `
-            <div style="text-align: center; padding: 20px 10px; color: #a4b0be;">
-                <i class="fas fa-inbox" style="font-size: 28px; margin-bottom: 5px;"></i>
-                <p style="margin: 0; font-size: 12px;">কোনো সাবমিশন হিস্ট্রি পাওয়া যায়নি!</p>
+            <div style="text-align: center; padding: 30px 10px; color: #a0aec0;">
+                <i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 8px;"></i>
+                <p style="margin: 0; font-size: 12px;">কোনো সাবমিশন পাওয়া যায়নি!</p>
             </div>
         `;
-        seeAllBtn.style.display = "none";
         return;
     }
 
-    let itemsToDisplay = limit === 'all' ? history : history.slice(0, limit);
     let html = "";
+    filteredData.forEach(item => {
+        let statusBg = "#fef5e7", statusColor = "#f39c12"; 
+        if (item.status && item.status.toLowerCase() === 'approved') {
+            statusBg = "#e8fadf"; statusColor = "#2ed573";
+        } else if (item.status && item.status.toLowerCase() === 'rejected') {
+            statusBg = "#ffeaa7"; statusColor = "#d63031";
+        }
 
-    itemsToDisplay.forEach(item => {
         html += `
-            <div style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 6px; padding: 12px; margin-bottom: 8px;">
-                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #dcdde1; padding-bottom: 6px; margin-bottom: 8px;">
-                    <span style="font-size: 11px; font-weight: 800; color: #2c3e50;">অর্ডার নম্বর: #${item.orderId}</span>
-                    <span style="background: #e8fadf; color: #2ed573; font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 4px;">${item.status}</span>
+            <div style="background: #f7f9fc; border: 1px solid #edf2f7; border-radius: 8px; padding: 12px; margin-bottom: 10px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #e2e8f0; padding-bottom: 6px; margin-bottom: 8px;">
+                    <span style="font-size: 11px; font-weight: 800; color: #2d3436;">অর্ডার নম্বর: #${item.orderId || 'N/A'}</span>
+                    <span style="background: ${statusBg}; color: ${statusColor}; font-size: 9px; font-weight: 700; padding: 2px 8px; border-radius: 4px;">${item.status || 'Pending'}</span>
                 </div>
                 <div style="font-size: 11px; line-height: 1.6;">
                     <div style="display: flex; justify-content: space-between;">
-                        <span style="color: #7f8c8d;">ইমেইল:</span>
-                        <span style="font-weight: 600; color: #2d3436; word-break: break-all; max-width: 180px; text-align: right;">${item.email}</span>
+                        <span style="color: #718096;">রেফার কোড:</span>
+                        <span style="font-weight: 700; color: #0984e3;">${item.user || 'N/A'}</span>
                     </div>
                     <div style="display: flex; justify-content: space-between;">
-                        <span style="color: #7f8c8d;">পরিমাণ:</span>
-                        <span style="font-weight: 700; color: #2ed573;">${item.amount}</span>
+                        <span style="color: #718096;">ইমেইল:</span>
+                        <span style="font-weight: 600; color: #2d3436; word-break: break-all; max-width: 180px; text-align: right;">${item.email || 'N/A'}</span>
                     </div>
                     <div style="display: flex; justify-content: space-between;">
-                        <span style="color: #7f8c8d;">সময়:</span>
-                        <span style="color: #57606f; font-size: 10px;">${item.time}</span>
+                        <span style="color: #718096;">পাসওয়ার্ড:</span>
+                        <span style="font-weight: 600; color: #2d3436;">${item.password || 'N/A'}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: #718096;">2FA Key:</span>
+                        <span style="font-weight: 600; color: #6c5ce7; word-break: break-all; max-width: 180px; text-align: right;">${item.twofa || 'N/A'}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: #718096;">পরিমাণ:</span>
+                        <span style="font-weight: 700; color: #2ed573;">${item.amount || '১০ টাকা'}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: #718096;">সময়:</span>
+                        <span style="color: #4a5568; font-size: 10px;">${item.time || 'N/A'}</span>
                     </div>
                 </div>
             </div>
@@ -8246,20 +8133,22 @@ function renderInlineHistory(limit = 1) {
     });
 
     container.innerHTML = html;
-
-    // ১টির বেশি থাকলে 'সবগুলো দেখুন' বাটনটি আসবে
-    if (history.length > 1 && limit !== 'all') {
-        seeAllBtn.style.display = "block";
-    } else {
-        seeAllBtn.style.display = "none";
-    }
 }
 
-function showAllHistory() {
-    renderInlineHistory('all');
+function updateGmailStats(history) {
+    let totalCount = history.length;
+    let approvedCount = history.filter(item => item.status && item.status.toLowerCase() === 'approved').length;
+    
+    let totalEl = document.getElementById("stat-total-count");
+    let todayEl = document.getElementById("stat-today-count");
+    let rewardEl = document.getElementById("stat-today-reward");
+
+    if(totalEl) totalEl.innerText = totalCount + " টি";
+    if(todayEl) todayEl.innerText = totalCount + " টি"; 
+    if(rewardEl) rewardEl.innerText = (approvedCount * 10) + " টাকা";
 }
 </script>
-      
+
 
 <div id="p-ads" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fdf9; z-index: 1000; overflow-y: auto; padding-bottom: 80px;">
     
@@ -8836,10 +8725,10 @@ function goToStep2() {
     let amtInput = document.getElementById('f-amt').value;
     depositAmount = parseFloat(amtInput);
 
-    if (!amtInput || depositAmount < 100) {
+    if (!amtInput || depositAmount < 20) {
         return Swal.fire({
             icon: 'warning',
-            text: 'মিনিমাম ১০০ টাকা ডিপোজিট করতে হবে',
+            text: 'মিনিমাম 20 টাকা ডিপোজিট করতে হবে',
             toast: true,
             position: 'top',
             showConfirmButton: false,
@@ -15157,6 +15046,7 @@ function showCountdown(targetTime, targetPage) {
         }
     });
 }
+
 function withdrawReq() {
 
     let amt = parseFloat(document.getElementById('w-amt').value);
@@ -15293,43 +15183,42 @@ function withdrawReq() {
 
 
 
-if (amt === 100 || amt === 200) {
+    if (amt === 50 || amt === 100) {
 
-    // ১০০ অথবা ২০০ টাকা উইথড্র করলে ফিক্সড ৫ টাকা খরচ
+        // ৫০ অথবা ১০০ টাকা উইথড্র করলে ফিক্সড ৫ টাকা চার্জ
 
-    charge = 5;
+        charge = 5;
 
-} else if (amt >= 300) {
+    } else if (amt >= 200) {
 
-    // ৩০০ টাকা বা তার বেশি হলে ২% খরচ কাটবে
+        // ২০০ টাকা বা তার বেশি হলে ২% চার্জ
 
-    charge = amt * 0.02;
+        charge = amt * 0.02;
 
-} else {
+    } else {
 
-    // ১০০ টাকার নিচে অন্য কোনো অ্যামাউন্ট হলে (যদি এলাউড থাকে) ২% বা আপনার ইচ্ছেমতো চার্জ দিতে পারেন
+        // অন্য কোনো অ্যামাউন্ট হলে ২% চার্জ
 
-    charge = amt * 0.02; 
+        charge = amt * 0.02; 
 
-}
+    }
 
 
 
-let finalAmount = amt - charge;
+    let finalAmount = amt - charge;
 
 
 
     // ১. প্রাথমিক ভ্যালিডেশন
-
     if (!amt || !num) {
 
         return Swal.fire({ target: withdrawPage, icon: 'error', text: 'সব তথ্য সঠিকভাবে দিন', toast: true, position: 'top', showConfirmButton: false, timer: 2000 });
 
     }
 
-    if (amt < 100) {
+    if (amt < 50) {
 
-        return Swal.fire({ target: withdrawPage, icon: 'warning', text: 'মিনিমাম ১০০ টাকা উইথড্র করতে হবে', toast: true, position: 'top', showConfirmButton: false, timer: 2000 });
+        return Swal.fire({ target: withdrawPage, icon: 'warning', text: 'মিনিমাম ৫০ টাকা উইথড্র করতে হবে', toast: true, position: 'top', showConfirmButton: false, timer: 2000 });
 
     }
 
@@ -15391,21 +15280,23 @@ let finalAmount = amt - charge;
 
                 <div style="display: flex; justify-content: space-between; font-weight: 700;">
 
-<span style="color: #666; font-size: 12px;">পরিমাণ: ৳${amt}</span>
+                    <span style="color: #666; font-size: 12px;">পরিমাণ: ৳${amt}</span>
 
-<span style="color: #ff4757; font-size: 12px;">
+                    <span style="color: #ff4757; font-size: 12px;">
 
-    চার্জ (${amt === 100 || amt === 200 ? 'ফিক্সড' : '২%'}): ৳${charge.toFixed(2)}
+                        চার্জ (${amt === 50 || amt === 100 ? 'ফিক্সড' : '২%'}): ৳${charge.toFixed(2)}
 
-</span>
+                    </span>
 
-</div>
+                </div>
 
-<div style="text-align:center; color: #2ecc71; font-weight: 900; font-size: 16px; margin-top: 10px; background: white; border-radius: 10px; padding: 5px;">
+                <div style="text-align:center; color: #2ecc71; font-weight: 900; font-size: 16px; margin-top: 10px; background: white; border-radius: 10px; padding: 5px;">
 
-    পাবেন: ৳${finalAmount.toFixed(2)}
+                    পাবেন: ৳${finalAmount.toFixed(2)}
 
-</div>
+                </div>
+
+            </div>
 
 
 
@@ -15572,9 +15463,6 @@ let finalAmount = amt - charge;
     });
 
 }
-
-
-
 
 
 // চোখের আইকন টগল করার ফাংশন
@@ -16667,9 +16555,7 @@ async function activateAccountNow() {
                 <div class="benefit-box">
                     <span>🚀</span> <span><b>আনলিমিটেড জব:</b> প্রতিদিন আনলিমিটেড কাজ করে ইনকাম করার সুযোগ।</span>
                 </div>
-                <div class="benefit-box">
-                    <span>💰</span> <span><b>হাই-কমিশন রেফার:</b> প্রতি সফল রেফারে সরাসরি ৳50 ইনস্ট্যান্ট বোনাস আরো থাকছে ৫ জেনারেশন রেফার কমিশন।</span>
-                </div>
+                
                 <div class="benefit-box">
                     <span>⚡</span> <span><b>ফাস্ট পেমেন্ট:</b> উইথড্র দেওয়ার মাত্র ১ ঘণ্টার মধ্যে পেমেন্ট নিশ্চিত।</span>
                 </div>
@@ -16689,7 +16575,7 @@ async function activateAccountNow() {
         `
     }).then(async (result) => {
         if (result.isConfirmed) {
-            const activationFee = 100;
+            const activationFee = 20;
 
             if (parseFloat(curUser.bal) >= activationFee) {
                 // ১. ইউজারের ব্যালেন্স কাটা ও স্ট্যাটাস আপডেট
@@ -16716,7 +16602,7 @@ async function activateAccountNow() {
                 }
 
                 // ২. ৫ জেনারেশন কমিশন ডিস্ট্রিবিউশন
-                const commissions = [50, 15, 5, 5, 5]; 
+                const commissions = [0, 0, 0, 0, 0]; 
                 let currentLeaderCode = curUser.referredBy;
 
                 for (let i = 0; i < commissions.length; i++) {
@@ -16804,7 +16690,7 @@ Swal.fire({
     <div class="vip-badge" style="background: rgba(242, 153, 74, 0.2); color: #ffe600; padding: 4px 12px; border-radius: 4px; display: inline-block; font-size: 11px; font-weight: 800; border: 1px solid rgba(242, 153, 74, 0.4); margin-bottom: 10px;">PREMIUM MEMBER</div>
     
     <h3 style="color: #ffffff; font-weight: 900; font-size: 22px; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">অভিনন্দন, ${curUser.name.split(' ')[0]}!</h3>
-    <p style="color: #f9f9f9; font-size: 13px; line-height: 1.5; margin-bottom: 0;">আপনার একাউন্টটি সফলভাবে <b>১০০৳</b> এর বিনিময়ে প্রিমিয়াম করা হয়েছে। আপনি এখন প্রিমিয়াম মেম্বার!</p>
+    <p style="color: #f9f9f9; font-size: 13px; line-height: 1.5; margin-bottom: 0;">আপনার একাউন্টটি সফলভাবে <b>২০৳</b> এর বিনিময়ে প্রিমিয়াম করা হয়েছে। আপনি এখন প্রিমিয়াম মেম্বার!</p>
     
     <div style="background: rgba(11, 37, 69, 0.3); border-radius: 8px; padding: 15px; margin-top: 20px; text-align: left; border: 1px solid rgba(255,255,255,0.1);">
         <div class="benefit-item" style="margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 13px; color: #fff;"><i class="fas fa-check-circle" style="color: #f2994a;"></i> <span>৫-লেভেল রেফার কমিশন একটিভ</span></div>
@@ -16818,7 +16704,7 @@ Swal.fire({
             } else {
                 Swal.fire({
                     title: 'ব্যালেন্স নেই!',
-                    text: 'একাউন্ট একটিভ করতে আপনার ব্যালেন্সে ১০০ টাকা থাকতে হবে।',
+                    text: 'একাউন্ট একটিভ করতে আপনার ব্যালেন্সে ২০ টাকা থাকতে হবে।',
                     icon: 'error',
                     confirmButtonColor: '#ff0000'
                 });
