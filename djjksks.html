@@ -3011,10 +3011,10 @@ function toggleSignupPassword() {
         </span>
     </div>
 
-    <!-- সাইডবার টগল বাটন -->
-    <div class="header-icon-wrapper" onclick="toggleSidebar()" style="width: 44px; height: 44px; background: rgba(255, 255, 255, 0.15); display: flex; align-items: center; justify-content: center; border-radius: 14px; cursor: pointer; border: 1px solid rgba(255, 255, 255, 0.3); transition: all 0.3s ease; box-shadow: inset 0 0 12px rgba(255,255,255,0.15); flex-shrink: 0; box-sizing: border-box;">
-        <i class="fas fa-bars" style="color: white; font-size: 19px; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));"></i>
-    </div>
+    <!-- প্রোফাইল পপআপ বাটন -->
+<div class="header-icon-wrapper" onclick="openProfilePopup()" style="width: 44px; height: 44px; background: rgba(255, 255, 255, 0.15); display: flex; align-items: center; justify-content: center; border-radius: 14px; cursor: pointer; border: 1px solid rgba(255, 255, 255, 0.3); transition: all 0.3s ease; box-shadow: inset 0 0 12px rgba(255,255,255,0.15); flex-shrink: 0; box-sizing: border-box;">
+  <i class="fas fa-bars" style="color: white; font-size: 19px; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));"></i>
+</div>
 </nav>
 
 <!-- নোটিফিকেশন পপআপ ওভারলে -->
@@ -3559,23 +3559,18 @@ function togglePassword() {
 <div class="container mt-2" style="padding: 0 16px; font-family: 'Poppins', sans-serif;">
     <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin: 10px 0;">
         
-
 <style>
-    /* মেইন কন্টেইনার স্টাইল (ছবির মতো লাল থিম #FF0000) */
+    * {
+        box-sizing: border-box;
+    }
+
+    /* মেইন সেকশন কন্টেইনার */
     #bkash-service-wrapper {
-        background: #FF0000;
         margin: 10px 0;
-        padding: 20px 15px;
-        border-radius: 14px;
-        box-shadow: 0 8px 30px rgba(255, 0, 0, 0.3);
-        border: 1px solid #ff4d4d;
+        padding: 10px 0;
         width: 100%;
         box-sizing: border-box;
         font-family: 'Poppins', 'Hind Siliguri', sans-serif;
-    }
-
-    * {
-        box-sizing: border-box;
     }
 
     /* সেকশন হেডার */
@@ -3588,11 +3583,11 @@ function togglePassword() {
     .section-header-box h2 {
         font-size: 16px;
         font-weight: 700;
-        color: #fff;
+        color: #222;
         margin: 0;
     }
 
-    /* সার্ভিস গ্রিড কন্টেইনার (মোবাইলে ২ লাইনে ৪টি অর্থাৎ ২ কলাম) */
+    /* সার্ভিস গ্রিড কন্টেইনার (মোবাইলে ২ কলাম, ডেস্কটপে ৪ কলাম) */
     .service-section-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -3602,24 +3597,23 @@ function togglePassword() {
         padding: 0;
     }
 
-    /* ডেস্কটপে ৪ কলামে দেখাবে */
     @media (min-width: 768px) {
         .service-section-container {
             grid-template-columns: repeat(4, 1fr);
         }
     }
 
-    /* প্রিমিয়াম কার্ড ডিজাইন (সাদা ব্যাকগ্রাউন্ড ও লাল বর্ডার) */
+    /* প্রিমিয়াম কার্ড ডিজাইন: সাদা ব্যাকগ্রাউন্ড, চিকন লাল বর্ডার এবং ৪ কোণ গোল */
     .service-card {
         background: #ffffff;
-        border: 2px solid #FF0000;
+        border: 1.5px solid #FF0000;
         border-radius: 12px;
         padding: 18px 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        box-shadow: 0 4px 10px rgba(255, 0, 0, 0.08);
         transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
         cursor: pointer;
         position: relative;
@@ -3633,8 +3627,8 @@ function togglePassword() {
     }
 
     .service-card:hover {
-        background: #fffdfd;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        background: #fff5f5;
+        box-shadow: 0 6px 15px rgba(255, 0, 0, 0.15);
     }
 
     /* কর্নারের ব্যাজ (যেমন: অফার, বোনাস) */
@@ -3642,7 +3636,7 @@ function togglePassword() {
         position: absolute;
         top: 0;
         right: 0;
-        background: linear-gradient(135deg, #11998e, #38ef7d);
+        background: #FF0000;
         color: #fff;
         font-size: 9px;
         font-weight: 700;
@@ -3650,11 +3644,7 @@ function togglePassword() {
         border-bottom-left-radius: 8px;
     }
 
-    .card-badge.bonus {
-        background: linear-gradient(135deg, #ff416c, #ff4b2b);
-    }
-
-    /* বড় আইকন সার্কেল */
+    /* বড় আইকন সার্কেল (লাল ব্যাকগ্রাউন্ড বা হালকা লাল ব্যাকগ্রাউন্ড) */
     .icon-circle {
         width: 45px;
         height: 45px;
@@ -3663,13 +3653,16 @@ function togglePassword() {
         align-items: center;
         justify-content: center;
         margin-bottom: 8px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        background: rgba(255, 0, 0, 0.08);
+        border: 1px solid rgba(255, 0, 0, 0.15);
+        box-shadow: 0 4px 10px rgba(255,0,0,0.05);
     }
 
+    /* আইকনের কালার লাল */
     .icon-circle svg {
         width: 22px;
         height: 22px;
-        fill: #fff;
+        fill: #FF0000;
     }
 
     /* কার্ডের টেক্সট */
@@ -3680,35 +3673,32 @@ function togglePassword() {
     .card-content h3 {
         font-size: 13px;
         font-weight: 700;
-        color: #222;
+        color: #222222;
         margin: 0 0 2px 0;
     }
 
     .card-content p {
         font-size: 10px;
-        color: #777;
+        color: #666666;
         margin: 0;
         line-height: 1.2;
     }
 </style>
 
 <!-- =========================================================
-     DARK RED STYLE SERVICE MENU
+     RED BUTTONS SERVICE MENU
 ========================================================= -->
 
 <div id="bkash-service-wrapper">
 
-    <div class="section-header-box">
-        <h2>🎉 বিশেষ সার্ভিস</h2>
-    </div>
-
-    <!-- মূল ৪টি কার্ড -->
+   
+    <!-- মূল ৪টি কার্ড/বাটন -->
     <div class="service-section-container">
 
         <!-- ১. জিমেইল সেল -->
         <div class="service-card" onclick="handleGmailCreateClick()">
             <div class="card-badge">অফার</div>
-            <div class="icon-circle" style="background:linear-gradient(135deg,#eb3349,#f45c43);">
+            <div class="icon-circle">
                 <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
             </div>
             <div class="card-content">
@@ -3716,10 +3706,9 @@ function togglePassword() {
                 <p>জিমেইল বানিয়ে আয়</p>
             </div>
         </div>
-
-        <!-- ২. হিস্ট্রি -->
-        <div class="service-card" onclick="openPage('p-history')">
-            <div class="icon-circle" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
+  <!-- ২. হিস্ট্রি -->
+        <div class="service-card" onclick="openGmailHistoryPage()">
+            <div class="icon-circle">
                 <svg viewBox="0 0 24 24"><path d="M13 3a9 9 0 0 0-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.963 8.963 0 0 0 13 21a9 9 0 0 0 0-18zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>
             </div>
             <div class="card-content">
@@ -3728,21 +3717,23 @@ function togglePassword() {
             </div>
         </div>
 
-        <!-- ৩. সাপোর্ট -->
-        <div class="service-card" onclick="openPage('p-support')">
-            <div class="icon-circle" style="background: linear-gradient(135deg, #3a7bd5, #3a6073);">
-                <svg viewBox="0 0 24 24"><path d="M12 1a9 9 0 0 0-9 9v7c0 1.66 1.34 3 3 3h1v-8H4v-2a8 8 0 0 1 16 0v2h-3v8h1c1.66 0 3-1.34 3-3v-7a9 9 0 0 0-9-9z"/></svg>
+      
+         <!-- ৩. সাপোর্ট সেন্টার (আগের মত ফিক্সড করে কার্ড স্টাইলে রূপান্তর করা হয়েছে) -->
+        <div class="service-card" onclick="handleSupportCenterClick()">
+            <div class="icon-circle">
+                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-10 10v4a3 3 0 0 0 3 3h1v-7H4v-1a8 8 0 0 1 16 0v1h-2v7h1a3 3 0 0 0 3-3v-4a10 10 0 0 0-10-10z"/></svg>
             </div>
             <div class="card-content">
-                <h3>সাপোর্ট</h3>
-                <p>২৪/৭ কাস্টমার সেবা</p>
+                <h3>সাপোর্ট সেন্টার</h3>
+                <p>যেকোনো সমস্যায় সহায়তা</p>
             </div>
         </div>
 
-        <!-- ৪. রেফার -->
+      
+      <!-- ৪. রেফার -->
         <div class="service-card" onclick="handleTeamClick()">
-            <div class="card-badge bonus">বোনাস</div>
-            <div class="icon-circle" style="background: linear-gradient(135deg, #ff416c, #ff4b2b);">
+            <div class="card-badge">বোনাস</div>
+            <div class="icon-circle">
                 <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
             </div>
             <div class="card-content">
@@ -3756,188 +3747,114 @@ function togglePassword() {
 </div>
 
 
-      
-<div id="sidebar-overlay" class="sidebar-overlay" onclick="toggleSidebar()"></div>
 
-<div id="right-sidebar" class="side-drawer">
-    <div class="drawer-content" style="background: #ffffff; height: 100vh; width: 280px; font-family: 'Poppins', sans-serif; display: flex; flex-direction: column; overflow: hidden;">
-        
-        <!-- প্রিমিয়াম নীল-কমলা গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড (শার্প চারকোনা লুক) -->
-        <div class="drawer-header" style="background: linear-gradient(135deg, #0b2545 0%, #134074 45%, #f2994a 100%); padding: 35px 20px 25px; position: relative; z-index: 10; flex-shrink: 0; box-shadow: 0 10px 30px rgba(11, 37, 69, 0.25); overflow: hidden; border-radius: 0px;">
+ <!-- POPUP OVERLAY -->
+<div id="profile-popup-overlay" class="popup-overlay" onclick="closeProfilePopup()" style="display:none; position:fixed; inset:0; background:rgba(255,0,0,0.45); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); z-index:9999; align-items:center; justify-content:center; padding:20px; box-sizing:border-box;">
+  
+  <!-- POPUP CARD -->
+  <div id="profile-popup" onclick="event.stopPropagation()" style="width:100%; max-width:340px; background:#ffffff; border-radius:16px; overflow:hidden; font-family:'Poppins', sans-serif; box-shadow:0 20px 60px rgba(255,0,0,0.25); animation:popupIn 0.3s ease; position:relative;">
 
-            <!-- ব্যাকগ্রাউন্ড লাইٹنگ ইফেক্ট -->
-            <div style="position: absolute; top: -50px; right: -50px; width: 120px; height: 120px; background: rgba(255, 255, 255, 0.12); filter: blur(20px); border-radius: 50%; pointer-events: none;"></div>
-            <div style="position: absolute; bottom: -30px; left: -30px; width: 100px; height: 100px; background: rgba(255, 255, 255, 0.08); filter: blur(15px); border-radius: 50%; pointer-events: none;"></div>
+    <!-- CLOSE BUTTON -->
+    <button onclick="closeProfilePopup()" style="position:absolute; top:12px; right:12px; width:30px; height:30px; border-radius:50%; border:none; background:rgba(255,255,255,0.25); color:#fff; font-size:16px; cursor:pointer; z-index:5; backdrop-filter:blur(5px);">✕</button>
 
-            <div style="text-align: center; position: relative; z-index: 2;">
-                
-                <!-- প্রোফাইল পিকচার -->
-                <div style="position: relative; display: inline-block; margin-bottom: 5px;">
-                    <img src="https://raw.githubusercontent.com/a01868293471-collab/Zizz-tfd/refs/heads/main/1785080656387.jpg" 
-                         id="user-dp" 
-                         alt="User Profile"
-                         style="width: 85px; height: 85px; border-radius: 4px; border: 2.5px solid rgba(255, 255, 255, 0.7); object-fit: cover; box-shadow: 0 8px 20px rgba(0,0,0,0.25); transition: 0.3s;">
-                    
-                    <!-- একটিভ ডট -->
-                    <div style="position: absolute; bottom: -4px; right: -4px; background: #2ecc71; width: 14px; height: 14px; border-radius: 2px; border: 2.5px solid #134074; box-shadow: 0 2px 6px rgba(0,0,0,0.3);"></div>
-                </div>
+    <!-- HEADER - PREMIUM RED GRADIENT -->
+    <div style="background: linear-gradient(135deg, #b30000 0%, #e60000 45%, #ff4d4d 100%); padding:30px 20px 22px; text-align:center; position:relative; overflow:hidden;">
+      <div style="position:absolute; top:-40px; right:-40px; width:110px; height:110px; background:rgba(255,255,255,0.15); filter:blur(20px); border-radius:50%;"></div>
+      <div style="position:absolute; bottom:-20px; left:-20px; width:90px; height:90px; background:rgba(255,255,255,0.1); filter:blur(15px); border-radius:50%;"></div>
 
-                <!-- ইউজার নেম -->
-                <h5 id="user-name" style="font-weight: 800; color: #ffffff; margin: 12px 0 10px; font-size: 19px; letter-spacing: 0.8px; text-transform: uppercase; text-shadow: 0 2px 4px rgba(0,0,0,0.15);">Abu Sufian</h5>
-                
-                <!-- গ্লাস মরফিজম র‍্যাঙ্ক কার্ড -->
-                <div style="display: flex; justify-content: center;">
-                    <div style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 6px 14px; border-radius: 4px; display: flex; align-items: center; gap: 6px; border: 1px solid rgba(255, 255, 255, 0.25); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);">
-                        <i class="fas fa-crown" style="font-size: 10px; color: #ffffff;"></i> 
-                        <span id="user-rank" style="font-size: 10px; font-weight: 800; color: #ffffff; text-transform: uppercase; letter-spacing: 0.8px;">General Member</span>
-                    </div>
-                </div>
+      <!-- PROFILE PHOTO -->
+      <div style="position:relative; display:inline-block;">
+        <img src="https://raw.githubusercontent.com/a01868293471-collab/Zizz-tfd/refs/heads/main/1785080656387.jpg" id="user-dp" alt="User Profile" style="width:90px; height:90px; border-radius:50%; border:3px solid rgba(255,255,255,0.9); object-fit:cover; box-shadow:0 10px 25px rgba(0,0,0,0.3);">
+        <div style="position:absolute; bottom:2px; right:2px; background:#2ecc71; width:16px; height:16px; border-radius:50%; border:3px solid #fff;"></div>
+      </div>
 
+      <!-- NAME -->
+      <h5 id="user-name" style="font-weight:800; color:#ffffff; margin:12px 0 8px; font-size:20px; letter-spacing:0.8px; text-transform:uppercase;">Abu Sufian</h5>
 
-
-            <!-- গ্লাস মরফিজম রেফার কার্ড -->
-            <div id="refer-section" class="ref-card-modern" 
-                 style="display: flex; margin-top: 18px; background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 8px 14px; border-radius: 4px; align-items: center; justify-content: space-between; max-width: 250px; margin-left: auto; margin-right: auto; transition: 0.3s; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); box-sizing: border-box;">
-                
-                <div style="display: flex; align-items: center; gap: 6px;">
-                    <i class="fas fa-gift" style="color: #ffffff; font-size: 11px;"></i>
-                    <span style="font-size: 10px; color: rgba(255, 255, 255, 0.85); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Refer:</span>
-                    <b id="user-ref" style="color: #ffffff; font-size: 13px; letter-spacing: 1px; font-weight: 900;">XYZ123</b>
-                </div>
-                
-                <i class="far fa-copy" onclick="copyRef()" 
-                   style="color: rgba(255, 255, 255, 0.85); cursor: pointer; font-size: 13px; transition: all 0.2s ease; padding: 4px;" 
-                   onmouseover="this.style.color='#ffffff'; this.style.transform='scale(1.15)';" 
-                   onmouseout="this.style.color='rgba(255, 255, 255, 0.85)'; this.style.transform='scale(1)';"></i>
-            </div>
-
+      <!-- MEMBER BADGE - PREMIUM -->
+      <div style="display:flex; justify-content:center;">
+        <div style="background:rgba(255,255,255,0.2); backdrop-filter:blur(12px); padding:6px 14px; border-radius:20px; display:flex; align-items:center; gap:6px; border:1px solid rgba(255,255,255,0.35);">
+          <i class="fas fa-crown" style="font-size:11px; color:#FFD700;"></i>
+          <span id="user-rank" style="font-size:11px; font-weight:800; color:#ffffff; text-transform:uppercase; letter-spacing:0.8px;">General Member</span>
         </div>
+      </div>
 
-
-</div>
-
-<!-- সিএসএস স্টাইল (আলাদা আলাদা বাটন কার্ডের প্রিমিয়াম ইফেক্ট) -->
-<style>
-    .custom-menu-btn {
-        background: #f8fafc !important; 
-        border: 1px solid #f1f5f9 !important; 
-        border-bottom: 2px solid #e2e8f0 !important; 
-        border-radius: 4px !important; 
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02) !important;
-        margin-bottom: 2px;
-        transition: all 0.2s ease-in-out !important;
-    }
-    .custom-menu-btn:active {
-        background: #f1f5f9 !important;
-        border-bottom: 1px solid #cbd5e1 !important;
-        transform: translateY(1px);
-        box-shadow: none !important;
-    }
-</style>
-        <!-- স্ক্রোলযোগ্য মেনু সেকশন (আলাদা আলাদা বাটন কার্ড ভিউ) -->
-        <div class="scrollable-menu" style="flex: 1; overflow-y: auto; padding: 18px 14px; background: #ffffff;">
-            <div class="menu-group" style="display: flex; flex-direction: column; gap: 8px;"> <!-- গ্যাপ বাড়িয়ে আলাদা করা হয়েছে -->
-
-                <!-- ১. Home (Royal Blue Gradient) -->
-                <button class="custom-menu-btn" onclick="openPage('home'); toggleSidebar()" style="display: flex; align-items: center; width: 100%; padding: 10px 10px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444;">
-                    <span class="icon-box" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(30,60,114,0.18); margin-right: 12px; flex-shrink: 0;">
-                        <i class="fas fa-th-large" style="font-size: 11px;"></i>
-                    </span> 
-                    <span style="flex: 1; text-align: left; font-size: 13px; letter-spacing: 0.2px;">হোমপেজ</span>
-                    <i class="fas fa-angle-right" style="font-size: 11px; color: #aaa;"></i>
-                </button>
-
-            
-
-                <!-- ৩. Withdraw (Sunset Orange Gradient) -->
-                <button class="custom-menu-btn" onclick="openPage('p-withdraw'); toggleSidebar()" style="display: flex; align-items: center; width: 100%; padding: 10px 10px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444;">
-                    <span class="icon-box" style="background: linear-gradient(135deg, #ff4e50 0%, #f9d423 100%); color: white; width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(255,78,80,0.18); margin-right: 12px; flex-shrink: 0;">
-                        <i class="fas fa-arrow-alt-circle-down" style="font-size: 11px;"></i>
-                    </span> 
-                    <span style="flex: 1; text-align: left; font-size: 13px; letter-spacing: 0.2px;">উইথড্র করুন</span>
-                    <i class="fas fa-angle-right" style="font-size: 11px; color: #aaa;"></i>
-                </button>
-
-                <!-- ৪. Transactions (Deep Purple Gradient) -->
-                <button class="custom-menu-btn" onclick="openTransactionPage(); toggleSidebar()" style="display: flex; align-items: center; width: 100%; padding: 10px 10px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444;">
-                    <span class="icon-box" style="background: linear-gradient(135deg, #654ea3 0%, #eaafc8 100%); color: white; width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(101,78,163,0.18); margin-right: 12px; flex-shrink: 0;">
-                        <i class="fas fa-wallet" style="font-size: 11px;"></i>
-                    </span> 
-                    <span style="flex: 1; text-align: left; font-size: 13px; letter-spacing: 0.2px;">লেনদেনর ইতিহাস</span>
-                    <i class="fas fa-angle-right" style="font-size: 11px; color: #aaa;"></i>
-                </button>
-
-                <!-- ৫. Settings (Steel Tech Grey Gradient) -->
-                <button class="custom-menu-btn" onclick="openSettings(); toggleSidebar()" style="display: flex; align-items: center; width: 100%; padding: 10px 10px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444;">
-                    <span class="icon-box" style="background: linear-gradient(135deg, #617ca5 0%, #2b384e 100%); color: white; width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(43,56,78,0.15); margin-right: 12px; flex-shrink: 0;">
-                        <i class="fas fa-sliders-h" style="font-size: 11px;"></i>
-                    </span> 
-                    <span style="flex: 1; text-align: left; font-size: 13px; letter-spacing: 0.2px;">একাউন্ট সেটিংস </span>
-                    <i class="fas fa-angle-right" style="font-size: 11px; color: #aaa;"></i>
-                </button>
-
-                <!--Adapter ৬. Admin Profile (Luxury Coral Gradient) -->
-                <button class="custom-menu-btn" onclick="openPage('p-admin-profile'); toggleSidebar()" style="display: flex; align-items: center; width: 100%; padding: 10px 10px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444;">
-                    <span class="icon-box" style="background: linear-gradient(135deg, #f857a6 0%, #ff5858 100%); color: white; width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(248,87,166,0.18); margin-right: 12px; flex-shrink: 0;">
-                        <i class="fas fa-user-check" style="font-size: 11px;"></i>
-                    </span> 
-                    <span style="flex: 1; text-align: left; font-size: 13px; letter-spacing: 0.2px;">এডমিন প্রোফাইল</span>
-                    <i class="fas fa-angle-right" style="font-size: 11px; color: #aaa;"></i>
-                </button>
-
-                <!-- ৭. Privacy Policy (Cyan Ocean Gradient) -->
-                <button class="custom-menu-btn" onclick="openPage('privacy'); toggleSidebar()" style="display: flex; align-items: center; width: 100%; padding: 10px 10px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444;">
-                    <span class="icon-box" style="background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); color: white; width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(0,114,255,0.18); margin-right: 12px; flex-shrink: 0;">
-                        <i class="fas fa-user-lock" style="font-size: 11px;"></i>
-                    </span> 
-                    <span style="flex: 1; text-align: left; font-size: 13px; letter-spacing: 0.2px;">গোপনীয়তা নীতি</span>
-                    <i class="fas fa-angle-right" style="font-size: 11px; color: #aaa;"></i>
-                </button>
-
-                <!-- ৮. About Us (Plum Maroon Gradient) -->
-                <button class="custom-menu-btn" onclick="openPage('p-about'); toggleSidebar()" style="display: flex; align-items: center; width: 100%; padding: 10px 10px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: #444;">
-                    <span class="icon-box" style="background: linear-gradient(135deg, #f43f5e 0%, #85144b 100%); color: white; width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(244,63,94,0.18); margin-right: 12px; flex-shrink: 0;">
-                        <i class="fas fa-id-card" style="font-size: 11px;"></i>
-                    </span> 
-                    <span style="flex: 1; text-align: left; font-size: 13px; letter-spacing: 0.2px;">নিয়মাবলী শর্তাবলী</span>
-                    <i class="fas fa-angle-right" style="font-size: 11px; color: #aaa;"></i>
-                </button>
-
-            </div>
+      <!-- REFER CARD -->
+      <div id="refer-section" style="display:flex; margin-top:16px; background:rgba(255,255,255,0.18); backdrop-filter:blur(12px); padding:10px 14px; border-radius:10px; align-items:center; justify-content:space-between; border:1px solid rgba(255,255,255,0.3);">
+        <div style="display:flex; align-items:center; gap:7px;">
+          <i class="fas fa-gift" style="color:#fff; font-size:12px;"></i>
+          <span style="font-size:11px; color:rgba(255,255,255,0.95); font-weight:700; text-transform:uppercase;">Refer:</span>
+          <b id="user-ref" style="color:#fff; font-size:14px; letter-spacing:1px; font-weight:900;">XYZ123</b>
         </div>
-
-        <!-- ফুটার লগআউট বাটন (কার্ড লুকের সাথে মিল রেখে সুন্দর ফিনিশিং) -->
-        <div style="padding: 12px 14px; background: #ffffff; border-top: 1px solid #f1f5f9; flex-shrink: 0;">
-            <button class="custom-menu-btn logout-btn" onclick="logout()" style="background: #fff1f2 !important; border: 1px solid #ffe4e6 !important; border-bottom: 2px solid #fecdd3 !important; display: flex; align-items: center; padding: 10px 10px; border-radius: 4px !important; width: 100%; cursor: pointer; margin-bottom: 0;">
-                <span class="icon-box" style="background: #ffe4e6; color: #e11d48; width: 26px; height: 26px; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 11px; flex-shrink: 0;">
-                    <i class="fas fa-sign-out-alt"></i>
-                </span> 
-<span style="color: #e11d48; font-weight: 700; font-size: 12px; letter-spacing: 0.3px;">লগ আউট</span>
-        </div>
-
+        <i class="far fa-copy" onclick="copyRef()" style="color:#fff; cursor:pointer; font-size:14px; padding:4px;"></i>
+      </div>
     </div>
+
+    <!-- BOTTOM ACTIONS - ONLY SETTINGS & LOGOUT -->
+    <div style="display:flex; gap:10px; padding:16px;">
+      <!-- SETTINGS -->
+      <button onclick="closeProfilePopup(); openSettings()" style="flex:1; display:flex; align-items:center; justify-content:center; gap:8px; padding:12px; border-radius:10px; border:1px solid #ffd1d1; background:#fff5f5; cursor:pointer; font-family:'Poppins',sans-serif;">
+        <span style="background:linear-gradient(135deg,#ff4d4d 0%,#cc0000 100%); color:white; width:28px; height:28px; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+          <i class="fas fa-cog" style="font-size:12px;"></i>
+        </span>
+        <span style="font-size:13px; font-weight:700; color:#b30000;">সেটিংস</span>
+      </button>
+
+      <!-- LOGOUT -->
+      <button onclick="logout()" style="flex:1; display:flex; align-items:center; justify-content:center; gap:8px; padding:12px; border-radius:10px; border:1px solid #ffe4e6; background:#fff1f2; cursor:pointer; font-family:'Poppins',sans-serif;">
+        <span style="background:#ffe4e6; color:#e11d48; width:28px; height:28px; border-radius:8px; display:flex; align-items:center; justify-content:center;">
+          <i class="fas fa-sign-out-alt" style="font-size:12px;"></i>
+        </span>
+        <span style="font-size:13px; font-weight:700; color:#e11d48;">লগ আউট</span>
+      </button>
+    </div>
+  </div>
 </div>
 
-<!-- সাপোর্ট সেন্টার পেজ -->
-<div id="p-support-center" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f4f6f9; z-index: 1500; overflow-y: auto; padding-bottom: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; opacity: 0; transition: opacity 0.3s ease;">
+<style>
+@keyframes popupIn {
+  from { transform:scale(0.85) translateY(20px); opacity:0; }
+  to { transform:scale(1) translateY(0); opacity:1; }
+}
+.popup-overlay.show { display:flex !important; }
+</style>
+
+<script>
+function openProfilePopup(){
+  document.getElementById('profile-popup-overlay').classList.add('show');
+  document.getElementById('profile-popup-overlay').style.display='flex';
+}
+function closeProfilePopup(){
+  document.getElementById('profile-popup-overlay').classList.remove('show');
+  document.getElementById('profile-popup-overlay').style.display='none';
+}
+function toggleSidebar(){ openProfilePopup(); }
+</script>
+
+
+      
+<!-- =========================================================
+     সাপোর্ট সেন্টার পেজ (রেড থিম ও ফিক্সড জাভাস্ক্রিপ্ট)
+========================================================= -->
+<div id="p-support-center" class="p-page d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fffdfd; z-index: 1500; overflow-y: auto; padding-bottom: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; opacity: 0; display: none; transition: opacity 0.3s ease;">
     
     <!-- হেডার -->
-    <div style="background: linear-gradient(135deg, #0f172a 100%, #1e293b 0%); padding: 16px 20px; display: flex; align-items: center; position: sticky; top: 0; z-index: 1502; box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);">
-        <div onclick="closeSupportPage()" style="cursor: pointer; display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); transition: all 0.2s ease;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+    <div style="background: linear-gradient(135deg, #FF0000 100%, #cc0000 0%); padding: 16px 20px; display: flex; align-items: center; position: sticky; top: 0; z-index: 1502; box-shadow: 0 4px 25px rgba(255, 0, 0, 0.2);">
+        <div onclick="closeSupportPage()" style="cursor: pointer; display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(255, 255, 255, 0.2); transition: all 0.2s ease;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
             <i class="fas fa-arrow-left" style="font-size: 18px; color: #ffffff;"></i>
         </div>
         <div style="margin-left: 14px;">
             <h5 style="margin: 0; font-weight: 800; color: #ffffff; font-size: 17px; letter-spacing: 0.5px;">সাপোর্ট সেন্টার</h5>
-            <span style="font-size: 10px; color: #94a3b8; font-weight: 600;">২৪/৭ অনলাইন সহায়তা</span>
+            <span style="font-size: 10px; color: #ffe6e6; font-weight: 600;">২৪/৭ অনলাইন সহায়তা</span>
         </div>
     </div>
 
     <div class="container mt-3 px-3" style="max-width: 650px; margin: 0 auto; animation: slideUp 0.4s ease forwards;">
         
         <!-- নোটিশ বক্স -->
-        <div style="background: #ffffff; border-left: 5px solid #3b82f6; padding: 16px; border-radius: 14px; margin-bottom: 22px; box-shadow: 0 6px 20px rgba(0,0,0,0.04);">
+        <div style="background: #ffffff; border-left: 5px solid #FF0000; padding: 16px; border-radius: 14px; margin-bottom: 22px; box-shadow: 0 6px 20px rgba(255,0,0,0.06);">
             <h6 style="margin: 0 0 8px 0; font-weight: 800; color: #1e293b; font-size: 14px; display: flex; align-items: center; gap: 8px;">
-                <i class="fas fa-bullhorn" style="color: #ef4444;"></i> জরুরি নোটিশ
+                <i class="fas fa-bullhorn" style="color: #FF0000;"></i> জরুরি নোটিশ
             </h6>
             <p style="margin: 0; font-size: 12px; color: #64748b; line-height: 1.7; text-align: justify;">
                 যেকোনো প্রয়োজনে নিচের ভেরিফাইড অ্যাডমিনদের সাথে সরাসরি যোগাযোগ করুন অথবা আমাদের অফিসিয়াল গ্রুপগুলোতে জয়েন করুন। প্রতারণা এড়াতে শুধুমাত্র ভেরিফাইড লিস্টের সাথে লেনদেন করুন।
@@ -3945,13 +3862,13 @@ function togglePassword() {
         </div>
 
         <!-- সরাসরি অ্যাডমিনের সাথে কথা বলুন (মেইন বাটন) -->
-        <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border-radius: 18px; padding: 22px; text-align: center; margin-bottom: 22px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.2);">
-            <div style="width: 60px; height: 60px; background: rgba(59, 130, 246, 0.15); color: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px auto;">
+        <div style="background: linear-gradient(135deg, #FF0000 0%, #cc0000 100%); border-radius: 18px; padding: 22px; text-align: center; margin-bottom: 22px; box-shadow: 0 10px 30px rgba(255, 0, 0, 0.25);">
+            <div style="width: 60px; height: 60px; background: rgba(255, 255, 255, 0.2); color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px auto;">
                 <i class="fas fa-headset" style="font-size: 26px;"></i>
             </div>
             <h6 style="margin: 0 0 6px 0; font-weight: 800; color: #ffffff; font-size: 16px;">সরাসরি অ্যাডমিনের সাথে কথা বলুন</h6>
-            <p style="margin: 0 0 16px 0; font-size: 11px; color: #94a3b8; line-height: 1.5;">আপনার যেকোনো সমস্যা বা লেনদেন সংক্রান্ত সহায়তার জন্য নির্দিষ্ট অ্যাডমিনকে বেছে নিন।</p>
-            <button onclick="openAdminModal()" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; border: none; padding: 12px 24px; border-radius: 12px; font-weight: 800; font-size: 13px; cursor: pointer; box-shadow: 0 4px 15px rgba(59,130,246,0.4); transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 8px;">
+            <p style="margin: 0 0 16px 0; font-size: 11px; color: #ffe6e6; line-height: 1.5;">আপনার যেকোনো সমস্যা বা লেনদেন সংক্রান্ত সহায়তার জন্য নির্দিষ্ট অ্যাডমিনকে বেছে নিন।</p>
+            <button onclick="openAdminModal()" style="background: #ffffff; color: #FF0000; border: none; padding: 12px 24px; border-radius: 12px; font-weight: 800; font-size: 13px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15); transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 8px;" onmouseover="this.style.background='#fff0f0'" onmouseout="this.style.background='#ffffff'">
                 <i class="fas fa-comments"></i> অ্যাডমিন লিস্ট দেখুন
             </button>
         </div>
@@ -3959,251 +3876,234 @@ function togglePassword() {
         <!-- সোশ্যাল গ্রুপ সেকশন -->
         <div style="display: flex; flex-direction: column; gap: 16px;">
             
+            <!-- ১. টেলিগ্রাম গ্রুপ দুটি -->
+            <div style="background: linear-gradient(145deg, #ffffff, #fffdfd); border: 1px solid #ffd1d1; border-radius: 18px; padding: 18px; box-shadow: 0 10px 25px -5px rgba(255,0,0,0.05);">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+                    <div style="width: 38px; height: 38px; background: linear-gradient(135deg, #0088cc, #00aaff); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,136,204,0.3);">
+                        <i class="fab fa-telegram-plane" style="font-size: 18px;"></i>
+                    </div>
+                    <div>
+                        <span style="font-size: 14px; font-weight: 800; color: #1e293b; display: block;">টেলিগ্রাম চ্যানেল ও গ্রুপ</span>
+                        <span style="font-size: 11px; color: #64748b;">যুক্ত হন আমাদের টেলিগ্রাম প্ল্যাটফর্মে</span>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #0088cc, #00aaff); color: white; border: none; padding: 11px; border-radius: 12px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                        গ্রুপ ১ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
+                    </button>
+                    <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #00aaff, #0088cc); color: white; border: none; padding: 11px; border-radius: 12px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                        গ্রুপ ২ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
+                    </button>
+                </div>
+            </div>
 
-    <!-- ১. টেলিগ্রাম গ্রুপ দুটি -->
-    <div style="background: linear-gradient(145deg, #ffffff, #f8fafc); border: 1px solid #e2e8f0; border-radius: 18px; padding: 18px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); transition: all 0.3s ease;">
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
-            <div style="width: 38px; height: 38px; background: linear-gradient(135deg, #0088cc, #00aaff); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,136,204,0.3);">
-                <i class="fab fa-telegram-plane" style="font-size: 18px;"></i>
+            <!-- ২. মেসেঞ্জার গ্রুপ দুটি -->
+            <div style="background: linear-gradient(145deg, #ffffff, #fffdfd); border: 1px solid #ffd1d1; border-radius: 18px; padding: 18px; box-shadow: 0 10px 25px -5px rgba(255,0,0,0.05);">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+                    <div style="width: 38px; height: 38px; background: linear-gradient(135deg, #006AFF, #00C6FF); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,106,255,0.3);">
+                        <i class="fab fa-facebook-messenger" style="font-size: 18px;"></i>
+                    </div>
+                    <div>
+                        <span style="font-size: 14px; font-weight: 800; color: #1e293b; display: block;">মেসেঞ্জার গ্রুপ চ্যাট</span>
+                        <span style="font-size: 11px; color: #64748b;">সরাসরি আড্ডা ও আলোচনা</span>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button onclick="window.open('https://m.me/', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #006AFF, #00C6FF); color: white; border: none; padding: 11px; border-radius: 12px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                        গ্রুপ ১ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
+                    </button>
+                    <button onclick="window.open('https://m.me/', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #00C6FF, #006AFF); color: white; border: none; padding: 11px; border-radius: 12px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                        গ্রুপ ২ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
+                    </button>
+                </div>
             </div>
-            <div>
-                <span style="font-size: 14px; font-weight: 800; color: #1e293b; display: block;">টেলিগ্রাম চ্যানেল ও গ্রুপ</span>
-                <span style="font-size: 11px; color: #64748b;">যুক্ত হন আমাদের টেলিগ্রাম প্ল্যাটফর্মে</span>
+
+            <!-- ৩. হোয়াটসঅ্যাপ গ্রুপ দুটি -->
+            <div style="background: linear-gradient(145deg, #ffffff, #fffdfd); border: 1px solid #ffd1d1; border-radius: 18px; padding: 18px; box-shadow: 0 10px 25px -5px rgba(255,0,0,0.05);">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+                    <div style="width: 38px; height: 38px; background: linear-gradient(135deg, #25d366, #128c7e); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(37,211,102,0.3);">
+                        <i class="fab fa-whatsapp" style="font-size: 18px;"></i>
+                    </div>
+                    <div>
+                        <span style="font-size: 14px; font-weight: 800; color: #1e293b; display: block;">হোয়াটসঅ্যাপ কমিউনিটি</span>
+                        <span style="font-size: 11px; color: #64748b;">জরুরি আপডেট পেতে যুক্ত হোন</span>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button onclick="window.open('https://whatsapp.com/', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #25d366, #128c7e); color: white; border: none; padding: 11px; border-radius: 12px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                        গ্রুপ ১ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
+                    </button>
+                    <button onclick="window.open('https://whatsapp.com/', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #128c7e, #25d366); color: white; border: none; padding: 11px; border-radius: 12px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                        গ্রুপ ২ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
+                    </button>
+                </div>
             </div>
-        </div>
-        <div style="display: flex; gap: 10px;">
-            <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #0088cc, #00aaff); color: white; border: none; padding: 11px; border-radius: 12px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,136,204,0.25); transition: opacity 0.2s;">
-                গ্রুপ ১ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
-            </button>
-            <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #00aaff, #0088cc); color: white; border: none; padding: 11px; border-radius: 12px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,136,204,0.25); transition: opacity 0.2s;">
-                গ্রুপ ২ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
-            </button>
+
+            <!-- ৪. ফেসবুক গ্রুপ দুটি -->
+            <div style="background: linear-gradient(145deg, #ffffff, #fffdfd); border: 1px solid #ffd1d1; border-radius: 18px; padding: 18px; box-shadow: 0 10px 25px -5px rgba(255,0,0,0.05);">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+                    <div style="width: 38px; height: 38px; background: linear-gradient(135deg, #1877f2, #0d56b3); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(24,119,242,0.3);">
+                        <i class="fab fa-facebook-f" style="font-size: 18px;"></i>
+                    </div>
+                    <div>
+                        <span style="font-size: 14px; font-weight: 800; color: #1e293b; display: block;">ফেসবুক অফিশিয়াল গ্রুপ</span>
+                        <span style="font-size: 11px; color: #64748b;">আমাদের ফেসবুক কমিউনিটি গ্রুপ</span>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button onclick="window.open('https://facebook.com/', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #1877f2, #0d56b3); color: white; border: none; padding: 11px; border-radius: 12px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                        গ্রুপ ১ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
+                    </button>
+                    <button onclick="window.open('https://facebook.com/', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #0d56b3, #1877f2); color: white; border: none; padding: 11px; border-radius: 12px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                        গ্রুপ ২ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
+                    </button>
+                </div>
+            </div>
+
         </div>
     </div>
-
-    <!-- ২. মেসেঞ্জার গ্রুপ দুটি -->
-    <div style="background: linear-gradient(145deg, #ffffff, #f8fafc); border: 1px solid #e2e8f0; border-radius: 18px; padding: 18px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); transition: all 0.3s ease;">
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
-            <div style="width: 38px; height: 38px; background: linear-gradient(135deg, #006AFF, #00C6FF); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,106,255,0.3);">
-                <i class="fab fa-facebook-messenger" style="font-size: 18px;"></i>
-            </div>
-            <div>
-                <span style="font-size: 14px; font-weight: 800; color: #1e293b; display: block;">মেসেঞ্জার গ্রুপ চ্যাট</span>
-                <span style="font-size: 11px; color: #64748b;">সরাসরি আড্ডা ও আলোচনা</span>
-            </div>
-        </div>
-        <div style="display: flex; gap: 10px;">
-            <button onclick="window.open('https://m.me/', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #006AFF, #00C6FF); color: white; border: none; padding: 11px; border-radius: 12px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,106,255,0.25); transition: opacity 0.2s;">
-                গ্রুপ ১ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
-            </button>
-            <button onclick="window.open('https://m.me/', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #00C6FF, #006AFF); color: white; border: none; padding: 11px; border-radius: 12px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,106,255,0.25); transition: opacity 0.2s;">
-                গ্রুপ ২ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
-            </button>
-        </div>
-    </div>
-
-    <!-- ৩. হোয়াটসঅ্যাপ গ্রুপ দুটি -->
-    <div style="background: linear-gradient(145deg, #ffffff, #f8fafc); border: 1px solid #e2e8f0; border-radius: 18px; padding: 18px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); transition: all 0.3s ease;">
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
-            <div style="width: 38px; height: 38px; background: linear-gradient(135deg, #25d366, #128c7e); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(37,211,102,0.3);">
-                <i class="fab fa-whatsapp" style="font-size: 18px;"></i>
-            </div>
-            <div>
-                <span style="font-size: 14px; font-weight: 800; color: #1e293b; display: block;">হোয়াটসঅ্যাপ কমিউনিটি</span>
-                <span style="font-size: 11px; color: #64748b;">জরুরি আপডেট পেতে যুক্ত হোন</span>
-            </div>
-        </div>
-        <div style="display: flex; gap: 10px;">
-            <button onclick="window.open('https://whatsapp.com/', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #25d366, #128c7e); color: white; border: none; padding: 11px; border-radius: 12px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 12px rgba(37,211,102,0.25); transition: opacity 0.2s;">
-                গ্রুপ ১ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
-            </button>
-            <button onclick="window.open('https://whatsapp.com/', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #128c7e, #25d366); color: white; border: none; padding: 11px; border-radius: 12px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 12px rgba(37,211,102,0.25); transition: opacity 0.2s;">
-                গ্রুপ ২ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
-            </button>
-        </div>
-    </div>
-
-    <!-- ৪. ফেসবুক গ্রুপ দুটি -->
-    <div style="background: linear-gradient(145deg, #ffffff, #f8fafc); border: 1px solid #e2e8f0; border-radius: 18px; padding: 18px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05); transition: all 0.3s ease;">
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
-            <div style="width: 38px; height: 38px; background: linear-gradient(135deg, #1877f2, #0d56b3); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(24,119,242,0.3);">
-                <i class="fab fa-facebook-f" style="font-size: 18px;"></i>
-            </div>
-            <div>
-                <span style="font-size: 14px; font-weight: 800; color: #1e293b; display: block;">ফেসবুক অফিশিয়াল গ্রুপ</span>
-                <span style="font-size: 11px; color: #64748b;">আমাদের ফেসবুক কমিউনিটি গ্রুপ</span>
-            </div>
-        </div>
-        <div style="display: flex; gap: 10px;">
-            <button onclick="window.open('https://facebook.com/', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #1877f2, #0d56b3); color: white; border: none; padding: 11px; border-radius: 12px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 12px rgba(24,119,242,0.25); transition: opacity 0.2s;">
-                গ্রুপ ১ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
-            </button>
-            <button onclick="window.open('https://facebook.com/', '_blank')" class="social-btn" style="flex: 1; background: linear-gradient(135deg, #0d56b3, #1877f2); color: white; border: none; padding: 11px; border-radius: 12px; font-weight: 700; font-size: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 4px 12px rgba(24,119,242,0.25); transition: opacity 0.2s;">
-                গ্রুপ ২ <i class="fas fa-external-link-alt" style="font-size: 10px;"></i>
-            </button>
-        </div>
-    </div>
-
 </div>
-    </div>
-
-</div>
-
-<!-- Hover Effect এর জন্য ছোট CSS (আপনার হেডার বা স্টাইল ট্যাগে রাখতে পারেন) -->
-<style>
-    .social-btn:hover {
-        opacity: 0.9;
-        transform: translateY(-1px);
-    }
-</style>
-
 
 <!-- প্রফেশনাল অ্যাডমিন পপআপ (Modal) -->
-<div id="admin-modal" class="d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(5px); z-index: 2000; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; padding: 15px;">
+<div id="admin-modal" class="d-none" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(5px); z-index: 2000; display: none; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; padding: 15px;">
     
     <div style="background: #ffffff; width: 100%; max-width: 500px; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.2); max-height: 90vh; display: flex; flex-direction: column; animation: scaleUp 0.3s ease forwards;">
         
-        <!-- পপআপ হেডার -->
-        <div style="background: linear-gradient(135deg, #0f172a, #1e293b); padding: 16px 20px; display: flex; align-items: center; justify-content: space-between;">
+        <!-- পপআপ হেডার (লাল থিম) -->
+        <div style="background: linear-gradient(135deg, #FF0000, #cc0000); padding: 16px 20px; display: flex; align-items: center; justify-content: space-between;">
             <div style="display: flex; align-items: center; gap: 10px;">
-                <div style="width: 35px; height: 35px; background: rgba(59, 130, 246, 0.2); color: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 35px; height: 35px; background: rgba(255, 255, 255, 0.2); color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                     <i class="fas fa-user-shield" style="font-size: 16px;"></i>
                 </div>
                 <div>
                     <h5 style="margin: 0; color: #ffffff; font-size: 15px; font-weight: 800;">ভেরিফাইড অ্যাডমিন লিস্ট</h5>
-                    <span style="font-size: 10px; color: #94a3b8;">আপনার সমস্যার জন্য সঠিক অ্যাডমিন বেছে নিন</span>
+                    <span style="font-size: 10px; color: #ffe6e6;">আপনার সমস্যার জন্য সঠিক অ্যাডমিন বেছে নিন</span>
                 </div>
             </div>
-            <div onclick="closeAdminModal()" style="cursor: pointer; width: 32px; height: 32px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+            <div onclick="closeAdminModal()" style="cursor: pointer; width: 32px; height: 32px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
                 <i class="fas fa-times" style="font-size: 14px;"></i>
             </div>
         </div>
 
-        <!-- পপআপ বডি (৫টি অ্যাডমিন কার্ড with Problem Description) -->
+        <!-- পপআপ বডি (৫টি অ্যাডমিন কার্ড) -->
         <div style="padding: 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px;">
             
             <!-- Admin 1 -->
-            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: all 0.2s;">
+            <div style="background: #fffdfd; border: 1px solid #ffd1d1; border-radius: 14px; padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
                 <div style="display: flex; align-items: center; gap: 12px;">
-                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(59,130,246,0.3);">
+                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #FF0000, #cc0000); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(255,0,0,0.3);">
                         <i class="fas fa-wallet" style="font-size: 18px;"></i>
                     </div>
                     <div>
                         <div style="display: flex; align-items: center; gap: 6px;">
                             <span style="font-size: 13px; font-weight: 800; color: #1e293b;">Admin 1</span>
-                            <span style="font-size: 8px; color: #3b82f6; font-weight: 700; background: #eff6ff; padding: 1px 5px; border-radius: 4px;">Verified</span>
+                            <span style="font-size: 8px; color: #FF0000; font-weight: 700; background: #ffe6e6; padding: 1px 5px; border-radius: 4px;">Verified</span>
                         </div>
                         <p style="margin: 3px 0 0 0; font-size: 11px; color: #64748b; font-weight: 600;">পেমেন্ট জমা, ডিপোজিট ও উইথড্র সংক্রান্ত সমস্যা</p>
                     </div>
                 </div>
-                <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" style="background: #3b82f6; color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0; transition: background 0.2s;" onmouseover="this.style.background='#1d4ed8'" onmouseout="this.style.background='#3b82f6'">
+                <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" style="background: #FF0000; color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0;" onmouseover="this.style.background='#cc0000'" onmouseout="this.style.background='#FF0000'">
                     মেসেজ করুন
                 </button>
             </div>
 
             <!-- Admin 2 -->
-            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: all 0.2s;">
+            <div style="background: #fffdfd; border: 1px solid #ffd1d1; border-radius: 14px; padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
                 <div style="display: flex; align-items: center; gap: 12px;">
-                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #10b981, #047857); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(16,185,129,0.3);">
+                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #FF0000, #cc0000); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(255,0,0,0.3);">
                         <i class="fas fa-user-cog" style="font-size: 18px;"></i>
                     </div>
                     <div>
                         <div style="display: flex; align-items: center; gap: 6px;">
                             <span style="font-size: 13px; font-weight: 800; color: #1e293b;">Admin 2</span>
-                            <span style="font-size: 8px; color: #10b981; font-weight: 700; background: #ecfdf5; padding: 1px 5px; border-radius: 4px;">Verified</span>
+                            <span style="font-size: 8px; color: #FF0000; font-weight: 700; background: #ffe6e6; padding: 1px 5px; border-radius: 4px;">Verified</span>
                         </div>
                         <p style="margin: 3px 0 0 0; font-size: 11px; color: #64748b; font-weight: 600;">অ্যাকাউন্ট ভেরিফিকেশন ও পাসওয়ার্ড সমস্যা</p>
                     </div>
                 </div>
-                <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" style="background: #10b981; color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0; transition: background 0.2s;" onmouseover="this.style.background='#047857'" onmouseout="this.style.background='#10b981'">
+                <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" style="background: #FF0000; color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0;" onmouseover="this.style.background='#cc0000'" onmouseout="this.style.background='#FF0000'">
                     মেসেজ করুন
                 </button>
             </div>
 
             <!-- Admin 3 -->
-            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: all 0.2s;">
+            <div style="background: #fffdfd; border: 1px solid #ffd1d1; border-radius: 14px; padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
                 <div style="display: flex; align-items: center; gap: 12px;">
-                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(245,158,11,0.3);">
+                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #FF0000, #cc0000); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(255,0,0,0.3);">
                         <i class="fas fa-gift" style="font-size: 18px;"></i>
                     </div>
                     <div>
                         <div style="display: flex; align-items: center; gap: 6px;">
                             <span style="font-size: 13px; font-weight: 800; color: #1e293b;">Admin 3</span>
-                            <span style="font-size: 8px; color: #f59e0b; font-weight: 700; background: #fffbeb; padding: 1px 5px; border-radius: 4px;">Verified</span>
+                            <span style="font-size: 8px; color: #FF0000; font-weight: 700; background: #ffe6e6; padding: 1px 5px; border-radius: 4px;">Verified</span>
                         </div>
                         <p style="margin: 3px 0 0 0; font-size: 11px; color: #64748b; font-weight: 600;">বোনাস, অফার ও প্রমোশন সংক্রান্ত সমস্যা</p>
                     </div>
                 </div>
-                <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" style="background: #f59e0b; color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0; transition: background 0.2s;" onmouseover="this.style.background='#d97706'" onmouseout="this.style.background='#f59e0b'">
+                <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" style="background: #FF0000; color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0;" onmouseover="this.style.background='#cc0000'" onmouseout="this.style.background='#FF0000'">
                     মেসেজ করুন
                 </button>
             </div>
 
             <!-- Admin 4 -->
-            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: all 0.2s;">
+            <div style="background: #fffdfd; border: 1px solid #ffd1d1; border-radius: 14px; padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
                 <div style="display: flex; align-items: center; gap: 12px;">
-                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #8b5cf6, #6d28d9); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(139,92,246,0.3);">
+                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #FF0000, #cc0000); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(255,0,0,0.3);">
                         <i class="fas fa-gamepad" style="font-size: 18px;"></i>
                     </div>
                     <div>
-                        <div style="display: flex; align-items: center; gap: 12px;">
+                        <div style="display: flex; align-items: center; gap: 6px;">
                             <span style="font-size: 13px; font-weight: 800; color: #1e293b;">Admin 4</span>
-                            <span style="font-size: 8px; color: #8b5cf6; font-weight: 700; background: #f3e8ff; padding: 1px 5px; border-radius: 4px;">Verified</span>
+                            <span style="font-size: 8px; color: #FF0000; font-weight: 700; background: #ffe6e6; padding: 1px 5px; border-radius: 4px;">Verified</span>
                         </div>
                         <p style="margin: 3px 0 0 0; font-size: 11px; color: #64748b; font-weight: 600;">গেম বা বেটিং ব্যালেন্স আপডেট সমস্যা</p>
                     </div>
                 </div>
-                <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" style="background: #8b5cf6; color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0; transition: background 0.2s;" onmouseover="this.style.background='#6d28d9'" onmouseout="this.style.background='#8b5cf6'">
+                <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" style="background: #FF0000; color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0;" onmouseover="this.style.background='#cc0000'" onmouseout="this.style.background='#FF0000'">
                     মেসেজ করুন
                 </button>
             </div>
 
             <!-- Admin 5 -->
-            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: all 0.2s;">
+            <div style="background: #fffdfd; border: 1px solid #ffd1d1; border-radius: 14px; padding: 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
                 <div style="display: flex; align-items: center; gap: 12px;">
-                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #ec4899, #be185d); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(236,72,153,0.3);">
+                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #FF0000, #cc0000); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(255,0,0,0.3);">
                         <i class="fas fa-headset" style="font-size: 18px;"></i>
                     </div>
                     <div>
                         <div style="display: flex; align-items: center; gap: 6px;">
                             <span style="font-size: 13px; font-weight: 800; color: #1e293b;">Admin 5</span>
-                            <span style="font-size: 8px; color: #ec4899; font-weight: 700; background: #fce7f3; padding: 1px 5px; border-radius: 4px;">Verified</span>
+                            <span style="font-size: 8px; color: #FF0000; font-weight: 700; background: #ffe6e6; padding: 1px 5px; border-radius: 4px;">Verified</span>
                         </div>
                         <p style="margin: 3px 0 0 0; font-size: 11px; color: #64748b; font-weight: 600;">সাধারণ সহায়তা ও অন্যান্য অভিযোগ</p>
                     </div>
                 </div>
-                <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" style="background: #ec4899; color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0; transition: background 0.2s;" onmouseover="this.style.background='#be185d'" onmouseout="this.style.background='#ec4899'">
+                <button onclick="window.open('https://t.me/Mohammed1199440', '_blank')" style="background: #FF0000; color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0;" onmouseover="this.style.background='#cc0000'" onmouseout="this.style.background='#FF0000'">
                     মেসেজ করুন
                 </button>
             </div>
 
         </div>
-                </div>
     </div>
 </div>
 
 <style>
-.social-btn {
-    transition: all 0.2s ease;
-}
 .social-btn:hover {
-    filter: brightness(1.1);
-    transform: translateY(-2px);
-}
-.social-btn:active {
-    transform: scale(0.96);
-}
-@keyframes slideUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    opacity: 0.9;
+    transform: translateY(-1px);
 }
 @keyframes scaleUp {
     from { opacity: 0; transform: scale(0.95); }
     to { opacity: 1; transform: scale(1); }
 }
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 </style>
 
 <script>
+// ১. সাপোর্ট সেন্টার পেজ খোলার ফাংশন
 function handleSupportCenterClick() {
     let page = document.getElementById('p-support-center');
     if (page) {
@@ -4215,6 +4115,7 @@ function handleSupportCenterClick() {
     }
 }
 
+// ২. সাপোর্ট সেন্টার পেজ বন্ধ করার ফাংশন
 function closeSupportPage() {
     let page = document.getElementById('p-support-center');
     if (page) {
@@ -4226,7 +4127,7 @@ function closeSupportPage() {
     }
 }
 
-// অ্যাডমিন পপআপ খোলার ফাংশন
+// ৩. অ্যাডমিন পপআপ খোলার ফাংশন
 function openAdminModal() {
     let modal = document.getElementById('admin-modal');
     if (modal) {
@@ -4238,7 +4139,7 @@ function openAdminModal() {
     }
 }
 
-// অ্যাডমিন পপআপ বন্ধ করার ফাংশন
+// ৪. অ্যাডমিন পপআপ বন্ধ করার ফাংশন
 function closeAdminModal() {
     let modal = document.getElementById('admin-modal');
     if (modal) {
@@ -4251,7 +4152,6 @@ function closeAdminModal() {
 }
 </script>
 
-      
 
 <div id="p-admin-profile" class="p-page d-none shadow" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f8fafc; z-index: 1500; overflow-y: auto; padding-bottom: 50px; font-family: 'Poppins', sans-serif;">
 
@@ -5121,8 +5021,7 @@ function closeAdminModal() {
 </div>
 
 
-
-  <!-- ==================== WITHDRAW PAGE ==================== -->
+<!-- ==================== WITHDRAW PAGE (RED THEME & SLIM BALANCE) ==================== -->
 <div id="p-withdraw" class="p-page d-none">
 
     <!-- TOP HEADER -->
@@ -5153,7 +5052,7 @@ function closeAdminModal() {
     <div class="withdraw-body">
 
 
-        <!-- BALANCE CARD -->
+        <!-- BALANCE CARD (SLIM & RED) -->
         <div class="balance-card">
 
             <div class="balance-glow glow-one"></div>
@@ -5180,7 +5079,7 @@ function closeAdminModal() {
 
         </div>
 
-<!-- WITHDRAW NOTICE -->
+        <!-- WITHDRAW NOTICE -->
         <div class="withdraw-notice">
 
             <div class="notice-top">
@@ -5416,7 +5315,7 @@ function closeAdminModal() {
 
 
 
-<!-- ==================== WITHDRAW CSS ==================== -->
+<!-- ==================== WITHDRAW CSS (ALL RED THEME) ==================== -->
 <style>
 
 *{
@@ -5428,7 +5327,7 @@ function closeAdminModal() {
     inset:0;
     width:100%;
     height:100%;
-    background:#f5f8fc;
+    background:#fffdfd;
     z-index:1500;
     overflow-y:auto;
     font-family:'Poppins',sans-serif;
@@ -5436,7 +5335,7 @@ function closeAdminModal() {
 }
 
 
-/* HEADER */
+/* HEADER (RED) */
 
 .withdraw-header{
     position:sticky;
@@ -5452,15 +5351,13 @@ function closeAdminModal() {
 
     background:
         linear-gradient(
-            115deg,
-            #063b82 0%,
-            #1556a0 38%,
-            #c86632 72%,
-            #ff8a00 100%
+            135deg,
+            #FF0000 0%,
+            #cc0000 100%
         );
 
     box-shadow:
-        0 5px 22px rgba(6,59,130,.20);
+        0 5px 22px rgba(255,0,0,.20);
 }
 
 
@@ -5479,9 +5376,9 @@ function closeAdminModal() {
     border:none;
     border-radius:13px;
 
-    background:rgba(255,255,255,.13);
+    background:rgba(255,255,255,.2);
 
-    border:1px solid rgba(255,255,255,.28);
+    border:1px solid rgba(255,255,255,.3);
 
     color:#fff;
 
@@ -5492,10 +5389,6 @@ function closeAdminModal() {
     font-size:16px;
 
     backdrop-filter:blur(10px);
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.18),
-        0 5px 15px rgba(0,0,0,.08);
 
     cursor:pointer;
 
@@ -5526,7 +5419,7 @@ function closeAdminModal() {
 .en-title{
     margin-top:4px;
     font-size:11px;
-    opacity:.85;
+    opacity:.9;
     letter-spacing:1.2px;
     font-weight:600;
 }
@@ -5544,19 +5437,19 @@ function closeAdminModal() {
 
 
 
-/* BALANCE CARD */
+/* BALANCE CARD (SLIM & RED) */
 
 .balance-card{
 
     position:relative;
 
-    min-height:165px;
+    min-height:115px; /* উচ্চতা কমানো হয়েছে যাতে স্লিম দেখায় */
 
     overflow:hidden;
 
-    border-radius:22px;
+    border-radius:18px;
 
-    padding:25px 22px;
+    padding:16px 20px;
 
     display:flex;
     align-items:center;
@@ -5565,15 +5458,13 @@ function closeAdminModal() {
 
     background:
         linear-gradient(
-            125deg,
-            #063d86 0%,
-            #1760b5 40%,
-            #a34d3e 70%,
-            #ff8500 100%
+            135deg,
+            #FF0000 0%,
+            #b30000 100%
         );
 
     box-shadow:
-        0 14px 30px rgba(11,68,135,.20);
+        0 8px 25px rgba(255,0,0,.22);
 
     margin-bottom:18px;
 
@@ -5588,29 +5479,29 @@ function closeAdminModal() {
 
 
 .glow-one{
-    width:190px;
-    height:190px;
-    right:-70px;
-    top:-90px;
-    background:rgba(255,255,255,.10);
+    width:140px;
+    height:140px;
+    right:-40px;
+    top:-60px;
+    background:rgba(255,255,255,.12);
 }
 
 
 .glow-two{
-    width:130px;
-    height:130px;
-    right:50px;
-    bottom:-90px;
-    background:rgba(255,166,0,.16);
+    width:100px;
+    height:100px;
+    right:30px;
+    bottom:-60px;
+    background:rgba(255,255,255,.08);
 }
 
 
 .wallet-icon{
 
-    width:70px;
-    height:70px;
+    width:52px;
+    height:52px;
 
-    min-width:70px;
+    min-width:52px;
 
     border-radius:50%;
 
@@ -5618,18 +5509,15 @@ function closeAdminModal() {
     align-items:center;
     justify-content:center;
 
-    background:rgba(255,255,255,.15);
+    background:rgba(255,255,255,.2);
 
-    border:1px solid rgba(255,255,255,.28);
+    border:1px solid rgba(255,255,255,.3);
 
     backdrop-filter:blur(8px);
 
-    box-shadow:
-        inset 0 2px 8px rgba(255,255,255,.10);
+    font-size:22px;
 
-    font-size:29px;
-
-    margin-right:16px;
+    margin-right:15px;
 
 }
 
@@ -5641,60 +5529,58 @@ function closeAdminModal() {
 
 
 .balance-label{
-    font-size:10px;
+    font-size:9px;
     font-weight:700;
     letter-spacing:1.1px;
-    opacity:.85;
+    opacity:.9;
 }
 
 
 .balance-amount{
     display:flex;
     align-items:center;
-    gap:7px;
+    gap:6px;
 
-    margin-top:4px;
+    margin-top:2px;
 
-    font-size:36px;
+    font-size:30px;
     line-height:1;
 
     font-weight:900;
-
-    text-shadow:0 3px 10px rgba(0,0,0,.14);
 }
 
 
 .balance-amount span:first-child{
-    font-size:27px;
+    font-size:22px;
 }
 
 
 .balance-decoration{
     position:absolute;
-    right:20px;
-    bottom:15px;
+    right:15px;
+    bottom:10px;
 
-    font-size:55px;
+    font-size:45px;
 
-    color:rgba(255,255,255,.12);
+    color:rgba(255,255,255,.1);
 
     transform:rotate(-12deg);
 }
 
 
 
-/* NOTICE */
+/* NOTICE (RED THEME) */
 
 .withdraw-notice{
 
     background:
         linear-gradient(
             135deg,
-            #fffdf4,
-            #fff8df
+            #fffdfd,
+            #fff5f5
         );
 
-    border:1px solid #f4c94e;
+    border:1px solid #ffcccc;
 
     border-radius:18px;
 
@@ -5703,7 +5589,7 @@ function closeAdminModal() {
     margin-bottom:23px;
 
     box-shadow:
-        0 7px 20px rgba(196,145,20,.08);
+        0 7px 20px rgba(255,0,0,.06);
 
 }
 
@@ -5737,14 +5623,9 @@ function closeAdminModal() {
     align-items:center;
     justify-content:center;
 
-    color:#e98900;
+    color:#FF0000;
 
-    background:
-        linear-gradient(
-            135deg,
-            #fff0bd,
-            #ffe49a
-        );
+    background:#ffe6e6;
 
     font-size:17px;
 }
@@ -5753,13 +5634,13 @@ function closeAdminModal() {
 .notice-heading{
     font-size:15px;
     font-weight:900;
-    color:#7c4b00;
+    color:#b30000;
 }
 
 
 .notice-sub{
     font-size:9px;
-    color:#ae7414;
+    color:#cc3333;
     font-weight:600;
     margin-top:2px;
 }
@@ -5767,7 +5648,7 @@ function closeAdminModal() {
 
 .notice-badge{
 
-    background:#16a765;
+    background:#FF0000;
 
     color:#fff;
 
@@ -5782,13 +5663,13 @@ function closeAdminModal() {
     white-space:nowrap;
 
     box-shadow:
-        0 4px 10px rgba(22,167,101,.16);
+        0 4px 10px rgba(255,0,0,.2);
 }
 
 
 .notice-line{
 
-    border-top:1px dashed #edcc68;
+    border-top:1px dashed #ffcccc;
 
     margin:13px 0 11px;
 }
@@ -5810,7 +5691,7 @@ function closeAdminModal() {
 
     font-size:11px;
 
-    color:#855713;
+    color:#4a5568;
 
     line-height:1.55;
 
@@ -5831,7 +5712,7 @@ function closeAdminModal() {
     align-items:center;
     justify-content:center;
 
-    background:#19aa65;
+    background:#FF0000;
 
     color:white;
 
@@ -5840,12 +5721,12 @@ function closeAdminModal() {
     margin-top:1px;
 
     box-shadow:
-        0 3px 7px rgba(25,170,101,.15);
+        0 3px 7px rgba(255,0,0,.2);
 }
 
 
 .notice-item b{
-    color:#704100;
+    color:#FF0000;
 }
 
 
@@ -5859,7 +5740,7 @@ function closeAdminModal() {
 
 
 .section-main{
-    color:#38557e;
+    color:#b30000;
 
     font-size:15px;
 
@@ -5881,8 +5762,8 @@ function closeAdminModal() {
     background:
         linear-gradient(
             90deg,
-            #0b58a9,
-            #ff8200
+            #FF0000,
+            #ff6666
         );
 }
 
@@ -5891,11 +5772,8 @@ function closeAdminModal() {
 /* PAYMENT METHODS */
 
 .payment-methods{
-
     display:flex;
-
-    gap:12px;
-
+    gap:10px;
     margin-bottom:20px;
 }
 
@@ -5907,26 +5785,26 @@ function closeAdminModal() {
 
 .w-method-card{
 
-    height:92px;
+    height:52px;
 
     position:relative;
 
     background:#fff;
 
-    border:1.5px solid #d8e2ef;
+    border:1.5px solid #ffd1d1;
 
-    border-radius:16px;
+    border-radius:12px;
 
     overflow:hidden;
 
-    padding:9px;
+    padding:6px 10px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
     box-shadow:
-        0 5px 15px rgba(26,59,96,.05);
+        0 3px 10px rgba(255, 0, 0, 0.05);
 
     cursor:pointer;
 
@@ -5949,19 +5827,19 @@ function closeAdminModal() {
 .w-method-card.active,
 .w-method-card.active-method{
 
-    border-color:#ff4d39 !important;
+    border-color:#FF0000 !important;
 
     background:
         linear-gradient(
             135deg,
-            #fff7f6,
+            #fff5f5,
             #fff
         ) !important;
 
-    transform:translateY(-3px);
+    transform:translateY(-2px);
 
     box-shadow:
-        0 9px 22px rgba(255,76,55,.13) !important;
+        0 6px 18px rgba(255,0,0,.2) !important;
 }
 
 
@@ -5969,20 +5847,15 @@ function closeAdminModal() {
 
     position:absolute;
 
-    top:8px;
-    right:8px;
+    top:6px;
+    right:6px;
 
-    width:27px;
-    height:27px;
+    width:20px;
+    height:20px;
 
     border-radius:50%;
 
-    background:
-        linear-gradient(
-            135deg,
-            #ff1744,
-            #ff7b00
-        );
+    background:#FF0000;
 
     color:#fff;
 
@@ -5991,10 +5864,10 @@ function closeAdminModal() {
     align-items:center;
     justify-content:center;
 
-    font-size:11px;
+    font-size:9px;
 
     box-shadow:
-        0 4px 10px rgba(255,61,44,.25);
+        0 3px 8px rgba(255,0,0,.3);
 }
 
 
@@ -6011,14 +5884,14 @@ function closeAdminModal() {
 
     background:#fff;
 
-    border:1px solid #e0e8f2;
+    border:1px solid #ffd1d1;
 
     border-radius:20px;
 
     padding:18px;
 
     box-shadow:
-        0 8px 25px rgba(31,63,97,.06);
+        0 8px 25px rgba(255,0,0,.05);
 }
 
 
@@ -6034,7 +5907,7 @@ function closeAdminModal() {
 
     gap:6px;
 
-    color:#405b82;
+    color:#b30000;
 
     font-size:10px;
 
@@ -6047,7 +5920,7 @@ function closeAdminModal() {
 
 
 .input-group-modern label i{
-    color:#d96a22;
+    color:#FF0000;
 }
 
 
@@ -6066,7 +5939,7 @@ function closeAdminModal() {
 
     transform:translateY(-50%);
 
-    color:#52709a;
+    color:#cc3333;
 
     font-size:15px;
 
@@ -6078,15 +5951,15 @@ function closeAdminModal() {
 
     width:100%;
 
-    height:53px;
+    height:50px;
 
     padding:0 15px 0 43px;
 
     border-radius:13px;
 
-    border:1px solid #d4dfec;
+    border:1px solid #ffd1d1;
 
-    background:#f7faff;
+    background:#fffdfd;
 
     color:#243b64;
 
@@ -6103,7 +5976,7 @@ function closeAdminModal() {
 
 
 .input-box input::placeholder{
-    color:#9aabc0;
+    color:#b3b3b3;
     font-weight:500;
 }
 
@@ -6112,114 +5985,21 @@ function closeAdminModal() {
 
     background:#fff;
 
-    border-color:#3476bd;
+    border-color:#FF0000;
 
     box-shadow:
-        0 0 0 4px rgba(28,101,177,.08);
+        0 0 0 4px rgba(255,0,0,.1);
 }
 
 
 
-/* FEE PREVIEW */
-
-.fee-preview{
-
-    padding:13px;
-
-    margin:4px 0 17px;
-
-    border-radius:13px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #f5f8fc,
-            #fff8ef
-        );
-
-    border:1px solid #e4eaf1;
-}
-
-
-.fee-row{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    gap:10px;
-
-    padding:5px 0;
-
-    font-size:10px;
-
-    color:#667c99;
-
-    font-weight:600;
-}
-
-
-.fee-row span{
-    display:flex;
-    align-items:center;
-    gap:6px;
-}
-
-
-.fee-row i{
-    color:#e87927;
-}
-
-
-.fee-row strong{
-    color:#405d83;
-}
-
-
-.fee-divider{
-    border-top:1px dashed #d5deea;
-    margin:6px 0;
-}
-
-
-.total-row{
-
-    font-size:12px;
-
-    color:#29496f;
-
-    font-weight:800;
-}
-
-
-.total-row strong{
-
-    font-size:15px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #0754a1,
-            #ed711e
-        );
-
-    -webkit-background-clip:text;
-    background-clip:text;
-
-    -webkit-text-fill-color:transparent;
-}
-
-
-
-/* SUBMIT */
+/* SUBMIT BUTTON (RED) */
 
 .withdraw-submit{
 
     width:100%;
 
-    height:56px;
+    height:54px;
 
     border:none;
 
@@ -6245,15 +6025,13 @@ function closeAdminModal() {
 
     background:
         linear-gradient(
-            110deg,
-            #0756aa 0%,
-            #2571b8 38%,
-            #d94e32 72%,
-            #ff8500 100%
+            135deg,
+            #FF0000 0%,
+            #cc0000 100%
         );
 
     box-shadow:
-        0 9px 20px rgba(30,91,155,.20);
+        0 9px 20px rgba(255,0,0,.25);
 
     transition:.2s;
 }
@@ -6261,7 +6039,7 @@ function closeAdminModal() {
 
 .withdraw-submit:hover{
     box-shadow:
-        0 12px 25px rgba(30,91,155,.27);
+        0 12px 25px rgba(255,0,0,.35);
 }
 
 
@@ -6279,7 +6057,7 @@ function closeAdminModal() {
     align-items:center;
     justify-content:center;
 
-    background:rgba(255,255,255,.14);
+    background:rgba(255,255,255,.2);
 
     border-radius:50%;
 
@@ -6300,7 +6078,7 @@ function closeAdminModal() {
 
     margin-top:17px;
 
-    color:#6e84a1;
+    color:#718096;
 
     font-size:10px;
 
@@ -6311,7 +6089,7 @@ function closeAdminModal() {
 
 
 .security-note i{
-    color:#3970a9;
+    color:#FF0000;
     font-size:14px;
 }
 
@@ -6336,20 +6114,20 @@ function closeAdminModal() {
     }
 
     .balance-card{
-        padding:20px 16px;
-        min-height:150px;
+        padding:14px 16px;
+        min-height:105px;
     }
 
     .wallet-icon{
-        width:60px;
-        height:60px;
-        min-width:60px;
-        font-size:24px;
+        width:45px;
+        height:45px;
+        min-width:45px;
+        font-size:19px;
         margin-right:12px;
     }
 
     .balance-amount{
-        font-size:31px;
+        font-size:26px;
     }
 
     .notice-heading{
@@ -6360,16 +6138,12 @@ function closeAdminModal() {
         display:none;
     }
 
-    .w-method-card{
-        height:80px;
-    }
-
 }
 
 </style>
 
 
-
+  
 <!-- ==================== WITHDRAW JS ==================== -->
 <script>
 
@@ -6931,10 +6705,7 @@ function showAllFbHistory() {
                 <h5 style="margin: 0; font-weight: 700; color: #ffffff; font-size: 16px; letter-spacing: 0.3px;">জিমেইল ক্রিয়েট টাস্ক</h5>
             </div>
         </div>
-        <!-- History Icon Button -->
-        <div onclick="openGmailHistoryPage()" style="cursor: pointer; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 10px; background: rgba(255, 255, 255, 0.2); transition: background 0.2s;">
-            <i class="fas fa-history" style="font-size: 16px; color: #ffffff;"></i>
-        </div>
+        
     </div>
 
     <div style="max-width: 480px; margin: 0 auto; padding: 16px;">
@@ -10844,6 +10615,7 @@ initMicroJobs();
     </div>
 </div>
 
+
 <div id="bottom-nav" style="position: fixed; bottom: 15px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 400px; background: #FF0000; display: flex; justify-content: space-around; align-items: center; padding: 0 10px; z-index: 999; box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4); border-radius: 35px; border: 1.5px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(15px); height: 68px; font-family: 'Poppins', sans-serif; box-sizing: border-box;">
 
     <!-- ১. ডিপোজিট (বামে) - সরাসরি p-fund-step1 পেজ ওপেন হবে -->
@@ -10879,6 +10651,7 @@ initMicroJobs();
 </div>
 
 
+  
 <style>
     /* বাটনে ক্লিক করলে ছোট হওয়ার এনিমেশন */
     #bottom-nav div:active {
